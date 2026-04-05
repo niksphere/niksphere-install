@@ -34,5 +34,21 @@ After restarting, verify your installation by simply typing:
 niksphere --version
 ```
 
+## Uninstallation
+
+If you wish to remove Niksphere from your system, you can use the provided standalone uninstall scripts.
+
+### Windows (PowerShell)
+
+```powershell
+Invoke-RestMethod https://raw.githubusercontent.com/niksphere/niksphere-install/main/uninstall.ps1 | Invoke-Expression
+```
+
+### macOS & Linux (Bash)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/niksphere/niksphere-install/main/uninstall.sh | bash
+```
+
 ---
 *For manual installations or exploring specific version archives, see the [Releases page](../../releases) of this repository.*
