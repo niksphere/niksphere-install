@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-REPO="niksphere/nikshare-install"
+REPO="niksphere/niksphere-install"
 
 echo "Fetching latest release information for Niksphere..."
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')

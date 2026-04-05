@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-$Repo = "niksphere/nikshare-install"
+$Repo = "niksphere/niksphere-install"
 $ApiUrl = "https://api.github.com/repos/$Repo/releases/latest"
 
 Write-Host "Fetching latest release information for Niksphere..."
