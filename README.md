@@ -13,7 +13,7 @@ This repository provides seamless, one-line installation scripts to securely dow
 Open your PowerShell terminal and execute the following script:
 
 ```powershell
-Invoke-RestMethod https://raw.githubusercontent.com/niksphere/nikshare-install/main/install.ps1 | Invoke-Expression
+Invoke-RestMethod https://raw.githubusercontent.com/niksphere/niksphere-install/main/install.ps1 | Invoke-Expression
 ```
 
 ### macOS & Linux (Bash)
@@ -21,7 +21,7 @@ Invoke-RestMethod https://raw.githubusercontent.com/niksphere/nikshare-install/m
 Open your terminal and run the following shell command:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/niksphere/nikshare-install/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/niksphere/niksphere-install/main/install.sh | bash
 ```
 
 ## Post-Installation
