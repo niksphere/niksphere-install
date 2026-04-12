@@ -31,7 +31,7 @@ Once the installation successfully completes, you will need to **restart your te
 After restarting, verify your installation by simply typing:
 
 ```bash
-niksphere --version
+nik --version
 ```
 
 ## Uninstallation

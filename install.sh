@@ -44,11 +44,9 @@ echo "Extracting to $INSTALL_DIR..."
 unzip -q -o "$TMP_ZIP" -d "$INSTALL_DIR"
 rm "$TMP_ZIP"
 
-# Rename to a clean 'niksphere' command without versioning hashes
-EXTRACTED_FILE=$(ls "$INSTALL_DIR"/niksphere-cli-*-${OS_SHORT}-${ARCH_SHORT}* 2>/dev/null | head -n 1 || true)
-if [ -n "$EXTRACTED_FILE" ]; then
-    mv "$EXTRACTED_FILE" "$INSTALL_DIR/niksphere"
-    chmod +x "$INSTALL_DIR/niksphere"
+# The executable is natively named 'nik' in the zip, ensure it is executable
+if [ -f "$INSTALL_DIR/nik" ]; then
+    chmod +x "$INSTALL_DIR/nik"
 fi
 
 echo ""

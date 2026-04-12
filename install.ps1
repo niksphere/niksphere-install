@@ -40,18 +40,14 @@ if (!(Test-Path $InstallDir)) {
 Expand-Archive -Path $ZipPath -DestinationPath $InstallDir -Force
 Remove-Item $ZipPath
 
-# Rename the executable so the user can just type 'niksphere'
-$ExtractedFile = Get-ChildItem -Path $InstallDir -Filter "niksphere-cli-*.exe" | Select-Object -First 1
-if ($ExtractedFile) {
-    Rename-Item -Path $ExtractedFile.FullName -NewName "niksphere.exe" -Force
-}
+# The executable is natively named 'nik.exe' in the zip, so no renaming is necessary.
 
 # Add path to system environment variables if it doesn't exist yet
 $UserPath = [Environment]::GetEnvironmentVariable("PATH", "User")
 if ($UserPath -notmatch [regex]::Escape($InstallDir)) {
     Write-Host "Adding $InstallDir to User PATH..."
     [Environment]::SetEnvironmentVariable("PATH", "$UserPath;$InstallDir", "User")
-    Write-Host "`n---> INSTALLATION SUCCESSFUL! Please restart your terminal to start using the 'niksphere' command! <---"
+    Write-Host "`n---> INSTALLATION SUCCESSFUL! Please restart your terminal to start using the 'nik' command! <---"
 } else {
     Write-Host "`n---> UPDATE SUCCESSFUL! Niksphere CLI has been updated. <---"
 }

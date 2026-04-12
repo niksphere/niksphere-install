@@ -2,7 +2,7 @@
 set -e
 
 INSTALL_DIR="$HOME/.local/bin"
-EXECUTABLE="$INSTALL_DIR/niksphere"
+EXECUTABLE="$INSTALL_DIR/nik"
 
 echo "Uninstalling Niksphere..."
 
