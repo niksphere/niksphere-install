@@ -9,16 +9,16 @@ Write-Host "Uninstalling Niksphere..."
 $ProcessName = "nik"
 
 if (Test-Path $BaseDir) {
-    # Isolate directory by renaming it to break automatic process restart loops (e.g., from VS Code)
-    $IsolatedDir = "$BaseDir-old_uninstall"
-    if (Test-Path $IsolatedDir) { Remove-Item -Path $IsolatedDir -Recurse -Force -ErrorAction SilentlyContinue }
-    
-    try {
-        Rename-Item -Path $BaseDir -NewName "niksphere-old_uninstall" -ErrorAction Stop
-        $TargetDir = $IsolatedDir
-    } catch {
-        $TargetDir = $BaseDir
+    # Isolate the executable by renaming it to break automatic process restart loops (e.g., from VS Code)
+    # This works better than renaming the directory, which can be locked by a file watcher.
+    $ExePath = Join-Path $InstallDir "nik.exe"
+    if (Test-Path $ExePath) {
+        try {
+            Rename-Item -Path $ExePath -NewName "nik.delete.exe" -ErrorAction SilentlyContinue
+        } catch {}
     }
+    
+    $TargetDir = $BaseDir
 
     if (Get-Process -Name $ProcessName -ErrorAction SilentlyContinue) {
         Write-Host "Stopping running instances of $ProcessName..."
