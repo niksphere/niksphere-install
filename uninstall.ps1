@@ -7,15 +7,27 @@ Write-Host "Uninstalling Niksphere..."
 
 # 1. Remove files
 $ProcessName = "nik"
-if (Get-Process -Name $ProcessName -ErrorAction SilentlyContinue) {
-    Write-Host "Stopping running instances of $ProcessName..."
-    Stop-Process -Name $ProcessName -Force -ErrorAction SilentlyContinue
-    Start-Sleep -Seconds 1
-}
 
 if (Test-Path $BaseDir) {
-    Remove-Item -Path $BaseDir -Recurse -Force
-    Write-Host "Niksphere directory at $BaseDir has been removed."
+    # Isolate directory by renaming it to break automatic process restart loops (e.g., from VS Code)
+    $IsolatedDir = "$BaseDir-old_uninstall"
+    if (Test-Path $IsolatedDir) { Remove-Item -Path $IsolatedDir -Recurse -Force -ErrorAction SilentlyContinue }
+    
+    try {
+        Rename-Item -Path $BaseDir -NewName "niksphere-old_uninstall" -ErrorAction Stop
+        $TargetDir = $IsolatedDir
+    } catch {
+        $TargetDir = $BaseDir
+    }
+
+    if (Get-Process -Name $ProcessName -ErrorAction SilentlyContinue) {
+        Write-Host "Stopping running instances of $ProcessName..."
+        Stop-Process -Name $ProcessName -Force -ErrorAction SilentlyContinue
+        Start-Sleep -Seconds 1
+    }
+
+    Remove-Item -Path $TargetDir -Recurse -Force
+    Write-Host "Niksphere directory has been removed."
 } else {
     Write-Host "Niksphere files ($BaseDir) were not found."
 }
