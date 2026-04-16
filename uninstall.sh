@@ -6,6 +6,12 @@ EXECUTABLE="$INSTALL_DIR/nik"
 
 echo "Uninstalling Niksphere..."
 
+if pgrep -x "nik" >/dev/null 2>&1; then
+    echo "Stopping running instances of nik..."
+    pkill -x "nik" >/dev/null 2>&1 || true
+    sleep 1
+fi
+
 if [ -f "$EXECUTABLE" ]; then
     rm -f "$EXECUTABLE"
     echo "Niksphere binary ($EXECUTABLE) has been removed."

@@ -6,6 +6,13 @@ $BaseDir = Join-Path $env:LOCALAPPDATA "niksphere"
 Write-Host "Uninstalling Niksphere..."
 
 # 1. Remove files
+$ProcessName = "nik"
+if (Get-Process -Name $ProcessName -ErrorAction SilentlyContinue) {
+    Write-Host "Stopping running instances of $ProcessName..."
+    Stop-Process -Name $ProcessName -Force -ErrorAction SilentlyContinue
+    Start-Sleep -Seconds 1
+}
+
 if (Test-Path $BaseDir) {
     Remove-Item -Path $BaseDir -Recurse -Force
     Write-Host "Niksphere directory at $BaseDir has been removed."
