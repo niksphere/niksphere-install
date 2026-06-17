@@ -65,25 +65,40 @@ jobs:
             const isDev = release.prerelease || release.tag_name.includes("dev");
             const channel = isDev ? "dev" : "stable";
             
-            const platforms = {};
+            manifest.channels[channel] = {
+              version: release.tag_name,
+              released_at: release.published_at || new Date().toISOString()
+            };
+            
+            const channelObj = manifest.channels[channel];
+            
+            // Tag-Name maskieren, um Regex-Fehler zu vermeiden
+            const escapedTagName = release.tag_name.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+            const regex = new RegExp("niksphere-([a-zA-Z0-9-]+)-" + escapedTagName + "(?:-(win|linux|mac)-(x64|arm64))?\\.(.+)$");
+            
             if (release.assets) {
               release.assets.forEach(asset => {
-                const match = asset.name.match(/niksphere-cli-.*-(win|linux|mac)-(x64|arm64)\.zip/);
+                const match = asset.name.match(regex);
                 if (match) {
-                  const platformKey = `${match[1]}-${match[2]}`;
-                  platforms[platformKey] = asset.browser_download_url;
+                  const component = match[1];
+                  const os = match[2];
+                  const arch = match[3];
+                  
+                  if (os && arch) {
+                    const platformKey = `${os}-${arch}`;
+                    if (!channelObj[component] || typeof channelObj[component] !== "object") {
+                      channelObj[component] = {};
+                    }
+                    channelObj[component][platformKey] = asset.browser_download_url;
+                  } else {
+                    channelObj[component] = asset.browser_download_url;
+                  }
                 }
               });
             }
             
-            manifest.channels[channel] = {
-              version: release.tag_name,
-              released_at: release.published_at || new Date().toISOString(),
-              platforms: platforms
-            };
-            
             fs.writeFileSync("releases.json", JSON.stringify(manifest, null, 2));
-            console.log(`Kanal "${channel}" erfolgreich auf Version ${release.tag_name} aktualisiert.`);
+            console.log(`Kanal "${channel}" erfolgreich aktualisiert.`);
           '
 
       - name: Commit and Push changes
