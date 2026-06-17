@@ -3,14 +3,21 @@
     "stable": {
       "version": "v1.0.25",
       "released_at": "2026-04-16T14:07:38Z",
-      "platforms": {
+      "cli": {
         "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-cli-v1.0.25-linux-arm64.zip",
         "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-cli-v1.0.25-linux-x64.zip",
         "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-cli-v1.0.25-mac-arm64.zip",
         "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-cli-v1.0.25-mac-x64.zip",
         "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-cli-v1.0.25-win-arm64.zip",
         "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-cli-v1.0.25-win-x64.zip"
-      }
+      },
+      "engine": {
+        "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-engine-v1.0.25-mac-arm64.zip",
+        "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-engine-v1.0.25-mac-x64.zip",
+        "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-engine-v1.0.25-win-arm64.zip",
+        "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-engine-v1.0.25-win-x64.zip"
+      },
+      "ide-vscode": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-ide-vscode-v1.0.25.vsix"
     }
   }
 }
