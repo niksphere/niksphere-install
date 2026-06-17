@@ -49,7 +49,7 @@ jobs:
             const release = data.release || data;
             
             if (!release || !release.tag_name) {
-              console.error("Fehler: Keine gültigen Release-Daten gefunden.");
+              console.error("Error: No valid release data found.");
               process.exit(1);
             }
             
@@ -58,7 +58,7 @@ jobs:
               try {
                 manifest = JSON.parse(fs.readFileSync("releases.json", "utf8"));
               } catch (e) {
-                console.log("Erstelle neue releases.json, da alte Datei ungültig war.");
+                console.log("Creating new releases.json because the old file was invalid.");
               }
             }
             
@@ -72,24 +72,24 @@ jobs:
             
             const channelObj = manifest.channels[channel];
             
-            // Tag-Name maskieren, um Regex-Fehler zu vermeiden
+            // Escape tag name to avoid regex issues
             const escapedTagName = release.tag_name.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
-            const regex = new RegExp("niksphere-([a-zA-Z0-9-]+)-" + escapedTagName + "(?:-(win|linux|mac)-(x64|arm64))?\\.(.+)$");
+            
+            // Regex matches standard platforms (OS-Arch) OR "docker"
+            const regex = new RegExp("niksphere-([a-zA-Z0-9-]+)-" + escapedTagName + "(?:-((?:win|linux|mac)-(?:x64|arm64)|docker))?\\.(.+)$");
             
             if (release.assets) {
               release.assets.forEach(asset => {
                 const match = asset.name.match(regex);
                 if (match) {
                   const component = match[1];
-                  const os = match[2];
-                  const arch = match[3];
+                  const platform = match[2];
                   
-                  if (os && arch) {
-                    const platformKey = `${os}-${arch}`;
+                  if (platform) {
                     if (!channelObj[component] || typeof channelObj[component] !== "object") {
                       channelObj[component] = {};
                     }
-                    channelObj[component][platformKey] = asset.browser_download_url;
+                    channelObj[component][platform] = asset.browser_download_url;
                   } else {
                     channelObj[component] = asset.browser_download_url;
                   }
@@ -98,7 +98,7 @@ jobs:
             }
             
             fs.writeFileSync("releases.json", JSON.stringify(manifest, null, 2));
-            console.log(`Kanal "${channel}" erfolgreich aktualisiert.`);
+            console.log(`Channel "${channel}" successfully updated.`);
           '
 
       - name: Commit and Push changes
@@ -109,7 +109,7 @@ jobs:
           git add releases.json
           
           if git diff --cached --quiet; then
-            echo "Keine Änderungen an der releases.json vorgenommen."
+            echo "No changes made to releases.json."
           else
             git commit -m "chore: update releases.json for release"
             git push origin main
