@@ -1,0 +1,101 @@
+name: Update Release Manifest
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Release Tag (leave empty for latest release)'
+        required: false
+        default: ''
+
+jobs:
+  update-manifest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Release Data
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TAG_NAME="${{ inputs.tag_name }}"
+            if [ -z "$TAG_NAME" ]; then
+              echo "Fetching latest release details..."
+              curl -s -H "Authorization: token $GH_TOKEN" \
+                "https://api.github.com/repos/${{ github.repository }}/releases/latest" > release_data.json
+            else
+              echo "Fetching release details for tag $TAG_NAME..."
+              curl -s -H "Authorization: token $GH_TOKEN" \
+                "https://api.github.com/repos/${{ github.repository }}/releases/tags/$TAG_NAME" > release_data.json
+            fi
+          else
+            cp "$GITHUB_EVENT_PATH" release_data.json
+          fi
+
+      - name: Update releases.json
+        shell: bash
+        run: |
+          node -e '
+            const fs = require("fs");
+            const data = JSON.parse(fs.readFileSync("release_data.json", "utf8"));
+            const release = data.release || data;
+            
+            if (!release || !release.tag_name) {
+              console.error("Fehler: Keine gültigen Release-Daten gefunden.");
+              process.exit(1);
+            }
+            
+            let manifest = { channels: {} };
+            if (fs.existsSync("releases.json")) {
+              try {
+                manifest = JSON.parse(fs.readFileSync("releases.json", "utf8"));
+              } catch (e) {
+                console.log("Erstelle neue releases.json, da alte Datei ungültig war.");
+              }
+            }
+            
+            const isDev = release.prerelease || release.tag_name.includes("dev");
+            const channel = isDev ? "dev" : "stable";
+            
+            const platforms = {};
+            if (release.assets) {
+              release.assets.forEach(asset => {
+                const match = asset.name.match(/niksphere-cli-.*-(win|linux|mac)-(x64|arm64)\.zip/);
+                if (match) {
+                  const platformKey = `${match[1]}-${match[2]}`;
+                  platforms[platformKey] = asset.browser_download_url;
+                }
+              });
+            }
+            
+            manifest.channels[channel] = {
+              version: release.tag_name,
+              released_at: release.published_at || new Date().toISOString(),
+              platforms: platforms
+            };
+            
+            fs.writeFileSync("releases.json", JSON.stringify(manifest, null, 2));
+            console.log(`Kanal "${channel}" erfolgreich auf Version ${release.tag_name} aktualisiert.`);
+          '
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add releases.json
+          
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen an der releases.json vorgenommen."
+          else
+            git commit -m "chore: update releases.json for release"
+            git push origin main
+          fi
