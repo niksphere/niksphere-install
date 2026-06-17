@@ -1,54 +1,71 @@
-# Niksphere CLI
+# Niksphere Distribution & Installation Hub
 
-Welcome to the official installation repository for the **Niksphere CLI**. 
-
-This repository provides seamless, one-line installation scripts to securely download and configure the latest Niksphere binaries onto your system. It supports Windows (amd64/arm64) as well as macOS and Linux.
-
-## Installation
-
-> **Note:** Administrator (root) privileges are **not** required. The CLI installs directly into your user's local directory (`%LOCALAPPDATA%` on Windows, `~/.local/bin` on Mac/Linux).
-
-### Windows (PowerShell)
-
-Open your PowerShell terminal and execute the following script:
-
-```powershell
-Invoke-RestMethod https://raw.githubusercontent.com/niksphere/niksphere-install/main/install.ps1 | Invoke-Expression
-```
-
-### macOS & Linux (Bash)
-
-Open your terminal and run the following shell command:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/niksphere/niksphere-install/main/install.sh | bash
-```
-
-## Post-Installation
-
-Once the installation successfully completes, you will need to **restart your terminal** or open a new tab so that the newly added system paths can be refreshed.
-
-After restarting, verify your installation by simply typing:
-
-```bash
-nik --version
-```
-
-## Uninstallation
-
-If you wish to remove Niksphere from your system, you can use the provided standalone uninstall scripts.
-
-### Windows (PowerShell)
-
-```powershell
-Invoke-RestMethod https://raw.githubusercontent.com/niksphere/niksphere-install/main/uninstall.ps1 | Invoke-Expression
-```
-
-### macOS & Linux (Bash)
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/niksphere/niksphere-install/main/uninstall.sh | bash
-```
+This repository is the central distribution hub for the **Niksphere** ecosystem. It serves two primary purposes:
+1. Hosts the static files and installation scripts for **[install.niksphere.de](https://install.niksphere.de)**.
+2. Tracks all official and development release artifacts across various update channels inside `releases.json`.
 
 ---
-*For manual installations or exploring specific version archives, see the [Releases page](../../releases) of this repository.*
+
+## 🛠️ For End-Users:
+
+Niksphere CLI (`nik`) can be installed using one-line scripts. No administrator (root) privileges are required; the CLI installs directly into the user's local directory (`%LOCALAPPDATA%` on Windows, `~/.local/bin` on macOS/Linux).
+
+### Installation & Updates
+
+To install or update the Niksphere CLI:
+* **Windows**: `Invoke-RestMethod https://install.niksphere.de/install.ps1 | Invoke-Expression`
+* **macOS & Linux**: `curl -fsSL https://install.niksphere.de/install.sh | bash`
+
+### Uninstallation
+To completely remove the Niksphere CLI from your system:
+* **Windows**: `Invoke-RestMethod https://install.niksphere.de/uninstall.ps1 | Invoke-Expression`
+* **macOS & Linux**: `curl -fsSL https://install.niksphere.de/uninstall.sh | bash`
+
+---
+
+## 📦 For Developers: Release Architecture & Manifest
+
+This repository acts as the metadata store for all release components of Niksphere (e.g., `cli`, `engine`, `ide-vscode`).
+
+### The `releases.json` Manifest
+The [releases.json](releases.json) file tracks the latest active releases across different update channels (like `stable` and `dev`). 
+
+```json
+{
+  "channels": {
+    "stable": {
+      "version": "v1.0.25",
+      "released_at": "2026-04-16T14:07:38Z",
+      "cli": {
+        "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-cli-v1.0.25-win-x64.zip",
+        "linux-x64": "..."
+      },
+      "engine": {
+        "docker": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-engine-v1.0.25-docker.tar"
+      },
+      "ide-vscode": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-ide-vscode-v1.0.25.vsix"
+    }
+  }
+}
+```
+
+### Automatic Manifest Updates (GitHub Actions)
+The repository contains an automated GitHub Actions workflow [update-manifest.yml](.github/workflows/update-manifest.yml) that automatically runs whenever a new release is published:
+
+1. **Trigger**: Runs on `release: [published]` or manually via `workflow_dispatch`.
+2. **Asset Parsing**: Scans release assets matching the naming convention:
+   `niksphere-{component}-{version}[-{platform}].{ext}`
+   * *Components*: e.g., `cli`, `engine`, `ide-vscode`
+   * *Platforms*: e.g., `win-x64`, `linux-arm64`, `docker`
+3. **Commit**: Dynamically updates `releases.json` and commits it to the `main` branch, making the metadata instantly available at `https://install.niksphere.de/releases.json`.
+
+---
+
+## 📁 Repository Structure
+
+* **[.github/workflows/](.github/workflows/)**: Contains the automation workflow for updating `releases.json`.
+* **[CNAME](CNAME)**: Mapped to `install.niksphere.de` for GitHub Pages.
+* **[index.html](index.html)**: Redirects browser traffic to the main website.
+* **[install.sh](install.sh) / [install.ps1](install.ps1)**: Script downloads for the Niksphere CLI.
+* **[uninstall.sh](uninstall.sh) / [uninstall.ps1](uninstall.ps1)**: Cleanup utilities.
+* **`releases.json`**: Auto-generated release catalog (live at `https://install.niksphere.de/releases.json`).
