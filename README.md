@@ -35,7 +35,8 @@ The [releases.json](releases.json) file tracks the latest active releases across
   "channels": {
     "stable": {
       "version": "v1.0.25",
-      "released_at": "2026-04-16T14:07:38Z",
+      "published_at": "2026-04-16T14:07:38Z",
+      "notes": "...",
       "cli": {
         "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-cli-v1.0.25-win-x64.zip",
         "linux-x64": "..."

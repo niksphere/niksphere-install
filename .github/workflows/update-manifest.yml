@@ -67,7 +67,8 @@ jobs:
             
             manifest.channels[channel] = {
               version: release.tag_name,
-              released_at: release.published_at || new Date().toISOString()
+              published_at: release.published_at || new Date().toISOString(),
+              notes: release.body || ""
             };
             
             const channelObj = manifest.channels[channel];
