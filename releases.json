@@ -12,6 +12,7 @@
         "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-cli-v1.0.25-win-x64.zip"
       },
       "engine": {
+        "docker": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-engine-v1.0.25-docker.tar",
         "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-engine-v1.0.25-mac-arm64.zip",
         "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-engine-v1.0.25-mac-x64.zip",
         "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-engine-v1.0.25-win-arm64.zip",
