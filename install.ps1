@@ -47,7 +47,15 @@ $UserPath = [Environment]::GetEnvironmentVariable("PATH", "User")
 if ($UserPath -notmatch [regex]::Escape($InstallDir)) {
     Write-Host "Adding $InstallDir to User PATH..."
     [Environment]::SetEnvironmentVariable("PATH", "$UserPath;$InstallDir", "User")
-    Write-Host "`n---> INSTALLATION SUCCESSFUL! Please restart your terminal to start using the 'nik' command! <---"
+}
+
+# Add path to the current session's environment variable so it can be used immediately
+if ($env:Path -notmatch [regex]::Escape($InstallDir)) {
+    $env:Path += ";$InstallDir"
+}
+
+if ($UserPath -notmatch [regex]::Escape($InstallDir)) {
+    Write-Host "`n---> INSTALLATION SUCCESSFUL! The 'nik' command is ready to use in this session! For other sessions, please restart your terminal. <---"
 } else {
-    Write-Host "`n---> UPDATE SUCCESSFUL! Niksphere CLI has been updated. <---"
+    Write-Host "`n---> UPDATE SUCCESSFUL! Niksphere CLI has been updated and is ready to use! <---"
 }
