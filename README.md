@@ -62,6 +62,13 @@ The repository contains an automated GitHub Actions workflow [update-manifest.ym
 
 ---
 
+## 📦 Active Releases / Download Portal
+
+<!-- RELEASES_START -->
+<!-- RELEASES_END -->
+
+---
+
 ## 📁 Repository Structure
 
 * **[.github/workflows/](.github/workflows/)**: Contains the automation workflow for updating `releases.json`.

@@ -118,6 +118,61 @@ jobs:
             
             fs.writeFileSync("releases.json", JSON.stringify(manifest, null, 2));
             console.log("releases.json successfully rebuilt from GitHub Releases.");
+            
+            // Generate README markdown
+            let readmeMarkdown = "\n";
+            const channelsList = ["stable", "insider"];
+            channelsList.forEach(ch => {
+              const capitalizedChannel = ch.charAt(0).toUpperCase() + ch.slice(1);
+              readmeMarkdown += `### 🚀 ${capitalizedChannel} Channel\n\n`;
+              
+              const channelData = manifest.channels[ch] || {};
+              const components = Object.keys(channelData);
+              
+              if (components.length === 0) {
+                readmeMarkdown += "_No releases published in this channel yet._\n\n";
+              } else {
+                readmeMarkdown += "| Component | Version | Published At | Download Links |\n";
+                readmeMarkdown += "| --- | --- | --- | --- |\n";
+                
+                components.forEach(comp => {
+                  const compData = channelData[comp];
+                  const version = compData.version || "N/A";
+                  const date = compData.published_at ? new Date(compData.published_at).toISOString().replace("T", " ").substring(0, 16) + " UTC" : "N/A";
+                  
+                  // Build download links
+                  let links = [];
+                  if (compData.assets) {
+                    for (const plat in compData.assets) {
+                      const url = compData.assets[plat];
+                      links.push(`[${plat}](${url})`);
+                    }
+                  }
+                  const linksStr = links.length > 0 ? links.join(" \\| ") : "No assets available";
+                  
+                  readmeMarkdown += `| \`${comp}\` | \`${version}\` | ${date} | ${linksStr} |\n`;
+                });
+                readmeMarkdown += "\n";
+              }
+            });
+            
+            // Update README.md file
+            if (fs.existsSync("README.md")) {
+              let readmeContent = fs.readFileSync("README.md", "utf8");
+              const startMarker = "<!-- RELEASES_START -->";
+              const endMarker = "<!-- RELEASES_END -->";
+              
+              if (readmeContent.includes(startMarker) && readmeContent.includes(endMarker)) {
+                const startIndex = readmeContent.indexOf(startMarker) + startMarker.length;
+                const endIndex = readmeContent.indexOf(endMarker);
+                
+                const newReadmeContent = readmeContent.substring(0, startIndex) + readmeMarkdown + readmeContent.substring(endIndex);
+                fs.writeFileSync("README.md", newReadmeContent, "utf8");
+                console.log("README.md successfully updated with latest release tables.");
+              } else {
+                console.log("Warning: Markers <!-- RELEASES_START --> and <!-- RELEASES_END --> not found in README.md.");
+              }
+            }
           '
 
       - name: Commit and Push changes
@@ -127,12 +182,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          git add releases.json
+          git add releases.json README.md
           
           if git diff --cached --quiet; then
-            echo "No changes made to releases.json."
+            echo "No changes made to releases.json and README.md."
           else
-            git commit -m "chore: update releases.json for release"
+            git commit -m "chore: update releases.json and README.md for release"
             git push origin main
             
             echo "Triggering GitHub Pages deployment workflow..."
