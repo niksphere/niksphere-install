@@ -32,6 +32,12 @@
         }
       }
     },
-    "insider": {}
+    "insider": {
+      "vscode": {
+        "versions": "vv1.0.0-build.1",
+        "published_at": "2026-07-16T08:53:40Z",
+        "assets": {}
+      }
+    }
   }
 }
