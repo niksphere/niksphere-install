@@ -77,29 +77,26 @@ jobs:
                     assets: {}
                   };
                   
-                  const escapedVersion = version.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
-                  
-                  // Regex matches component name and version with optional platform or openapi suffix
-                  const regex = new RegExp("niksphere-([a-zA-Z0-9-]+)-" + escapedVersion + "(?:-((?:win|linux|mac)-(?:x64|arm64)|docker|openapi))?\\.(.+)$");
-                  
                   if (release.assets) {
                     release.assets.forEach(asset => {
-                      const match = asset.name.match(regex);
-                      if (match) {
-                        const matchedComponent = match[1];
-                        const platform = match[2];
+                      const assetName = asset.name;
+                      const expectedPrefix = `niksphere-${component}-${version}`;
+                      
+                      if (assetName.includes(expectedPrefix)) {
+                        const remaining = assetName.substring(expectedPrefix.length);
+                        const lastDotIndex = remaining.lastIndexOf(".");
+                        const rawSuffix = lastDotIndex !== -1 ? remaining.substring(0, lastDotIndex) : remaining;
+                        let key = rawSuffix.startsWith("-") ? rawSuffix.substring(1) : rawSuffix;
                         
-                        if (matchedComponent === component) {
-                          if (platform) {
-                            channelObj[component].assets[platform] = asset.browser_download_url;
+                        if (!key) {
+                          if (component === "ide-vscode") {
+                            key = "vsix";
                           } else {
-                            if (component === "ide-vscode") {
-                              channelObj[component].assets["vsix"] = asset.browser_download_url;
-                            } else {
-                              channelObj[component].assets["default"] = asset.browser_download_url;
-                            }
+                            key = "default";
                           }
                         }
+                        
+                        channelObj[component].assets[key] = asset.browser_download_url;
                       }
                     });
                   }
