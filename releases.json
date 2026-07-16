@@ -21,6 +21,18 @@
         "assets": {
           "vsix": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.2/niksphere-ide-vscode-v1.0.0-build.2.vsix"
         }
+      },
+      "engine": {
+        "version": "v1.1.0-build.7",
+        "published_at": "2026-07-16T10:44:21Z",
+        "assets": {
+          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-linux-arm64.zip",
+          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-linux-x64.zip",
+          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-mac-arm64.zip",
+          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-mac-x64.zip",
+          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-win-arm64.zip",
+          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-win-x64.zip"
+        }
       }
     }
   }

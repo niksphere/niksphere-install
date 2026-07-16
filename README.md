@@ -20,5 +20,6 @@ This repository is the central distribution hub for the **Niksphere** ecosystem.
 | Component | Version | Published At | Download Links |
 | --- | --- | --- | --- |
 | `ide-vscode` | `v1.0.0-build.2` | 2026-07-16 09:50 UTC | [vsix](https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.2/niksphere-ide-vscode-v1.0.0-build.2.vsix) |
+| `engine` | `v1.1.0-build.7` | 2026-07-16 10:44 UTC | [linux-arm64](https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-linux-arm64.zip) \| [linux-x64](https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-linux-x64.zip) \| [mac-arm64](https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-mac-arm64.zip) \| [mac-x64](https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-mac-x64.zip) \| [win-arm64](https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-win-arm64.zip) \| [win-x64](https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-win-x64.zip) |
 
 <!-- RELEASES_END -->
