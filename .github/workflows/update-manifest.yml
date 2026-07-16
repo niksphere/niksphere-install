@@ -42,17 +42,12 @@ jobs:
               process.exit(1);
             }
             
-            let manifest = { channels: {} };
-            if (fs.existsSync("releases.json")) {
-              try {
-                manifest = JSON.parse(fs.readFileSync("releases.json", "utf8"));
-              } catch (e) {
-                console.log("Creating new releases.json because the old file was invalid.");
+            const manifest = {
+              channels: {
+                stable: {},
+                insider: {}
               }
-            }
-            if (!manifest.channels) {
-              manifest.channels = {};
-            }
+            };
             
             // Sort releases chronologically ascending (oldest first) so newer ones overwrite older ones
             releases.sort((a, b) => new Date(a.published_at) - new Date(b.published_at));
