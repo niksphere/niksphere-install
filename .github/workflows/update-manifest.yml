@@ -127,7 +127,7 @@ jobs:
             
             fs.writeFileSync("releases.json", JSON.stringify(manifest, null, 2));
             console.log("releases.json successfully rebuilt from GitHub Releases.");
-          ''
+          '
 
       - name: Commit and Push changes
         run: |
