@@ -4,11 +4,6 @@ on:
   release:
     types: [published, edited, prereleased]
   workflow_dispatch:
-    inputs:
-      tag_name:
-        description: 'Release Tag (leave empty for latest release)'
-        required: false
-        default: ''
 
 concurrency:
   group: update-release-manifest
