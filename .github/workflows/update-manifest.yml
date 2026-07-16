@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
 
     steps:
       - name: Checkout Repository
@@ -120,6 +121,8 @@ jobs:
           '
 
       - name: Commit and Push changes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -131,4 +134,7 @@ jobs:
           else
             git commit -m "chore: update releases.json for release"
             git push origin main
+            
+            echo "Triggering GitHub Pages deployment workflow..."
+            gh workflow run pages.yml --repo "${{ github.repository }}" --ref main
           fi
