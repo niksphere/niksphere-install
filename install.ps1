@@ -1,14 +1,18 @@
 $ErrorActionPreference = "Stop"
 
-$Repo = "niksphere/niksphere-install"
-$ApiUrl = "https://api.github.com/repos/$Repo/releases/latest"
+$ManifestUrl = "https://install.niksphere.de/releases.json"
+$FallbackUrl = "https://raw.githubusercontent.com/niksphere/niksphere-install/main/releases.json"
 
-Write-Host "Fetching latest release information for Niksphere..."
+Write-Host "Fetching latest release information for Niksphere CLI..."
 try {
-    $Release = Invoke-RestMethod -Uri $ApiUrl -UseBasicParsing
+    $Manifest = Invoke-RestMethod -Uri $ManifestUrl -UseBasicParsing
 } catch {
-    Write-Error "Failed to fetch release information. Make sure the repository is public and has at least one published release."
-    exit 1
+    try {
+        $Manifest = Invoke-RestMethod -Uri $FallbackUrl -UseBasicParsing
+    } catch {
+        Write-Error "Failed to fetch release manifest. Check your internet connection."
+        exit 1
+    }
 }
 
 $Arch = "x64"
@@ -16,16 +20,16 @@ if ($env:PROCESSOR_ARCHITECTURE -match "ARM") {
     $Arch = "arm64"
 }
 
-# Find the correct zip among the release assets
-$AssetNamePattern = "niksphere-cli-.*-win-$Arch\.zip"
-$Asset = $Release.assets | Where-Object { $_.name -match $AssetNamePattern } | Select-Object -First 1
+$Platform = "win-$Arch"
+# By default, install the stable channel
+$Channel = "stable"
 
-if (!$Asset) {
-    Write-Error "No matching release found for Windows $Arch in the latest Release."
+$DownloadUrl = $Manifest.channels.$Channel.cli.assets.$Platform
+
+if (!$DownloadUrl) {
+    Write-Error "No matching release found for Windows $Arch in the $Channel channel."
     exit 1
 }
-
-$DownloadUrl = $Asset.browser_download_url
 $ZipPath = Join-Path $env:TEMP "niksphere-cli.zip"
 $InstallDir = Join-Path $env:LOCALAPPDATA "niksphere\bin"
 

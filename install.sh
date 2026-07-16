@@ -22,13 +22,31 @@ else
     exit 1
 fi
 
-API_URL="https://api.github.com/repos/$REPO/releases/latest"
+MANIFEST_URL="https://install.niksphere.de/releases.json"
+FALLBACK_URL="https://raw.githubusercontent.com/niksphere/niksphere-install/main/releases.json"
+CHANNEL="stable"
 
-# Get the download URL directly from the GitHub API response
-DOWNLOAD_URL=$(curl -s $API_URL | grep "browser_download_url.*niksphere-cli-.*-${OS_SHORT}-${ARCH_SHORT}\.zip" | cut -d '"' -f 4 | head -n 1)
+MANIFEST_JSON=$(curl -sL "$MANIFEST_URL")
+if [ -z "$MANIFEST_JSON" ] || ! echo "$MANIFEST_JSON" | grep -q "channels"; then
+    MANIFEST_JSON=$(curl -sL "$FALLBACK_URL")
+fi
+
+if [ -z "$MANIFEST_JSON" ]; then
+    echo "Error: Failed to fetch release manifest."
+    exit 1
+fi
+
+# Try extracting via python3 if available, otherwise fallback to grep
+if command -v python3 >/dev/null 2>&1; then
+    DOWNLOAD_URL=$(echo "$MANIFEST_JSON" | python3 -c "import sys, json; data = json.load(sys.stdin); print(data.get('channels', {}).get('$CHANNEL', {}).get('cli', {}).get('assets', {}).get('${OS_SHORT}-${ARCH_SHORT}', ''))" 2>/dev/null)
+fi
 
 if [ -z "$DOWNLOAD_URL" ]; then
-    echo "Error: No matching release found for $OS_SHORT $ARCH_SHORT."
+    DOWNLOAD_URL=$(echo "$MANIFEST_JSON" | grep -o 'https://github.com/niksphere/niksphere-install/releases/download/[^"]*' | grep "cli-" | grep "${OS_SHORT}-${ARCH_SHORT}" | head -n 1)
+fi
+
+if [ -z "$DOWNLOAD_URL" ]; then
+    echo "Error: No matching release found for $OS_SHORT $ARCH_SHORT in $CHANNEL channel."
     exit 1
 fi
 
