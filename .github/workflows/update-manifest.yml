@@ -88,26 +88,19 @@ jobs:
             }
             const channelObj = manifest.channels[channel];
             
-            // Initialize versions and published_at objects
-            if (!channelObj.versions) {
-              channelObj.versions = {};
-            }
-            if (!channelObj.published_at) {
-              channelObj.published_at = {};
-            }
-            
-            // Clean up legacy global properties
+            // Clean up legacy global properties if present
             delete channelObj.version;
             delete channelObj.published_at;
             delete channelObj.notes;
+            delete channelObj.versions;
             
-            // Set component versions & date
+            // Initialize component structure
             if (component) {
-              channelObj.versions[component] = version;
-              channelObj.published_at[component] = release.published_at || new Date().toISOString();
-              
-              // Clear previous assets for this component
-              delete channelObj[component];
+              channelObj[component] = {
+                versions: version,
+                published_at: release.published_at || new Date().toISOString(),
+                assets: {}
+              };
             }
             
             const escapedVersion = version.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
@@ -123,13 +116,18 @@ jobs:
                   const platform = match[2];
                   
                   if (matchedComponent === component) {
+                    if (!channelObj[matchedComponent].assets) {
+                      channelObj[matchedComponent].assets = {};
+                    }
+                    
                     if (platform) {
-                      if (!channelObj[matchedComponent] || typeof channelObj[matchedComponent] !== "object") {
-                        channelObj[matchedComponent] = {};
-                      }
-                      channelObj[matchedComponent][platform] = asset.browser_download_url;
+                      channelObj[matchedComponent].assets[platform] = asset.browser_download_url;
                     } else {
-                      channelObj[matchedComponent] = asset.browser_download_url;
+                      if (matchedComponent === "ide-vscode") {
+                        channelObj[matchedComponent].assets["vsix"] = asset.browser_download_url;
+                      } else {
+                        channelObj[matchedComponent].assets["default"] = asset.browser_download_url;
+                      }
                     }
                   }
                 }
