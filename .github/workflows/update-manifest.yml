@@ -10,6 +10,10 @@ on:
         required: false
         default: ''
 
+concurrency:
+  group: update-release-manifest
+  cancel-in-progress: false
+
 jobs:
   update-manifest:
     runs-on: ubuntu-latest
