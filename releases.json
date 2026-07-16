@@ -1,9 +1,16 @@
 {
   "channels": {
     "stable": {
-      "version": "v1.0.25",
-      "published_at": "2026-04-16T14:07:38Z",
-      "notes": "It’s common practice to prefix your version names with the letter v. Some good tag names might be v1.0.0 or v2.3.4.\r\n\r\nIf the tag isn’t meant for production use, add a pre-release version after the version name. Some good pre-release versions might be v0.2.0-alpha or v5.9-beta.3.\r\n\r\n## Test\r\n\r\nBlub",
+      "versions": {
+        "cli": "v1.0.25",
+        "engine": "v1.0.25",
+        "ide-vscode": "v1.0.25"
+      },
+      "published_at": {
+        "cli": "2026-04-16T14:07:38Z",
+        "engine": "2026-04-16T14:07:38Z",
+        "ide-vscode": "2026-04-16T14:07:38Z"
+      },
       "cli": {
         "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-cli-v1.0.25-linux-arm64.zip",
         "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-cli-v1.0.25-linux-x64.zip",
@@ -20,6 +27,10 @@
         "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-engine-v1.0.25-win-x64.zip"
       },
       "ide-vscode": "https://github.com/niksphere/niksphere-install/releases/download/v1.0.25/niksphere-ide-vscode-v1.0.25.vsix"
+    },
+    "insider": {
+      "versions": {},
+      "published_at": {}
     }
   }
 }
