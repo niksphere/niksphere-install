@@ -31,40 +31,19 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            TAG_NAME="${{ inputs.tag_name }}"
-            if [ -z "$TAG_NAME" ]; then
-              echo "Fetching latest release details (including prereleases)..."
-              curl -s -H "Authorization: token $GH_TOKEN" \
-                "https://api.github.com/repos/${{ github.repository }}/releases" | node -e '
-                  const fs = require("fs");
-                  const data = JSON.parse(fs.readFileSync(0, "utf-8"));
-                  if (Array.isArray(data) && data.length > 0) {
-                    fs.writeFileSync("release_data.json", JSON.stringify(data[0]));
-                  } else {
-                    console.error("No releases found in repository.");
-                    process.exit(1);
-                  }
-                '
-            else
-              echo "Fetching release details for tag $TAG_NAME..."
-              curl -s -H "Authorization: token $GH_TOKEN" \
-                "https://api.github.com/repos/${{ github.repository }}/releases/tags/$TAG_NAME" > release_data.json
-            fi
-          else
-            cp "$GITHUB_EVENT_PATH" release_data.json
-          fi
+          echo "Fetching all releases from repository..."
+          curl -s -H "Authorization: token $GH_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/releases?per_page=100" > releases_list.json
 
       - name: Update releases.json
         shell: bash
         run: |
           node -e '
             const fs = require("fs");
-            const data = JSON.parse(fs.readFileSync("release_data.json", "utf8"));
-            const release = data.release || data;
+            const releases = JSON.parse(fs.readFileSync("releases_list.json", "utf8"));
             
-            if (!release || !release.tag_name) {
-              console.error("Error: No valid release data found.");
+            if (!Array.isArray(releases)) {
+              console.error("Error: Invalid releases list retrieved.");
               process.exit(1);
             }
             
@@ -80,72 +59,82 @@ jobs:
               manifest.channels = {};
             }
             
-            const tag = release.tag_name;
-            let component = "";
-            let version = tag;
-            if (tag.includes("/")) {
-              const parts = tag.split("/");
-              component = parts[0]; // "cli", "engine", "ide-vscode"
-              version = parts[1];   // "v1.0.0-build.1"
-            }
+            // Sort releases chronologically ascending (oldest first) so newer ones overwrite older ones
+            releases.sort((a, b) => new Date(a.published_at) - new Date(b.published_at));
             
-            // Channels: "stable" or "insider"
-            const channel = release.prerelease ? "insider" : "stable";
-            
-            if (!manifest.channels[channel]) {
-              manifest.channels[channel] = {};
-            }
-            const channelObj = manifest.channels[channel];
-            
-            // Clean up legacy global properties if present
-            delete channelObj.version;
-            delete channelObj.published_at;
-            delete channelObj.notes;
-            delete channelObj.versions;
-            
-            // Initialize component structure
-            if (component) {
-              channelObj[component] = {
-                versions: version,
-                published_at: release.published_at || new Date().toISOString(),
-                assets: {}
-              };
-            }
-            
-            const escapedVersion = version.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
-            
-            // Regex matches standard platforms (OS-Arch) OR "docker"
-            const regex = new RegExp("niksphere-([a-zA-Z0-9-]+)-" + escapedVersion + "(?:-((?:win|linux|mac)-(?:x64|arm64)|docker))?\\.(.+)$");
-            
-            if (release.assets) {
-              release.assets.forEach(asset => {
-                const match = asset.name.match(regex);
-                if (match) {
-                  const matchedComponent = match[1];
-                  const platform = match[2];
+            releases.forEach(release => {
+              const tag = release.tag_name;
+              
+              // Only process decoupled releases containing a slash "/"
+              if (tag.includes("/")) {
+                const parts = tag.split("/");
+                let component = parts[0]; // "cli", "engine", "ide-vscode" (or "vscode" for legacy tags)
+                const version = parts[1];   // e.g. "v1.0.0-build.1"
+                
+                // Normalise legacy "vscode" prefix to "ide-vscode"
+                if (component === "vscode") {
+                  component = "ide-vscode";
+                }
+                
+                if (component === "cli" || component === "engine" || component === "ide-vscode") {
+                  const channel = release.prerelease ? "insider" : "stable";
                   
-                  if (matchedComponent === component) {
-                    if (!channelObj[matchedComponent].assets) {
-                      channelObj[matchedComponent].assets = {};
-                    }
-                    
-                    if (platform) {
-                      channelObj[matchedComponent].assets[platform] = asset.browser_download_url;
-                    } else {
-                      if (matchedComponent === "ide-vscode") {
-                        channelObj[matchedComponent].assets["vsix"] = asset.browser_download_url;
-                      } else {
-                        channelObj[matchedComponent].assets["default"] = asset.browser_download_url;
+                  if (!manifest.channels[channel]) {
+                    manifest.channels[channel] = {};
+                  }
+                  const channelObj = manifest.channels[channel];
+                  
+                  // Initialize component structure
+                  channelObj[component] = {
+                    versions: version,
+                    published_at: release.published_at || new Date().toISOString(),
+                    assets: {}
+                  };
+                  
+                  // Normalize version for matching (remove leading v's)
+                  const cleanVer = version.replace(/^v+/, "");
+                  const escapedVer = cleanVer.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+                  
+                  // Regex matches component name and version with optional platform
+                  const regex = new RegExp("niksphere-([a-zA-Z0-9-]+)-v*" + escapedVer + "(?:-((?:win|linux|mac)-(?:x64|arm64)|docker))?\\.(.+)$");
+                  
+                  if (release.assets) {
+                    release.assets.forEach(asset => {
+                      const match = asset.name.match(regex);
+                      if (match) {
+                        const matchedComponent = match[1];
+                        const platform = match[2];
+                        
+                        if (matchedComponent === component) {
+                          if (platform) {
+                            channelObj[component].assets[platform] = asset.browser_download_url;
+                          } else {
+                            if (component === "ide-vscode") {
+                              channelObj[component].assets["vsix"] = asset.browser_download_url;
+                            } else {
+                              channelObj[component].assets["default"] = asset.browser_download_url;
+                            }
+                          }
+                        }
                       }
-                    }
+                    });
                   }
                 }
-              });
+              }
+            });
+            
+            // Clean up legacy global properties in channels if they exist
+            for (const ch in manifest.channels) {
+              const channelObj = manifest.channels[ch];
+              delete channelObj.version;
+              delete channelObj.published_at;
+              delete channelObj.notes;
+              delete channelObj.versions;
             }
             
             fs.writeFileSync("releases.json", JSON.stringify(manifest, null, 2));
-            console.log(`Channel "${channel}" component "${component}" successfully updated.`);
-          '
+            console.log("releases.json successfully rebuilt from GitHub Releases.");
+          ''
 
       - name: Commit and Push changes
         run: |
