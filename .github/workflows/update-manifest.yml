@@ -79,8 +79,8 @@ jobs:
                   
                   const escapedVersion = version.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
                   
-                  // Regex matches component name and version with optional platform
-                  const regex = new RegExp("niksphere-([a-zA-Z0-9-]+)-" + escapedVersion + "(?:-((?:win|linux|mac)-(?:x64|arm64)|docker))?\\.(.+)$");
+                  // Regex matches component name and version with optional platform or openapi suffix
+                  const regex = new RegExp("niksphere-([a-zA-Z0-9-]+)-" + escapedVersion + "(?:-((?:win|linux|mac)-(?:x64|arm64)|docker|openapi))?\\.(.+)$");
                   
                   if (release.assets) {
                     release.assets.forEach(asset => {
