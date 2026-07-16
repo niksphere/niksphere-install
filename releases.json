@@ -2,15 +2,15 @@
   "channels": {
     "stable": {
       "engine": {
-        "version": "v1.0.0-build.3",
-        "published_at": "2026-07-16T09:53:16Z",
+        "version": "v1.0.0-build.5",
+        "published_at": "2026-07-16T10:18:16Z",
         "assets": {
-          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-linux-arm64.zip",
-          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-linux-x64.zip",
-          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-mac-arm64.zip",
-          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-mac-x64.zip",
-          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-win-arm64.zip",
-          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-win-x64.zip"
+          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-linux-arm64.zip",
+          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-linux-x64.zip",
+          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-mac-arm64.zip",
+          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-mac-x64.zip",
+          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-win-arm64.zip",
+          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-win-x64.zip"
         }
       }
     },
