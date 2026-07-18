@@ -1,0 +1,40 @@
+name: Cleanup Old Insider Releases
+
+on:
+  schedule:
+    - cron: '0 3 * * 0' # Every Sunday at 03:00 UTC
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry Run (only log what would be deleted)'
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run Cleanup Script
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const script = require('./.github/scripts/cleanup-releases.js');
+            const dryRun = ${{ github.event.inputs.dry_run || 'false' }};
+            await script({ github, context, core }, dryRun);
+
+      - name: Trigger Manifest Update
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Triggering update-manifest.yml workflow to sync releases.json and README.md..."
+          gh workflow run update-manifest.yml --repo "${{ github.repository }}" --ref main || true
