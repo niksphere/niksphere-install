@@ -24,16 +24,16 @@
         }
       },
       "engine": {
-        "version": "v1.1.0-build.8",
-        "published_at": "2026-07-17T05:15:19Z",
+        "version": "v1.1.0-build.9",
+        "published_at": "2026-07-18T04:50:29Z",
         "assets": {
-          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-linux-arm64.zip",
-          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-linux-x64.zip",
-          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-mac-arm64.zip",
-          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-mac-x64.zip",
-          "openapi": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-openapi.yaml",
-          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-win-arm64.zip",
-          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-win-x64.zip"
+          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.9/niksphere-engine-v1.1.0-build.9-linux-arm64.zip",
+          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.9/niksphere-engine-v1.1.0-build.9-linux-x64.zip",
+          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.9/niksphere-engine-v1.1.0-build.9-mac-arm64.zip",
+          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.9/niksphere-engine-v1.1.0-build.9-mac-x64.zip",
+          "openapi": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.9/niksphere-engine-v1.1.0-build.9-openapi.yaml",
+          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.9/niksphere-engine-v1.1.0-build.9-win-arm64.zip",
+          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.9/niksphere-engine-v1.1.0-build.9-win-x64.zip"
         }
       },
       "cli": {
