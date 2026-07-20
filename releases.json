@@ -37,15 +37,15 @@
         }
       },
       "cli": {
-        "version": "v1.0.0-build.6",
-        "published_at": "2026-07-20T05:36:33Z",
+        "version": "v1.0.0-build.7",
+        "published_at": "2026-07-20T19:35:06Z",
         "assets": {
-          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.6/niksphere-cli-v1.0.0-build.6-linux-arm64.zip",
-          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.6/niksphere-cli-v1.0.0-build.6-linux-x64.zip",
-          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.6/niksphere-cli-v1.0.0-build.6-mac-arm64.zip",
-          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.6/niksphere-cli-v1.0.0-build.6-mac-x64.zip",
-          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.6/niksphere-cli-v1.0.0-build.6-win-arm64.zip",
-          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.6/niksphere-cli-v1.0.0-build.6-win-x64.zip"
+          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-linux-arm64.zip",
+          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-linux-x64.zip",
+          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-mac-arm64.zip",
+          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-mac-x64.zip",
+          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-win-arm64.zip",
+          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-win-x64.zip"
         }
       }
     }
