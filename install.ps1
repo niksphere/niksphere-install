@@ -21,8 +21,18 @@ if ($env:PROCESSOR_ARCHITECTURE -match "ARM") {
 }
 
 $Platform = "win-$Arch"
-# By default, install the stable channel
-$Channel = "stable"
+# Determine the release channel (stable, insider, etc.)
+if (-not $Channel) {
+    if ($env:NIKSPHERE_CHANNEL) {
+        $Channel = $env:NIKSPHERE_CHANNEL
+    } elseif ($env:NIKSPHERE_RELEASE) {
+        $Channel = $env:NIKSPHERE_RELEASE
+    } elseif ($env:Channel) {
+        $Channel = $env:Channel
+    } else {
+        $Channel = "stable"
+    }
+}
 
 $DownloadUrl = $Manifest.channels.$Channel.cli.assets.$Platform
 

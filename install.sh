@@ -24,7 +24,7 @@ fi
 
 MANIFEST_URL="https://install.niksphere.de/releases.json"
 FALLBACK_URL="https://raw.githubusercontent.com/niksphere/niksphere-install/main/releases.json"
-CHANNEL="stable"
+CHANNEL="${NIKSPHERE_CHANNEL:-${NIKSPHERE_RELEASE:-${CHANNEL:-stable}}}"
 
 MANIFEST_JSON=$(curl -sL "$MANIFEST_URL")
 if [ -z "$MANIFEST_JSON" ] || ! echo "$MANIFEST_JSON" | grep -q "channels"; then
