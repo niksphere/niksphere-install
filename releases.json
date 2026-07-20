@@ -37,15 +37,15 @@
         }
       },
       "cli": {
-        "version": "v1.0.0-build.7",
-        "published_at": "2026-07-20T19:35:06Z",
+        "version": "v1.0.0-build.8-channel.insider",
+        "published_at": "2026-07-20T20:16:47Z",
         "assets": {
-          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-linux-arm64.zip",
-          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-linux-x64.zip",
-          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-mac-arm64.zip",
-          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-mac-x64.zip",
-          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-win-arm64.zip",
-          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-win-x64.zip"
+          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.8-channel.insider/niksphere-cli-v1.0.0-build.8-channel.insider-linux-arm64.zip",
+          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.8-channel.insider/niksphere-cli-v1.0.0-build.8-channel.insider-linux-x64.zip",
+          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.8-channel.insider/niksphere-cli-v1.0.0-build.8-channel.insider-mac-arm64.zip",
+          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.8-channel.insider/niksphere-cli-v1.0.0-build.8-channel.insider-mac-x64.zip",
+          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.8-channel.insider/niksphere-cli-v1.0.0-build.8-channel.insider-win-arm64.zip",
+          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.8-channel.insider/niksphere-cli-v1.0.0-build.8-channel.insider-win-x64.zip"
         }
       }
     }
