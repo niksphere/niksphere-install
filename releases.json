@@ -29,10 +29,10 @@
     },
     "insider": {
       "ide-vscode": {
-        "version": "v1.0.0-build.8",
-        "published_at": "2026-07-21T05:14:20Z",
+        "version": "v1.0.0-build.9-channel.insider",
+        "published_at": "2026-07-21T15:21:43Z",
         "assets": {
-          "vsix": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.8/niksphere-ide-vscode-v1.0.0-build.8.vsix"
+          "vsix": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.9-channel.insider/niksphere-ide-vscode-v1.0.0-build.9-channel.insider.vsix"
         }
       },
       "engine": {
