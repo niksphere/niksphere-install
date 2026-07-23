@@ -53,7 +53,7 @@ jobs:
             const componentNames = {
               "cli": "Niksphere CLI",
               "engine": "Niksphere Engine",
-              "ide-vscode": "Niksphere IDE for VS Code"
+              "ide-vscode": "Niksphere VS Code Extension"
             };
 
             releases.forEach(release => {

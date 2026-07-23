@@ -42,7 +42,7 @@
     "insider": {
       "ide-vscode": [
         {
-          "name": "Niksphere IDE for VS Code",
+          "name": "Niksphere VS Code Extension",
           "version": "v1.0.0-build.7",
           "published_at": "2026-07-20T19:30:15Z",
           "assets": {
