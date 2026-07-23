@@ -50,14 +50,11 @@ jobs:
               }
             };
             
-            // Sort releases chronologically ascending (oldest first) so newer ones overwrite older ones
-            releases.sort((a, b) => new Date(a.published_at) - new Date(b.published_at));
-            
             releases.forEach(release => {
               const tag = release.tag_name;
               
               // Only process decoupled releases containing a slash "/"
-              if (tag.includes("/")) {
+              if (tag && tag.includes("/")) {
                 const parts = tag.split("/");
                 const component = parts[0]; // "cli", "engine", "ide-vscode"
                 const version = parts[1];   // e.g. "v1.0.0-build.1"
@@ -69,14 +66,11 @@ jobs:
                     manifest.channels[channel] = {};
                   }
                   const channelObj = manifest.channels[channel];
+                  if (!channelObj[component]) {
+                    channelObj[component] = [];
+                  }
                   
-                  // Initialize component structure
-                  channelObj[component] = {
-                    version: version,
-                    published_at: release.published_at || new Date().toISOString(),
-                    assets: {}
-                  };
-                  
+                  const assets = {};
                   if (release.assets) {
                     release.assets.forEach(asset => {
                       const assetName = asset.name;
@@ -96,21 +90,26 @@ jobs:
                           }
                         }
                         
-                        channelObj[component].assets[key] = asset.browser_download_url;
+                        assets[key] = asset.browser_download_url;
                       }
                     });
                   }
+
+                  channelObj[component].push({
+                    version: version,
+                    published_at: release.published_at || new Date().toISOString(),
+                    assets: assets
+                  });
                 }
               }
             });
-            
-            // Clean up legacy global properties in channels if they exist
+
+            // Sort releases in each component array chronologically descending (newest first)
             for (const ch in manifest.channels) {
               const channelObj = manifest.channels[ch];
-              delete channelObj.version;
-              delete channelObj.published_at;
-              delete channelObj.notes;
-              delete channelObj.versions;
+              for (const comp in channelObj) {
+                channelObj[comp].sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+              }
             }
             
             fs.writeFileSync("releases.json", JSON.stringify(manifest, null, 2));
@@ -133,7 +132,8 @@ jobs:
                 readmeMarkdown += "| --- | --- | --- | --- |\n";
                 
                 components.forEach(comp => {
-                  const compData = channelData[comp];
+                  const compList = channelData[comp] || [];
+                  const compData = compList[0] || {};
                   const version = compData.version || "N/A";
                   const date = compData.published_at ? new Date(compData.published_at).toISOString().replace("T", " ").substring(0, 16) + " UTC" : "N/A";
                   

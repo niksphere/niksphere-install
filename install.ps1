@@ -1,9 +1,14 @@
+param (
+    [string]$Channel = "stable",
+    [string]$Version = ""
+)
+
 $ErrorActionPreference = "Stop"
 
 $ManifestUrl = "https://install.niksphere.de/releases.json"
 $FallbackUrl = "https://raw.githubusercontent.com/niksphere/niksphere-install/main/releases.json"
 
-Write-Host "Fetching latest release information for Niksphere CLI..."
+Write-Host "Fetching release information for Niksphere CLI..."
 try {
     $Manifest = Invoke-RestMethod -Uri $ManifestUrl -UseBasicParsing
 } catch {
@@ -21,29 +26,34 @@ if ($env:PROCESSOR_ARCHITECTURE -match "ARM") {
 }
 
 $Platform = "win-$Arch"
-# Determine the release channel (stable, insider, etc.)
-if (-not $Channel) {
-    if ($env:NIKSPHERE_CHANNEL) {
-        $Channel = $env:NIKSPHERE_CHANNEL
-    } elseif ($env:NIKSPHERE_RELEASE) {
-        $Channel = $env:NIKSPHERE_RELEASE
-    } elseif ($env:Channel) {
-        $Channel = $env:Channel
-    } else {
-        $Channel = "stable"
-    }
-}
 
-$DownloadUrl = $Manifest.channels.$Channel.cli.assets.$Platform
-
-if (!$DownloadUrl) {
-    Write-Error "No matching release found for Windows $Arch in the $Channel channel."
+$ComponentReleases = $Manifest.channels.$Channel.cli
+if (-not $ComponentReleases -or $ComponentReleases.Count -eq 0) {
+    Write-Error "No releases found for CLI in channel '$Channel'."
     exit 1
 }
+
+if ($Version) {
+    $SelectedRelease = $ComponentReleases | Where-Object { $_.version -eq $Version } | Select-Object -First 1
+    if (-not $SelectedRelease) {
+        Write-Error "Release version '$Version' not found for CLI in channel '$Channel'."
+        exit 1
+    }
+} else {
+    $SelectedRelease = $ComponentReleases[0]
+}
+
+$DownloadUrl = $SelectedRelease.assets.$Platform
+
+if (-not $DownloadUrl) {
+    Write-Error "No matching asset found for Windows $Arch in CLI $($SelectedRelease.version) ($Channel channel)."
+    exit 1
+}
+
 $ZipPath = Join-Path $env:TEMP "niksphere-cli.zip"
 $InstallDir = Join-Path $env:LOCALAPPDATA "niksphere\bin"
 
-Write-Host "Downloading $($Asset.name)..."
+Write-Host "Downloading Niksphere CLI $($SelectedRelease.version) ($Platform)..."
 Invoke-WebRequest -Uri $DownloadUrl -OutFile $ZipPath -UseBasicParsing
 
 Write-Host "Extracting to $InstallDir..."

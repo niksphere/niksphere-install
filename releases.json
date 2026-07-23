@@ -1,65 +1,61 @@
 {
   "channels": {
     "stable": {
-      "engine": {
-        "version": "v1.0.0-build.6",
-        "published_at": "2026-07-16T10:25:46Z",
-        "assets": {
-          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-linux-arm64.zip",
-          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-linux-x64.zip",
-          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-mac-arm64.zip",
-          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-mac-x64.zip",
-          "openapi": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-openapi.yaml",
-          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-win-arm64.zip",
-          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-win-x64.zip"
+      "engine": [
+        {
+          "version": "v1.0.0-build.6",
+          "published_at": "2026-07-16T10:25:46Z",
+          "assets": {
+            "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-linux-arm64.zip",
+            "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-linux-x64.zip",
+            "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-mac-arm64.zip",
+            "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-mac-x64.zip",
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-openapi.yaml",
+            "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-win-arm64.zip",
+            "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-win-x64.zip"
+          }
         }
-      },
-      "cli": {
-        "version": "v1.0.0-build.9-channel.stable",
-        "published_at": "2026-07-20T20:25:48Z",
-        "assets": {
-          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-linux-arm64.zip",
-          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-linux-x64.zip",
-          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-mac-arm64.zip",
-          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-mac-x64.zip",
-          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-win-arm64.zip",
-          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-win-x64.zip"
-        }
-      }
+      ]
     },
     "insider": {
-      "ide-vscode": {
-        "version": "v1.0.0-build.11-channel.insider",
-        "published_at": "2026-07-23T01:11:22Z",
-        "assets": {
-          "vsix": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.11-channel.insider/niksphere-ide-vscode-v1.0.0-build.11-channel.insider.vsix"
+      "ide-vscode": [
+        {
+          "version": "v1.0.0-build.7",
+          "published_at": "2026-07-20T19:30:15Z",
+          "assets": {
+            "vsix": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.7/niksphere-ide-vscode-v1.0.0-build.7.vsix"
+          }
         }
-      },
-      "engine": {
-        "version": "v1.1.0-build.15-channel.insider",
-        "published_at": "2026-07-22T01:08:21Z",
-        "assets": {
-          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.15-channel.insider/niksphere-engine-v1.1.0-build.15-channel.insider-linux-arm64.zip",
-          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.15-channel.insider/niksphere-engine-v1.1.0-build.15-channel.insider-linux-x64.zip",
-          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.15-channel.insider/niksphere-engine-v1.1.0-build.15-channel.insider-mac-arm64.zip",
-          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.15-channel.insider/niksphere-engine-v1.1.0-build.15-channel.insider-mac-x64.zip",
-          "openapi": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.15-channel.insider/niksphere-engine-v1.1.0-build.15-channel.insider-openapi.yaml",
-          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.15-channel.insider/niksphere-engine-v1.1.0-build.15-channel.insider-win-arm64.zip",
-          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.15-channel.insider/niksphere-engine-v1.1.0-build.15-channel.insider-win-x64.zip"
+      ],
+      "engine": [
+        {
+          "version": "v1.1.0-build.12",
+          "published_at": "2026-07-20T19:31:58Z",
+          "assets": {
+            "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.12/niksphere-engine-v1.1.0-build.12-linux-arm64.zip",
+            "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.12/niksphere-engine-v1.1.0-build.12-linux-x64.zip",
+            "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.12/niksphere-engine-v1.1.0-build.12-mac-arm64.zip",
+            "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.12/niksphere-engine-v1.1.0-build.12-mac-x64.zip",
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.12/niksphere-engine-v1.1.0-build.12-openapi.yaml",
+            "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.12/niksphere-engine-v1.1.0-build.12-win-arm64.zip",
+            "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.12/niksphere-engine-v1.1.0-build.12-win-x64.zip"
+          }
         }
-      },
-      "cli": {
-        "version": "v1.1.0-build.14-channel.insider",
-        "published_at": "2026-07-23T01:19:00Z",
-        "assets": {
-          "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.14-channel.insider/niksphere-cli-v1.1.0-build.14-channel.insider-linux-arm64.zip",
-          "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.14-channel.insider/niksphere-cli-v1.1.0-build.14-channel.insider-linux-x64.zip",
-          "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.14-channel.insider/niksphere-cli-v1.1.0-build.14-channel.insider-mac-arm64.zip",
-          "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.14-channel.insider/niksphere-cli-v1.1.0-build.14-channel.insider-mac-x64.zip",
-          "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.14-channel.insider/niksphere-cli-v1.1.0-build.14-channel.insider-win-arm64.zip",
-          "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.14-channel.insider/niksphere-cli-v1.1.0-build.14-channel.insider-win-x64.zip"
+      ],
+      "cli": [
+        {
+          "version": "v1.0.0-build.7",
+          "published_at": "2026-07-20T19:35:06Z",
+          "assets": {
+            "linux-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-linux-arm64.zip",
+            "linux-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-linux-x64.zip",
+            "mac-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-mac-arm64.zip",
+            "mac-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-mac-x64.zip",
+            "win-arm64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-win-arm64.zip",
+            "win-x64": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-win-x64.zip"
+          }
         }
-      }
+      ]
     }
   }
 }

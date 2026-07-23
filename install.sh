@@ -1,9 +1,29 @@
 #!/usr/bin/env bash
 set -e
 
+CHANNEL="stable"
+VERSION=""
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -c|--channel)
+            CHANNEL="$2"
+            shift 2
+            ;;
+        -v|--version)
+            VERSION="$2"
+            shift 2
+            ;;
+        *)
+            echo "Unknown option: $1"
+            exit 1
+            ;;
+    esac
+done
+
 REPO="niksphere/niksphere-install"
 
-echo "Fetching latest release information for Niksphere..."
+echo "Fetching release information for Niksphere..."
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')
 ARCH=$(uname -m)
 
@@ -24,7 +44,6 @@ fi
 
 MANIFEST_URL="https://install.niksphere.de/releases.json"
 FALLBACK_URL="https://raw.githubusercontent.com/niksphere/niksphere-install/main/releases.json"
-CHANNEL="${NIKSPHERE_CHANNEL:-${NIKSPHERE_RELEASE:-${CHANNEL:-stable}}}"
 
 MANIFEST_JSON=$(curl -sL "$MANIFEST_URL")
 if [ -z "$MANIFEST_JSON" ] || ! echo "$MANIFEST_JSON" | grep -q "channels"; then
@@ -38,15 +57,39 @@ fi
 
 # Try extracting via python3 if available, otherwise fallback to grep
 if command -v python3 >/dev/null 2>&1; then
-    DOWNLOAD_URL=$(echo "$MANIFEST_JSON" | python3 -c "import sys, json; data = json.load(sys.stdin); print(data.get('channels', {}).get('$CHANNEL', {}).get('cli', {}).get('assets', {}).get('${OS_SHORT}-${ARCH_SHORT}', ''))" 2>/dev/null)
+    DOWNLOAD_URL=$(echo "$MANIFEST_JSON" | python3 -c "
+import sys, json
+data = json.load(sys.stdin)
+releases = data.get('channels', {}).get('$CHANNEL', {}).get('cli', [])
+version_target = '$VERSION'
+selected = None
+if version_target:
+    for r in releases:
+        if r.get('version') == version_target:
+            selected = r
+            break
+else:
+    selected = releases[0] if releases else None
+
+if selected:
+    print(selected.get('assets', {}).get('${OS_SHORT}-${ARCH_SHORT}', ''))
+" 2>/dev/null)
 fi
 
 if [ -z "$DOWNLOAD_URL" ]; then
-    DOWNLOAD_URL=$(echo "$MANIFEST_JSON" | grep -o 'https://github.com/niksphere/niksphere-install/releases/download/[^"]*' | grep "cli-" | grep "${OS_SHORT}-${ARCH_SHORT}" | head -n 1)
+    if [ -n "$VERSION" ]; then
+        DOWNLOAD_URL=$(echo "$MANIFEST_JSON" | grep -o 'https://github.com/niksphere/niksphere-install/releases/download/[^"]*' | grep "cli" | grep "$VERSION" | grep "${OS_SHORT}-${ARCH_SHORT}" | head -n 1)
+    else
+        DOWNLOAD_URL=$(echo "$MANIFEST_JSON" | grep -o 'https://github.com/niksphere/niksphere-install/releases/download/[^"]*' | grep "cli" | grep "${OS_SHORT}-${ARCH_SHORT}" | head -n 1)
+    fi
 fi
 
 if [ -z "$DOWNLOAD_URL" ]; then
-    echo "Error: No matching release found for $OS_SHORT $ARCH_SHORT in $CHANNEL channel."
+    if [ -n "$VERSION" ]; then
+        echo "Error: Release version '$VERSION' not found for $OS_SHORT $ARCH_SHORT in $CHANNEL channel."
+    else
+        echo "Error: No matching release found for $OS_SHORT $ARCH_SHORT in $CHANNEL channel."
+    fi
     exit 1
 fi
 
