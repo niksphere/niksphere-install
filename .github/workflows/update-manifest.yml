@@ -111,6 +111,33 @@ jobs:
                 channelObj[comp].sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
               }
             }
+
+            // Generate installation commands for CLI releases
+            for (const ch in manifest.channels) {
+              const channelObj = manifest.channels[ch];
+              if (channelObj["cli"]) {
+                channelObj["cli"].forEach((rel, index) => {
+                  const isLatestStable = (index === 0 && ch === "stable");
+                  
+                  const bashCmd = isLatestStable
+                    ? "curl -fsSL https://install.niksphere.de/install.sh | bash"
+                    : `curl -fsSL https://install.niksphere.de/install.sh | bash -s -- -c "${ch}" -v "${rel.version}"`;
+                    
+                  const psCmd = isLatestStable
+                    ? "irm https://install.niksphere.de/install.ps1 | iex"
+                    : `& ([ScriptBlock]::Create((irm https://install.niksphere.de/install.ps1))) -Channel "${ch}" -Version "${rel.version}"`;
+                    
+                  rel.install = {
+                    "linux-arm64": bashCmd,
+                    "linux-x64": bashCmd,
+                    "mac-arm64": bashCmd,
+                    "mac-x64": bashCmd,
+                    "win-arm64": psCmd,
+                    "win-x64": psCmd
+                  };
+                });
+              }
+            }
             
             fs.writeFileSync("releases.json", JSON.stringify(manifest, null, 2));
             console.log("releases.json successfully rebuilt from GitHub Releases.");
