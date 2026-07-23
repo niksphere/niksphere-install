@@ -131,6 +131,11 @@ jobs:
                     "bash": bashCmd,
                     "powershell": psCmd
                   };
+
+                  rel.uninstall = {
+                    "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
+                    "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
+                  };
                 });
               }
             }
