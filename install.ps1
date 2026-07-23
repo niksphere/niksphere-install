@@ -43,7 +43,14 @@ if ($Version) {
     $SelectedRelease = $ComponentReleases[0]
 }
 
-$DownloadUrl = $SelectedRelease.assets.$Platform
+$AssetVal = $SelectedRelease.assets.$Platform
+if ($AssetVal -is [string]) {
+    $DownloadUrl = $AssetVal
+} elseif ($AssetVal -and $AssetVal.url) {
+    $DownloadUrl = $AssetVal.url
+} else {
+    $DownloadUrl = $null
+}
 
 if (-not $DownloadUrl) {
     Write-Error "No matching asset found for Windows $Arch in CLI $($SelectedRelease.version) ($Channel channel)."

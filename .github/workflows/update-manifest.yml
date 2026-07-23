@@ -90,7 +90,10 @@ jobs:
                           }
                         }
                         
-                        assets[key] = asset.browser_download_url;
+                        assets[key] = {
+                          url: asset.browser_download_url,
+                          size: asset.size || 0
+                        };
                       }
                     });
                   }
@@ -169,7 +172,8 @@ jobs:
                   let links = [];
                   if (compData.assets) {
                     for (const plat in compData.assets) {
-                      const url = compData.assets[plat];
+                      const assetVal = compData.assets[plat];
+                      const url = typeof assetVal === "string" ? assetVal : (assetVal && assetVal.url ? assetVal.url : "#");
                       links.push(`[${plat}](${url})`);
                     }
                   }
