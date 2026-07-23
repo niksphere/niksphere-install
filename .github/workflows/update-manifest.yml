@@ -50,6 +50,12 @@ jobs:
               }
             };
             
+            const componentNames = {
+              "cli": "Niksphere CLI",
+              "engine": "Niksphere Engine",
+              "ide-vscode": "Niksphere IDE for VS Code"
+            };
+
             releases.forEach(release => {
               const tag = release.tag_name;
               
@@ -99,6 +105,7 @@ jobs:
                   }
 
                   channelObj[component].push({
+                    name: componentNames[component] || component,
                     version: version,
                     published_at: release.published_at || new Date().toISOString(),
                     assets: assets
