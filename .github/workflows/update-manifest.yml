@@ -125,7 +125,7 @@ jobs:
                     
                   const psCmd = isLatestStable
                     ? "irm https://install.niksphere.de/install.ps1 | iex"
-                    : `& ([ScriptBlock]::Create((irm https://install.niksphere.de/install.ps1))) -Channel "${ch}" -Version "${rel.version}"`;
+                    : `irm https://install.niksphere.de/install.ps1 -OutFile install.ps1; .\\install.ps1 -Channel "${ch}" -Version "${rel.version}"`;
                     
                   rel.install = {
                     "linux-arm64": bashCmd,
