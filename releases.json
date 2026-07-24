@@ -304,6 +304,55 @@
       "engine": [
         {
           "name": "Niksphere Engine",
+          "version": "v1.1.0-build.26-channel.insider",
+          "published_at": "2026-07-24T12:32:55Z",
+          "changelog": "### Added\n- Initial release of Niksphere Engine",
+          "assets": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.26-channel.insider/niksphere-engine-v1.1.0-build.26-channel.insider-linux-arm64.zip",
+              "size": 9890407
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.26-channel.insider/niksphere-engine-v1.1.0-build.26-channel.insider-linux-x64.zip",
+              "size": 11094955
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.26-channel.insider/niksphere-engine-v1.1.0-build.26-channel.insider-mac-arm64.zip",
+              "size": 10259475
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.26-channel.insider/niksphere-engine-v1.1.0-build.26-channel.insider-mac-x64.zip",
+              "size": 11213982
+            },
+            "openapi": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.26-channel.insider/niksphere-engine-v1.1.0-build.26-channel.insider-openapi.yaml",
+              "size": 14210
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.26-channel.insider/niksphere-engine-v1.1.0-build.26-channel.insider-win-arm64.zip",
+              "size": 9876962
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.26-channel.insider/niksphere-engine-v1.1.0-build.26-channel.insider-win-x64.zip",
+              "size": 11208451
+            }
+          },
+          "install": {
+            "docker": "docker pull ghcr.io/niksphere/niksphere-engine:v1.1.0-build.26-channel.insider"
+          },
+          "container": {
+            "image": "ghcr.io/niksphere/niksphere-engine:v1.1.0-build.26-channel.insider",
+            "registry": "ghcr.io",
+            "package": "niksphere-engine",
+            "tags": [
+              "v1.1.0-build.26-channel.insider",
+              "v1.1.0",
+              "insider"
+            ]
+          }
+        },
+        {
+          "name": "Niksphere Engine",
           "version": "v1.1.0-build.22-channel.insider",
           "published_at": "2026-07-24T09:25:48Z",
           "changelog": "Automated release of Niksphere Engine. Channel: insider.",
@@ -345,9 +394,7 @@
             "registry": "ghcr.io",
             "package": "niksphere-engine",
             "tags": [
-              "v1.1.0",
-              "v1.1.0-build.22-channel.insider",
-              "insider"
+              "v1.1.0-build.22-channel.insider"
             ]
           }
         },
