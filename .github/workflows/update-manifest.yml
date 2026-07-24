@@ -15,6 +15,7 @@ jobs:
     permissions:
       contents: write
       actions: write
+      packages: read
 
     steps:
       - name: Checkout Repository
@@ -22,7 +23,7 @@ jobs:
         with:
           ref: main
 
-      - name: Fetch Release Data
+      - name: Fetch Release and Package Data
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,11 +32,36 @@ jobs:
           curl -s -H "Authorization: token $GH_TOKEN" \
             "https://api.github.com/repos/${{ github.repository }}/releases?per_page=100" > releases_list.json
 
+          echo "Fetching container packages..."
+          curl -s -H "Authorization: token $GH_TOKEN" \
+            "https://api.github.com/orgs/niksphere/packages?package_type=container" > packages_list.json
+
+          mkdir -p package_versions
+          node -e '
+            const fs = require("fs");
+            try {
+              const pkgs = JSON.parse(fs.readFileSync("packages_list.json", "utf8"));
+              if (Array.isArray(pkgs)) {
+                pkgs.forEach(p => {
+                  if (p.name) console.log(p.name);
+                });
+              }
+            } catch (e) {}
+          ' | while read pkg_name; do
+            if [ -n "$pkg_name" ]; then
+              echo "Fetching versions for package $pkg_name..."
+              curl -s -H "Authorization: token $GH_TOKEN" \
+                "https://api.github.com/orgs/niksphere/packages/container/${pkg_name}/versions?per_page=100" > "package_versions/${pkg_name}.json"
+            fi
+          done
+
       - name: Update releases.json
         shell: bash
         run: |
           node -e '
             const fs = require("fs");
+            const path = require("path");
+
             const releases = JSON.parse(fs.readFileSync("releases_list.json", "utf8"));
             
             if (!Array.isArray(releases)) {
@@ -56,14 +82,14 @@ jobs:
               "ide-vscode": "Niksphere VS Code Extension"
             };
 
+            // 1. Process GitHub Releases
             releases.forEach(release => {
               const tag = release.tag_name;
               
-              // Only process decoupled releases containing a slash "/"
               if (tag && tag.includes("/")) {
                 const parts = tag.split("/");
-                const component = parts[0]; // "cli", "engine", "ide-vscode"
-                const version = parts[1];   // e.g. "v1.0.0-build.1"
+                const component = parts[0];
+                const version = parts[1];
                 
                 if (component === "cli" || component === "engine" || component === "ide-vscode") {
                   const channel = release.prerelease ? "insider" : "stable";
@@ -114,7 +140,93 @@ jobs:
               }
             });
 
-            // Sort releases in each component array chronologically descending (newest first)
+            // 2. Process GHCR Packages
+            const versionsDir = "package_versions";
+            if (fs.existsSync(versionsDir)) {
+              const files = fs.readdirSync(versionsDir);
+              files.forEach(file => {
+                if (file.endsWith(".json")) {
+                  const pkgName = file.replace(".json", "");
+                  const component = pkgName.replace(/^niksphere-/, "");
+                  
+                  try {
+                    const pkgVersions = JSON.parse(fs.readFileSync(path.join(versionsDir, file), "utf8"));
+                    if (Array.isArray(pkgVersions)) {
+                      pkgVersions.forEach(v => {
+                        const containerMeta = v.metadata && v.metadata.container;
+                        const tags = containerMeta && Array.isArray(containerMeta.tags) ? containerMeta.tags : [];
+                        
+                        if (tags.length === 0) return;
+                        
+                        let channel = "insider";
+                        if (tags.includes("latest") || tags.some(t => t.includes("-channel.stable"))) {
+                          channel = "stable";
+                        } else if (tags.includes("insider") || tags.some(t => t.includes("-channel.insider"))) {
+                          channel = "insider";
+                        }
+                        
+                        let specificVersionTag = tags.find(t => t.startsWith("v") && t.includes("-build."))
+                                              || tags.find(t => t.startsWith("v"))
+                                              || tags.find(t => t !== "latest" && t !== "insider");
+
+                        if (!specificVersionTag) return;
+
+                        const pullCmd = `docker pull ghcr.io/niksphere/${pkgName}:${specificVersionTag}`;
+                        
+                        if (!manifest.channels[channel]) {
+                          manifest.channels[channel] = {};
+                        }
+                        const channelObj = manifest.channels[channel];
+                        if (!channelObj[component]) {
+                          channelObj[component] = [];
+                        }
+                        
+                        let relEntry = channelObj[component].find(r => r.version === specificVersionTag);
+                        
+                        if (!relEntry) {
+                          relEntry = channelObj[component].find(r => specificVersionTag.startsWith(r.version) || r.version.startsWith(specificVersionTag));
+                        }
+                        
+                        if (relEntry) {
+                          if (!relEntry.install) {
+                            relEntry.install = {};
+                          }
+                          relEntry.install.docker = pullCmd;
+                          
+                          relEntry.container = {
+                            image: `ghcr.io/niksphere/${pkgName}:${specificVersionTag}`,
+                            registry: "ghcr.io",
+                            package: pkgName,
+                            tags: tags
+                          };
+                        } else {
+                          const newEntry = {
+                            name: componentNames[component] || component,
+                            version: specificVersionTag,
+                            published_at: v.created_at || v.updated_at || new Date().toISOString(),
+                            install: {
+                              docker: pullCmd
+                            },
+                            container: {
+                              image: `ghcr.io/niksphere/${pkgName}:${specificVersionTag}`,
+                              registry: "ghcr.io",
+                              package: pkgName,
+                              tags: tags
+                            },
+                            assets: {}
+                          };
+                          channelObj[component].push(newEntry);
+                        }
+                      });
+                    }
+                  } catch (err) {
+                    console.error(`Error processing package file ${file}:`, err);
+                  }
+                }
+              });
+            }
+
+            // 3. Sort releases chronologically descending
             for (const ch in manifest.channels) {
               const channelObj = manifest.channels[ch];
               for (const comp in channelObj) {
@@ -122,7 +234,7 @@ jobs:
               }
             }
 
-            // Generate installation commands for CLI releases
+            // 4. Generate CLI install commands
             for (const ch in manifest.channels) {
               const channelObj = manifest.channels[ch];
               if (channelObj["cli"]) {
@@ -137,10 +249,11 @@ jobs:
                     ? "irm https://install.niksphere.de/install.ps1 | iex"
                     : `irm https://install.niksphere.de/install.ps1 -OutFile install.ps1; .\\install.ps1 -Channel "${ch}" -Version "${rel.version}"`;
                     
-                  rel.install = {
-                    "bash": bashCmd,
-                    "powershell": psCmd
-                  };
+                  if (!rel.install) {
+                    rel.install = {};
+                  }
+                  rel.install.bash = bashCmd;
+                  rel.install.powershell = psCmd;
 
                   rel.uninstall = {
                     "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
@@ -149,66 +262,9 @@ jobs:
                 });
               }
             }
-            
+
             fs.writeFileSync("releases.json", JSON.stringify(manifest, null, 2));
-            console.log("releases.json successfully rebuilt from GitHub Releases.");
-            
-            // Generate README markdown
-            let readmeMarkdown = "\n";
-            const channelsList = ["stable", "insider"];
-            channelsList.forEach(ch => {
-              const capitalizedChannel = ch.charAt(0).toUpperCase() + ch.slice(1);
-              readmeMarkdown += `### 🚀 ${capitalizedChannel} Channel\n\n`;
-              
-              const channelData = manifest.channels[ch] || {};
-              const components = Object.keys(channelData);
-              
-              if (components.length === 0) {
-                readmeMarkdown += "_No releases published in this channel yet._\n\n";
-              } else {
-                readmeMarkdown += "| Component | Version | Published At | Download Links |\n";
-                readmeMarkdown += "| --- | --- | --- | --- |\n";
-                
-                components.forEach(comp => {
-                  const compList = channelData[comp] || [];
-                  const compData = compList[0] || {};
-                  const version = compData.version || "N/A";
-                  const date = compData.published_at ? new Date(compData.published_at).toISOString().replace("T", " ").substring(0, 16) + " UTC" : "N/A";
-                  
-                  // Build download links
-                  let links = [];
-                  if (compData.assets) {
-                    for (const plat in compData.assets) {
-                      const assetVal = compData.assets[plat];
-                      const url = typeof assetVal === "string" ? assetVal : (assetVal && assetVal.url ? assetVal.url : "#");
-                      links.push(`[${plat}](${url})`);
-                    }
-                  }
-                  const linksStr = links.length > 0 ? links.join(" \\| ") : "No assets available";
-                  
-                  readmeMarkdown += `| \`${comp}\` | \`${version}\` | ${date} | ${linksStr} |\n`;
-                });
-                readmeMarkdown += "\n";
-              }
-            });
-            
-            // Update README.md file
-            if (fs.existsSync("README.md")) {
-              let readmeContent = fs.readFileSync("README.md", "utf8");
-              const startMarker = "<!-- RELEASES_START -->";
-              const endMarker = "<!-- RELEASES_END -->";
-              
-              if (readmeContent.includes(startMarker) && readmeContent.includes(endMarker)) {
-                const startIndex = readmeContent.indexOf(startMarker) + startMarker.length;
-                const endIndex = readmeContent.indexOf(endMarker);
-                
-                const newReadmeContent = readmeContent.substring(0, startIndex) + readmeMarkdown + readmeContent.substring(endIndex);
-                fs.writeFileSync("README.md", newReadmeContent, "utf8");
-                console.log("README.md successfully updated with latest release tables.");
-              } else {
-                console.log("Warning: Markers <!-- RELEASES_START --> and <!-- RELEASES_END --> not found in README.md.");
-              }
-            }
+            console.log("releases.json successfully rebuilt from GitHub Releases and GHCR Packages.");
           '
 
       - name: Commit and Push changes
@@ -218,12 +274,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          git add releases.json README.md
+          git add releases.json
           
           if git diff --cached --quiet; then
-            echo "No changes made to releases.json and README.md."
+            echo "No changes made to releases.json."
           else
-            git commit -m "chore: update releases.json and README.md for release"
+            git commit -m "chore: update releases.json for release"
             git push origin main
             
             echo "Triggering GitHub Pages deployment workflow..."
