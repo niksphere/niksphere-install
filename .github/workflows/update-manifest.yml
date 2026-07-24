@@ -32,34 +32,13 @@ jobs:
           curl -s -H "Authorization: token $GH_TOKEN" \
             "https://api.github.com/repos/${{ github.repository }}/releases?per_page=100" > releases_list.json
 
-          echo "Fetching container packages connected to org..."
-          curl -s -H "Authorization: token $GH_TOKEN" \
-            "https://api.github.com/orgs/niksphere/packages?package_type=container" > packages_list.json
-
+          echo "Fetching container package versions for niksphere-engine..."
           mkdir -p package_versions
-          node -e '
-            const fs = require("fs");
-            try {
-              const pkgs = JSON.parse(fs.readFileSync("packages_list.json", "utf8"));
-              if (Array.isArray(pkgs)) {
-                pkgs.forEach(p => {
-                  const repoName = p.repository ? p.repository.name : "";
-                  const htmlUrl = p.html_url || "";
-                  const isLinkedToInstall = repoName === "niksphere-install" || htmlUrl.includes("/niksphere-install/");
-                  if (isLinkedToInstall && p.name) {
-                    console.log(p.name);
-                  }
-                });
-              }
-            } catch (e) {
-              console.error("Error reading packages_list.json:", e);
-            }
-          ' | while read pkg_name; do
-            if [ -n "$pkg_name" ]; then
-              echo "Fetching versions for container package ${pkg_name} (linked to niksphere-install)..."
-              curl -s -H "Authorization: token $GH_TOKEN" \
-                "https://api.github.com/orgs/niksphere/packages/container/${pkg_name}/versions?per_page=100" > "package_versions/${pkg_name}.json"
-            fi
+          for comp in engine; do
+            pkg_name="niksphere-${comp}"
+            echo "Fetching versions for container package ${pkg_name}..."
+            curl -s -H "Authorization: token $GH_TOKEN" \
+              "https://api.github.com/orgs/niksphere/packages/container/${pkg_name}/versions?per_page=100" > "package_versions/${pkg_name}.json"
           done
 
       - name: Update releases.json
