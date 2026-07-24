@@ -120,6 +120,7 @@ jobs:
                     name: componentNames[component] || component,
                     version: version,
                     published_at: release.published_at || new Date().toISOString(),
+                    changelog: release.body || "",
                     assets: assets
                   });
                 }
