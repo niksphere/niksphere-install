@@ -33,26 +33,12 @@ jobs:
             "https://api.github.com/repos/${{ github.repository }}/releases?per_page=100" > releases_list.json
 
           echo "Fetching container packages..."
-          curl -s -H "Authorization: token $GH_TOKEN" \
-            "https://api.github.com/orgs/niksphere/packages?package_type=container" > packages_list.json
-
           mkdir -p package_versions
-          node -e '
-            const fs = require("fs");
-            try {
-              const pkgs = JSON.parse(fs.readFileSync("packages_list.json", "utf8"));
-              if (Array.isArray(pkgs)) {
-                pkgs.forEach(p => {
-                  if (p.name) console.log(p.name);
-                });
-              }
-            } catch (e) {}
-          ' | while read pkg_name; do
-            if [ -n "$pkg_name" ]; then
-              echo "Fetching versions for package $pkg_name..."
-              curl -s -H "Authorization: token $GH_TOKEN" \
-                "https://api.github.com/orgs/niksphere/packages/container/${pkg_name}/versions?per_page=100" > "package_versions/${pkg_name}.json"
-            fi
+          for comp in engine cli cloud; do
+            pkg_name="niksphere-${comp}"
+            echo "Fetching versions for container package ${pkg_name}..."
+            curl -s -H "Authorization: token $GH_TOKEN" \
+              "https://api.github.com/orgs/niksphere/packages/container/${pkg_name}/versions?per_page=100" > "package_versions/${pkg_name}.json"
           done
 
       - name: Update releases.json
@@ -140,91 +126,88 @@ jobs:
               }
             });
 
-            // 2. Process GHCR Packages
-            const versionsDir = "package_versions";
-            if (fs.existsSync(versionsDir)) {
-              const files = fs.readdirSync(versionsDir);
-              files.forEach(file => {
-                if (file.endsWith(".json")) {
-                  const pkgName = file.replace(".json", "");
-                  const component = pkgName.replace(/^niksphere-/, "");
-                  
-                  try {
-                    const pkgVersions = JSON.parse(fs.readFileSync(path.join(versionsDir, file), "utf8"));
-                    if (Array.isArray(pkgVersions)) {
-                      pkgVersions.forEach(v => {
-                        const containerMeta = v.metadata && v.metadata.container;
-                        const tags = containerMeta && Array.isArray(containerMeta.tags) ? containerMeta.tags : [];
-                        
-                        if (tags.length === 0) return;
-                        
-                        let channel = "insider";
-                        if (tags.includes("latest") || tags.some(t => t.includes("-channel.stable"))) {
-                          channel = "stable";
-                        } else if (tags.includes("insider") || tags.some(t => t.includes("-channel.insider"))) {
-                          channel = "insider";
-                        }
-                        
-                        let specificVersionTag = tags.find(t => t.startsWith("v") && t.includes("-build."))
-                                              || tags.find(t => t.startsWith("v"))
-                                              || tags.find(t => t !== "latest" && t !== "insider");
+            // 2. Process GHCR Container Packages
+            const componentsList = ["engine", "cli", "cloud"];
+            componentsList.forEach(component => {
+              const pkgName = `niksphere-${component}`;
+              const pkgFile = path.join("package_versions", `${pkgName}.json`);
+              
+              if (fs.existsSync(pkgFile)) {
+                try {
+                  const pkgVersions = JSON.parse(fs.readFileSync(pkgFile, "utf8"));
+                  if (Array.isArray(pkgVersions)) {
+                    pkgVersions.forEach(v => {
+                      const containerMeta = v.metadata && v.metadata.container;
+                      const tags = containerMeta && Array.isArray(containerMeta.tags) ? containerMeta.tags : [];
+                      
+                      if (tags.length === 0) return;
+                      
+                      let channel = "insider";
+                      if (tags.includes("latest") || tags.some(t => t.includes("-channel.stable"))) {
+                        channel = "stable";
+                      } else if (tags.includes("insider") || tags.some(t => t.includes("-channel.insider"))) {
+                        channel = "insider";
+                      }
+                      
+                      let specificVersionTag = tags.find(t => t.startsWith("v") && t.includes("-build."))
+                                            || tags.find(t => t.startsWith("v"))
+                                            || tags.find(t => t !== "latest" && t !== "insider");
 
-                        if (!specificVersionTag) return;
+                      if (!specificVersionTag) return;
 
-                        const pullCmd = `docker pull ghcr.io/niksphere/${pkgName}:${specificVersionTag}`;
-                        
-                        if (!manifest.channels[channel]) {
-                          manifest.channels[channel] = {};
+                      const pullCmd = `docker pull ghcr.io/niksphere/${pkgName}:${specificVersionTag}`;
+                      
+                      if (!manifest.channels[channel]) {
+                        manifest.channels[channel] = {};
+                      }
+                      const channelObj = manifest.channels[channel];
+                      if (!channelObj[component]) {
+                        channelObj[component] = [];
+                      }
+                      
+                      let relEntry = channelObj[component].find(r => r.version === specificVersionTag);
+                      
+                      if (!relEntry) {
+                        relEntry = channelObj[component].find(r => specificVersionTag.startsWith(r.version) || r.version.startsWith(specificVersionTag));
+                      }
+                      
+                      if (relEntry) {
+                        if (!relEntry.install) {
+                          relEntry.install = {};
                         }
-                        const channelObj = manifest.channels[channel];
-                        if (!channelObj[component]) {
-                          channelObj[component] = [];
-                        }
+                        relEntry.install.docker = pullCmd;
                         
-                        let relEntry = channelObj[component].find(r => r.version === specificVersionTag);
-                        
-                        if (!relEntry) {
-                          relEntry = channelObj[component].find(r => specificVersionTag.startsWith(r.version) || r.version.startsWith(specificVersionTag));
-                        }
-                        
-                        if (relEntry) {
-                          if (!relEntry.install) {
-                            relEntry.install = {};
-                          }
-                          relEntry.install.docker = pullCmd;
-                          
-                          relEntry.container = {
+                        relEntry.container = {
+                          image: `ghcr.io/niksphere/${pkgName}:${specificVersionTag}`,
+                          registry: "ghcr.io",
+                          package: pkgName,
+                          tags: tags
+                        };
+                      } else {
+                        const newEntry = {
+                          name: componentNames[component] || component,
+                          version: specificVersionTag,
+                          published_at: v.created_at || v.updated_at || new Date().toISOString(),
+                          install: {
+                            docker: pullCmd
+                          },
+                          container: {
                             image: `ghcr.io/niksphere/${pkgName}:${specificVersionTag}`,
                             registry: "ghcr.io",
                             package: pkgName,
                             tags: tags
-                          };
-                        } else {
-                          const newEntry = {
-                            name: componentNames[component] || component,
-                            version: specificVersionTag,
-                            published_at: v.created_at || v.updated_at || new Date().toISOString(),
-                            install: {
-                              docker: pullCmd
-                            },
-                            container: {
-                              image: `ghcr.io/niksphere/${pkgName}:${specificVersionTag}`,
-                              registry: "ghcr.io",
-                              package: pkgName,
-                              tags: tags
-                            },
-                            assets: {}
-                          };
-                          channelObj[component].push(newEntry);
-                        }
-                      });
-                    }
-                  } catch (err) {
-                    console.error(`Error processing package file ${file}:`, err);
+                          },
+                          assets: {}
+                        };
+                        channelObj[component].push(newEntry);
+                      }
+                    });
                   }
+                } catch (err) {
+                  console.error(`Error processing package file ${pkgFile}:`, err);
                 }
-              });
-            }
+              }
+            });
 
             // 3. Sort releases chronologically descending
             for (const ch in manifest.channels) {
