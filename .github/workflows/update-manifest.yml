@@ -44,7 +44,9 @@ jobs:
               if (Array.isArray(pkgs)) {
                 pkgs.forEach(p => {
                   const repoName = p.repository ? p.repository.name : "";
-                  if (repoName === "niksphere-install") {
+                  const htmlUrl = p.html_url || "";
+                  const isLinkedToInstall = repoName === "niksphere-install" || htmlUrl.includes("/niksphere-install/");
+                  if (isLinkedToInstall && p.name) {
                     console.log(p.name);
                   }
                 });
