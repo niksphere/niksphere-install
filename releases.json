@@ -154,6 +154,41 @@
       "engine": [
         {
           "name": "Niksphere Engine",
+          "version": "v1.1.0-build.19-channel.insider",
+          "published_at": "2026-07-24T08:29:33Z",
+          "assets": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.19-channel.insider/niksphere-engine-v1.1.0-build.19-channel.insider-linux-arm64.zip",
+              "size": 9890308
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.19-channel.insider/niksphere-engine-v1.1.0-build.19-channel.insider-linux-x64.zip",
+              "size": 11094943
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.19-channel.insider/niksphere-engine-v1.1.0-build.19-channel.insider-mac-arm64.zip",
+              "size": 10259583
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.19-channel.insider/niksphere-engine-v1.1.0-build.19-channel.insider-mac-x64.zip",
+              "size": 11213985
+            },
+            "openapi": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.19-channel.insider/niksphere-engine-v1.1.0-build.19-channel.insider-openapi.yaml",
+              "size": 14210
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.19-channel.insider/niksphere-engine-v1.1.0-build.19-channel.insider-win-arm64.zip",
+              "size": 9876946
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.19-channel.insider/niksphere-engine-v1.1.0-build.19-channel.insider-win-x64.zip",
+              "size": 11208451
+            }
+          }
+        },
+        {
+          "name": "Niksphere Engine",
           "version": "v1.1.0-build.17-channel.insider",
           "published_at": "2026-07-24T01:09:09Z",
           "assets": {
