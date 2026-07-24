@@ -6,6 +6,7 @@
           "name": "Niksphere CLI",
           "version": "v1.0.0-build.9-channel.stable",
           "published_at": "2026-07-20T20:25:48Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: stable.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-linux-arm64.zip",
@@ -39,8 +40,7 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         }
       ],
       "engine": [
@@ -48,6 +48,7 @@
           "name": "Niksphere Engine",
           "version": "v1.0.0-build.6",
           "published_at": "2026-07-16T10:25:46Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: stable.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-linux-arm64.zip",
@@ -77,13 +78,13 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-win-x64.zip",
               "size": 10848477
             }
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.0.0-build.5",
           "published_at": "2026-07-16T10:18:16Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: stable.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-linux-arm64.zip",
@@ -113,13 +114,13 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-win-x64.zip",
               "size": 10850808
             }
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.0.0-build.3",
           "published_at": "2026-07-16T09:53:16Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: stable.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-linux-arm64.zip",
@@ -149,17 +150,163 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-win-x64.zip",
               "size": 10850800
             }
-          },
-          "changelog": ""
+          }
         }
       ]
     },
     "insider": {
+      "ide-vscode": [
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.13-channel.insider",
+          "published_at": "2026-07-24T12:12:37Z",
+          "changelog": "### Added\n- Initial release of Niksphere VS Code Extension",
+          "assets": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.13-channel.insider/niksphere-ide-vscode-v1.0.0-build.13-channel.insider.vsix",
+              "size": 375142
+            }
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.12-channel.insider",
+          "published_at": "2026-07-24T01:07:45Z",
+          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
+          "assets": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.12-channel.insider/niksphere-ide-vscode-v1.0.0-build.12-channel.insider.vsix",
+              "size": 375142
+            }
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.11-channel.insider",
+          "published_at": "2026-07-23T01:11:22Z",
+          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
+          "assets": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.11-channel.insider/niksphere-ide-vscode-v1.0.0-build.11-channel.insider.vsix",
+              "size": 370046
+            }
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.10-channel.insider",
+          "published_at": "2026-07-22T01:06:27Z",
+          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
+          "assets": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.10-channel.insider/niksphere-ide-vscode-v1.0.0-build.10-channel.insider.vsix",
+              "size": 370046
+            }
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.9-channel.insider",
+          "published_at": "2026-07-21T15:21:43Z",
+          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
+          "assets": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.9-channel.insider/niksphere-ide-vscode-v1.0.0-build.9-channel.insider.vsix",
+              "size": 370046
+            }
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.8",
+          "published_at": "2026-07-21T05:14:20Z",
+          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
+          "assets": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.8/niksphere-ide-vscode-v1.0.0-build.8.vsix",
+              "size": 369651
+            }
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.7",
+          "published_at": "2026-07-20T19:30:15Z",
+          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
+          "assets": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.7/niksphere-ide-vscode-v1.0.0-build.7.vsix",
+              "size": 369651
+            }
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.6",
+          "published_at": "2026-07-20T05:32:51Z",
+          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
+          "assets": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.6/niksphere-ide-vscode-v1.0.0-build.6.vsix",
+              "size": 22068153
+            }
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.5",
+          "published_at": "2026-07-19T05:15:25Z",
+          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
+          "assets": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.5/niksphere-ide-vscode-v1.0.0-build.5.vsix",
+              "size": 22068153
+            }
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.4",
+          "published_at": "2026-07-18T04:42:12Z",
+          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
+          "assets": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.4/niksphere-ide-vscode-v1.0.0-build.4.vsix",
+              "size": 22068153
+            }
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.3",
+          "published_at": "2026-07-17T04:57:54Z",
+          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
+          "assets": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.3/niksphere-ide-vscode-v1.0.0-build.3.vsix",
+              "size": 22068153
+            }
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.2",
+          "published_at": "2026-07-16T09:50:57Z",
+          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
+          "assets": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.2/niksphere-ide-vscode-v1.0.0-build.2.vsix",
+              "size": 22068153
+            }
+          }
+        }
+      ],
       "engine": [
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.22-channel.insider",
           "published_at": "2026-07-24T09:25:48Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.22-channel.insider/niksphere-engine-v1.1.0-build.22-channel.insider-linux-arm64.zip",
@@ -202,13 +349,13 @@
               "v1.1.0-build.22-channel.insider",
               "insider"
             ]
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.21-channel.insider",
           "published_at": "2026-07-24T09:07:42Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.21-channel.insider/niksphere-engine-v1.1.0-build.21-channel.insider-linux-arm64.zip",
@@ -238,13 +385,13 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.21-channel.insider/niksphere-engine-v1.1.0-build.21-channel.insider-win-x64.zip",
               "size": 11208453
             }
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.20-channel.insider",
           "published_at": "2026-07-24T08:37:48Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.20-channel.insider/niksphere-engine-v1.1.0-build.20-channel.insider-linux-arm64.zip",
@@ -274,13 +421,13 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.20-channel.insider/niksphere-engine-v1.1.0-build.20-channel.insider-win-x64.zip",
               "size": 11208457
             }
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.19-channel.insider",
           "published_at": "2026-07-24T08:29:33Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.19-channel.insider/niksphere-engine-v1.1.0-build.19-channel.insider-linux-arm64.zip",
@@ -310,13 +457,13 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.19-channel.insider/niksphere-engine-v1.1.0-build.19-channel.insider-win-x64.zip",
               "size": 11208451
             }
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.17-channel.insider",
           "published_at": "2026-07-24T01:09:09Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.17-channel.insider/niksphere-engine-v1.1.0-build.17-channel.insider-linux-arm64.zip",
@@ -346,13 +493,13 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.17-channel.insider/niksphere-engine-v1.1.0-build.17-channel.insider-win-x64.zip",
               "size": 11208452
             }
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.15-channel.insider",
           "published_at": "2026-07-22T01:08:21Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.15-channel.insider/niksphere-engine-v1.1.0-build.15-channel.insider-linux-arm64.zip",
@@ -382,13 +529,13 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.15-channel.insider/niksphere-engine-v1.1.0-build.15-channel.insider-win-x64.zip",
               "size": 11206318
             }
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.14-channel.insider",
           "published_at": "2026-07-21T15:22:43Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.14-channel.insider/niksphere-engine-v1.1.0-build.14-channel.insider-linux-arm64.zip",
@@ -418,13 +565,13 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.14-channel.insider/niksphere-engine-v1.1.0-build.14-channel.insider-win-x64.zip",
               "size": 11206586
             }
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.13",
           "published_at": "2026-07-21T05:22:12Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.13/niksphere-engine-v1.1.0-build.13-linux-arm64.zip",
@@ -454,13 +601,13 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.13/niksphere-engine-v1.1.0-build.13-win-x64.zip",
               "size": 11206696
             }
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.12",
           "published_at": "2026-07-20T19:31:58Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.12/niksphere-engine-v1.1.0-build.12-linux-arm64.zip",
@@ -490,13 +637,13 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.12/niksphere-engine-v1.1.0-build.12-win-x64.zip",
               "size": 11206695
             }
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.9",
           "published_at": "2026-07-18T04:50:29Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.9/niksphere-engine-v1.1.0-build.9-linux-arm64.zip",
@@ -526,13 +673,13 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.9/niksphere-engine-v1.1.0-build.9-win-x64.zip",
               "size": 10850797
             }
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.8",
           "published_at": "2026-07-17T05:15:19Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-linux-arm64.zip",
@@ -562,13 +709,13 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-win-x64.zip",
               "size": 10850799
             }
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.7",
           "published_at": "2026-07-16T10:44:21Z",
+          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-linux-arm64.zip",
@@ -598,8 +745,7 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-win-x64.zip",
               "size": 10850798
             }
-          },
-          "changelog": ""
+          }
         }
       ],
       "cli": [
@@ -607,6 +753,7 @@
           "name": "Niksphere CLI",
           "version": "v1.1.0-build.15-channel.insider",
           "published_at": "2026-07-24T01:11:52Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.15-channel.insider/niksphere-cli-v1.1.0-build.15-channel.insider-linux-arm64.zip",
@@ -640,13 +787,13 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere CLI",
           "version": "v1.1.0-build.14-channel.insider",
           "published_at": "2026-07-23T01:19:00Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.14-channel.insider/niksphere-cli-v1.1.0-build.14-channel.insider-linux-arm64.zip",
@@ -680,13 +827,13 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere CLI",
           "version": "v1.1.0-build.13-channel.insider",
           "published_at": "2026-07-22T01:13:09Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.13-channel.insider/niksphere-cli-v1.1.0-build.13-channel.insider-linux-arm64.zip",
@@ -720,13 +867,13 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere CLI",
           "version": "v1.1.0-build.12-channel.insider",
           "published_at": "2026-07-21T20:47:21Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.12-channel.insider/niksphere-cli-v1.1.0-build.12-channel.insider-linux-arm64.zip",
@@ -760,13 +907,13 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere CLI",
           "version": "v1.1.0-build.11-channel.insider",
           "published_at": "2026-07-21T15:25:44Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.11-channel.insider/niksphere-cli-v1.1.0-build.11-channel.insider-linux-arm64.zip",
@@ -800,13 +947,13 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere CLI",
           "version": "v1.1.0-build.10-channel.insider",
           "published_at": "2026-07-21T05:19:36Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.10-channel.insider/niksphere-cli-v1.1.0-build.10-channel.insider-linux-arm64.zip",
@@ -840,13 +987,13 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere CLI",
           "version": "v1.0.0-build.8-channel.insider",
           "published_at": "2026-07-20T20:16:47Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.8-channel.insider/niksphere-cli-v1.0.0-build.8-channel.insider-linux-arm64.zip",
@@ -880,13 +1027,13 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere CLI",
           "version": "v1.0.0-build.7",
           "published_at": "2026-07-20T19:35:06Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.7/niksphere-cli-v1.0.0-build.7-linux-arm64.zip",
@@ -920,13 +1067,13 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere CLI",
           "version": "v1.0.0-build.6",
           "published_at": "2026-07-20T05:36:33Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.6/niksphere-cli-v1.0.0-build.6-linux-arm64.zip",
@@ -960,13 +1107,13 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere CLI",
           "version": "v1.0.0-build.5",
           "published_at": "2026-07-19T05:19:18Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.5/niksphere-cli-v1.0.0-build.5-linux-arm64.zip",
@@ -1000,13 +1147,13 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere CLI",
           "version": "v1.0.0-build.4",
           "published_at": "2026-07-18T04:45:04Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.4/niksphere-cli-v1.0.0-build.4-linux-arm64.zip",
@@ -1040,13 +1187,13 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere CLI",
           "version": "v1.0.0-build.3",
           "published_at": "2026-07-17T05:01:13Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.3/niksphere-cli-v1.0.0-build.3-linux-arm64.zip",
@@ -1080,13 +1227,13 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
+          }
         },
         {
           "name": "Niksphere CLI",
           "version": "v1.0.0-build.2",
           "published_at": "2026-07-16T10:46:39Z",
+          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
           "assets": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.2/niksphere-cli-v1.0.0-build.2-linux-arm64.zip",
@@ -1120,142 +1267,7 @@
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
             "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          },
-          "changelog": ""
-        }
-      ],
-      "ide-vscode": [
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.12-channel.insider",
-          "published_at": "2026-07-24T01:07:45Z",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.12-channel.insider/niksphere-ide-vscode-v1.0.0-build.12-channel.insider.vsix",
-              "size": 375142
-            }
-          },
-          "changelog": ""
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.11-channel.insider",
-          "published_at": "2026-07-23T01:11:22Z",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.11-channel.insider/niksphere-ide-vscode-v1.0.0-build.11-channel.insider.vsix",
-              "size": 370046
-            }
-          },
-          "changelog": ""
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.10-channel.insider",
-          "published_at": "2026-07-22T01:06:27Z",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.10-channel.insider/niksphere-ide-vscode-v1.0.0-build.10-channel.insider.vsix",
-              "size": 370046
-            }
-          },
-          "changelog": ""
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.9-channel.insider",
-          "published_at": "2026-07-21T15:21:43Z",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.9-channel.insider/niksphere-ide-vscode-v1.0.0-build.9-channel.insider.vsix",
-              "size": 370046
-            }
-          },
-          "changelog": ""
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.8",
-          "published_at": "2026-07-21T05:14:20Z",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.8/niksphere-ide-vscode-v1.0.0-build.8.vsix",
-              "size": 369651
-            }
-          },
-          "changelog": ""
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.7",
-          "published_at": "2026-07-20T19:30:15Z",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.7/niksphere-ide-vscode-v1.0.0-build.7.vsix",
-              "size": 369651
-            }
-          },
-          "changelog": ""
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.6",
-          "published_at": "2026-07-20T05:32:51Z",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.6/niksphere-ide-vscode-v1.0.0-build.6.vsix",
-              "size": 22068153
-            }
-          },
-          "changelog": ""
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.5",
-          "published_at": "2026-07-19T05:15:25Z",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.5/niksphere-ide-vscode-v1.0.0-build.5.vsix",
-              "size": 22068153
-            }
-          },
-          "changelog": ""
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.4",
-          "published_at": "2026-07-18T04:42:12Z",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.4/niksphere-ide-vscode-v1.0.0-build.4.vsix",
-              "size": 22068153
-            }
-          },
-          "changelog": ""
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.3",
-          "published_at": "2026-07-17T04:57:54Z",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.3/niksphere-ide-vscode-v1.0.0-build.3.vsix",
-              "size": 22068153
-            }
-          },
-          "changelog": ""
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.2",
-          "published_at": "2026-07-16T09:50:57Z",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.2/niksphere-ide-vscode-v1.0.0-build.2.vsix",
-              "size": 22068153
-            }
-          },
-          "changelog": ""
+          }
         }
       ]
     }
