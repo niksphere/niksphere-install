@@ -275,30 +275,6 @@
               "size": 22068153
             }
           }
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.3",
-          "published_at": "2026-07-17T04:57:54Z",
-          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.3/niksphere-ide-vscode-v1.0.0-build.3.vsix",
-              "size": 22068153
-            }
-          }
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.2",
-          "published_at": "2026-07-16T09:50:57Z",
-          "changelog": "Automated release of Niksphere VS Code Extension. Channel: insider.",
-          "assets": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.2/niksphere-ide-vscode-v1.0.0-build.2.vsix",
-              "size": 22068153
-            }
-          }
         }
       ],
       "engine": [
@@ -719,78 +695,6 @@
             "win-x64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.9/niksphere-engine-v1.1.0-build.9-win-x64.zip",
               "size": 10850797
-            }
-          }
-        },
-        {
-          "name": "Niksphere Engine",
-          "version": "v1.1.0-build.8",
-          "published_at": "2026-07-17T05:15:19Z",
-          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
-          "assets": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-linux-arm64.zip",
-              "size": 9523369
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-linux-x64.zip",
-              "size": 10680508
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-mac-arm64.zip",
-              "size": 9942169
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-mac-x64.zip",
-              "size": 10862120
-            },
-            "openapi": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-openapi.yaml",
-              "size": 14210
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-win-arm64.zip",
-              "size": 9566355
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.8/niksphere-engine-v1.1.0-build.8-win-x64.zip",
-              "size": 10850799
-            }
-          }
-        },
-        {
-          "name": "Niksphere Engine",
-          "version": "v1.1.0-build.7",
-          "published_at": "2026-07-16T10:44:21Z",
-          "changelog": "Automated release of Niksphere Engine. Channel: insider.",
-          "assets": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-linux-arm64.zip",
-              "size": 9523369
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-linux-x64.zip",
-              "size": 10680508
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-mac-arm64.zip",
-              "size": 9942169
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-mac-x64.zip",
-              "size": 10862120
-            },
-            "openapi": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-openapi.yaml",
-              "size": 14210
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-win-arm64.zip",
-              "size": 9566356
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.7/niksphere-engine-v1.1.0-build.7-win-x64.zip",
-              "size": 10850798
             }
           }
         }
@@ -1270,86 +1174,6 @@
           "install": {
             "bash": "curl -fsSL https://install.niksphere.de/install.sh | bash -s -- -c \"insider\" -v \"v1.0.0-build.4\"",
             "powershell": "irm https://install.niksphere.de/install.ps1 -OutFile install.ps1; .\\install.ps1 -Channel \"insider\" -Version \"v1.0.0-build.4\""
-          },
-          "uninstall": {
-            "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
-            "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          }
-        },
-        {
-          "name": "Niksphere CLI",
-          "version": "v1.0.0-build.3",
-          "published_at": "2026-07-17T05:01:13Z",
-          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
-          "assets": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.3/niksphere-cli-v1.0.0-build.3-linux-arm64.zip",
-              "size": 4345858
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.3/niksphere-cli-v1.0.0-build.3-linux-x64.zip",
-              "size": 4868654
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.3/niksphere-cli-v1.0.0-build.3-mac-arm64.zip",
-              "size": 4375866
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.3/niksphere-cli-v1.0.0-build.3-mac-x64.zip",
-              "size": 4768471
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.3/niksphere-cli-v1.0.0-build.3-win-arm64.zip",
-              "size": 4273971
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.3/niksphere-cli-v1.0.0-build.3-win-x64.zip",
-              "size": 4811740
-            }
-          },
-          "install": {
-            "bash": "curl -fsSL https://install.niksphere.de/install.sh | bash -s -- -c \"insider\" -v \"v1.0.0-build.3\"",
-            "powershell": "irm https://install.niksphere.de/install.ps1 -OutFile install.ps1; .\\install.ps1 -Channel \"insider\" -Version \"v1.0.0-build.3\""
-          },
-          "uninstall": {
-            "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
-            "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-          }
-        },
-        {
-          "name": "Niksphere CLI",
-          "version": "v1.0.0-build.2",
-          "published_at": "2026-07-16T10:46:39Z",
-          "changelog": "Automated release of Niksphere CLI. Channel: insider.",
-          "assets": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.2/niksphere-cli-v1.0.0-build.2-linux-arm64.zip",
-              "size": 4345858
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.2/niksphere-cli-v1.0.0-build.2-linux-x64.zip",
-              "size": 4868654
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.2/niksphere-cli-v1.0.0-build.2-mac-arm64.zip",
-              "size": 4375866
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.2/niksphere-cli-v1.0.0-build.2-mac-x64.zip",
-              "size": 4768471
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.2/niksphere-cli-v1.0.0-build.2-win-arm64.zip",
-              "size": 4273972
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.2/niksphere-cli-v1.0.0-build.2-win-x64.zip",
-              "size": 4811740
-            }
-          },
-          "install": {
-            "bash": "curl -fsSL https://install.niksphere.de/install.sh | bash -s -- -c \"insider\" -v \"v1.0.0-build.2\"",
-            "powershell": "irm https://install.niksphere.de/install.ps1 -OutFile install.ps1; .\\install.ps1 -Channel \"insider\" -Version \"v1.0.0-build.2\""
           },
           "uninstall": {
             "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
