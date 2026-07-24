@@ -751,6 +751,46 @@
       "cli": [
         {
           "name": "Niksphere CLI",
+          "version": "v1.1.0-build.16-channel.insider",
+          "published_at": "2026-07-24T12:12:53Z",
+          "changelog": "### Added\n- Initial release of Niksphere CLI",
+          "assets": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.16-channel.insider/niksphere-cli-v1.1.0-build.16-channel.insider-linux-arm64.zip",
+              "size": 4780008
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.16-channel.insider/niksphere-cli-v1.1.0-build.16-channel.insider-linux-x64.zip",
+              "size": 5353417
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.16-channel.insider/niksphere-cli-v1.1.0-build.16-channel.insider-mac-arm64.zip",
+              "size": 4849422
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.16-channel.insider/niksphere-cli-v1.1.0-build.16-channel.insider-mac-x64.zip",
+              "size": 5280835
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.16-channel.insider/niksphere-cli-v1.1.0-build.16-channel.insider-win-arm64.zip",
+              "size": 4731883
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.16-channel.insider/niksphere-cli-v1.1.0-build.16-channel.insider-win-x64.zip",
+              "size": 5327510
+            }
+          },
+          "install": {
+            "bash": "curl -fsSL https://install.niksphere.de/install.sh | bash -s -- -c \"insider\" -v \"v1.1.0-build.16-channel.insider\"",
+            "powershell": "irm https://install.niksphere.de/install.ps1 -OutFile install.ps1; .\\install.ps1 -Channel \"insider\" -Version \"v1.1.0-build.16-channel.insider\""
+          },
+          "uninstall": {
+            "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
+            "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
+          }
+        },
+        {
+          "name": "Niksphere CLI",
           "version": "v1.1.0-build.15-channel.insider",
           "published_at": "2026-07-24T01:11:52Z",
           "changelog": "Automated release of Niksphere CLI. Channel: insider.",
