@@ -185,6 +185,19 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.22-channel.insider/niksphere-engine-v1.1.0-build.22-channel.insider-win-x64.zip",
               "size": 11208462
             }
+          },
+          "install": {
+            "docker": "docker pull ghcr.io/niksphere/niksphere-engine:v1.1.0-build.22-channel.insider"
+          },
+          "container": {
+            "image": "ghcr.io/niksphere/niksphere-engine:v1.1.0-build.22-channel.insider",
+            "registry": "ghcr.io",
+            "package": "niksphere-engine",
+            "tags": [
+              "v1.1.0",
+              "v1.1.0-build.22-channel.insider",
+              "insider"
+            ]
           }
         },
         {
