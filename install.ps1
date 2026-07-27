@@ -58,7 +58,8 @@ if (-not $DownloadUrl) {
 }
 
 $ZipPath = Join-Path $env:TEMP "niksphere-cli.zip"
-$InstallDir = Join-Path $env:LOCALAPPDATA "niksphere\bin"
+$BaseDir = Join-Path $env:LOCALAPPDATA "niksphere"
+$InstallDir = Join-Path $BaseDir "bin"
 
 Write-Host "Downloading Niksphere CLI $($SelectedRelease.version) ($Platform)..."
 Invoke-WebRequest -Uri $DownloadUrl -OutFile $ZipPath -UseBasicParsing
@@ -70,6 +71,44 @@ if (!(Test-Path $InstallDir)) {
 
 Expand-Archive -Path $ZipPath -DestinationPath $InstallDir -Force
 Remove-Item $ZipPath
+
+# Save uninstall script locally for Windows Settings integration
+$LocalUninstallScript = Join-Path $BaseDir "uninstall.ps1"
+if ($PSScriptRoot -and (Test-Path (Join-Path $PSScriptRoot "uninstall.ps1"))) {
+    Copy-Item -Path (Join-Path $PSScriptRoot "uninstall.ps1") -Destination $LocalUninstallScript -Force
+} else {
+    $UninstallUrl = "https://install.niksphere.de/uninstall.ps1"
+    $UninstallFallbackUrl = "https://raw.githubusercontent.com/niksphere/niksphere-install/main/uninstall.ps1"
+    try {
+        Invoke-WebRequest -Uri $UninstallUrl -OutFile $LocalUninstallScript -UseBasicParsing
+    } catch {
+        try {
+            Invoke-WebRequest -Uri $UninstallFallbackUrl -OutFile $LocalUninstallScript -UseBasicParsing
+        } catch {
+            Write-Warning "Could not download uninstall.ps1 for offline uninstallation registration."
+        }
+    }
+}
+
+# Register in Windows Apps & Features (Registry)
+try {
+    $RegPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\Niksphere CLI"
+    if (!(Test-Path $RegPath)) {
+        New-Item -Path $RegPath -Force | Out-Null
+    }
+
+    Set-ItemProperty -Path $RegPath -Name "DisplayName" -Value "Niksphere CLI"
+    Set-ItemProperty -Path $RegPath -Name "DisplayVersion" -Value $SelectedRelease.version
+    Set-ItemProperty -Path $RegPath -Name "Publisher" -Value "Niksphere"
+    Set-ItemProperty -Path $RegPath -Name "DisplayIcon" -Value (Join-Path $InstallDir "nik.exe")
+    Set-ItemProperty -Path $RegPath -Name "InstallLocation" -Value $InstallDir
+    Set-ItemProperty -Path $RegPath -Name "UninstallString" -Value "powershell.exe -ExecutionPolicy Bypass -NoProfile -File `"$LocalUninstallScript`""
+    Set-ItemProperty -Path $RegPath -Name "QuietUninstallString" -Value "powershell.exe -ExecutionPolicy Bypass -NoProfile -File `"$LocalUninstallScript`""
+    Set-ItemProperty -Path $RegPath -Name "NoModify" -Value 1 -Type DWord
+    Set-ItemProperty -Path $RegPath -Name "NoRepair" -Value 1 -Type DWord
+} catch {
+    Write-Warning "Failed to register Niksphere CLI in Windows Registry: $_"
+}
 
 # The executable is natively named 'nik.exe' in the zip, so no renaming is necessary.
 
@@ -90,3 +129,4 @@ if ($UserPath -notmatch [regex]::Escape($InstallDir)) {
 } else {
     Write-Host "`n---> UPDATE SUCCESSFUL! Niksphere CLI has been updated and is ready to use! <---"
 }
+

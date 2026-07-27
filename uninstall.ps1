@@ -46,5 +46,15 @@ if ($UserPath) {
     }
 }
 
+# 3. Remove Windows Registry Entry
+$RegPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\Niksphere CLI"
+if (Test-Path $RegPath) {
+    Remove-Item -Path $RegPath -Recurse -Force -ErrorAction SilentlyContinue
+    Write-Host "Removed Niksphere CLI Windows Registry entry."
+}
+
+
+
 Write-Host "`n---> UNINSTALL SUCCESSFUL! <---"
 Write-Host "Please restart your terminal for the PATH changes to take effect."
+
