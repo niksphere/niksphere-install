@@ -100,7 +100,7 @@ try {
     Set-ItemProperty -Path $RegPath -Name "DisplayName" -Value "Niksphere CLI"
     Set-ItemProperty -Path $RegPath -Name "DisplayVersion" -Value $SelectedRelease.version
     Set-ItemProperty -Path $RegPath -Name "Publisher" -Value "Niksphere"
-    Set-ItemProperty -Path $RegPath -Name "DisplayIcon" -Value (Join-Path $InstallDir "nik.exe")
+    Set-ItemProperty -Path $RegPath -Name "DisplayIcon" -Value "$((Join-Path $InstallDir 'nik.exe')),0"
     Set-ItemProperty -Path $RegPath -Name "InstallLocation" -Value $InstallDir
     Set-ItemProperty -Path $RegPath -Name "UninstallString" -Value "powershell.exe -ExecutionPolicy Bypass -NoProfile -File `"$LocalUninstallScript`""
     Set-ItemProperty -Path $RegPath -Name "QuietUninstallString" -Value "powershell.exe -ExecutionPolicy Bypass -NoProfile -File `"$LocalUninstallScript`""
