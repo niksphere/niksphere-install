@@ -104,10 +104,17 @@ curl -sL "$DOWNLOAD_URL" -o "$TMP_ZIP"
 INSTALL_DIR="$HOME/.local/bin"
 mkdir -p "$INSTALL_DIR"
 
+# Gracefully terminate running nik processes to release file locks (e.g. LSP server)
+if command -v pkill >/dev/null 2>&1; then
+    pkill -f "nik " || true
+elif command -v killall >/dev/null 2>&1; then
+    killall nik || true
+fi
+
 echo "Extracting to $INSTALL_DIR..."
 # Force overwrite (-o) and quiet mode (-q)
 unzip -q -o "$TMP_ZIP" -d "$INSTALL_DIR"
-rm "$TMP_ZIP"
+rm -f "$TMP_ZIP"
 
 # The executable is natively named 'nik' in the zip, ensure it is executable
 if [ -f "$INSTALL_DIR/nik" ]; then

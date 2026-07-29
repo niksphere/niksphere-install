@@ -64,13 +64,37 @@ $InstallDir = Join-Path $BaseDir "bin"
 Write-Host "Downloading Niksphere CLI $($SelectedRelease.version) ($Platform)..."
 Invoke-WebRequest -Uri $DownloadUrl -OutFile $ZipPath -UseBasicParsing
 
-Write-Host "Extracting to $InstallDir..."
-if (!(Test-Path $InstallDir)) {
-    New-Item -ItemType Directory -Path $InstallDir -Force | Out-Null
+# Stop any running nik.exe processes to release binary lock (e.g. LSP server in VS Code)
+$CurrentPid = $PID
+Get-Process -Name "nik" -ErrorAction SilentlyContinue | Where-Object { $_.Id -ne $CurrentPid } | Stop-Process -Force -ErrorAction SilentlyContinue
+
+# Safe rename fallback if process couldn't be stopped or file is still locked
+$TargetExe = Join-Path $InstallDir "nik.exe"
+$OldExe = Join-Path $InstallDir "nik.exe.old"
+if (Test-Path $TargetExe) {
+    Remove-Item $OldExe -Force -ErrorAction SilentlyContinue
+    Rename-Item -Path $TargetExe -NewName "nik.exe.old" -Force -ErrorAction SilentlyContinue
 }
 
-Expand-Archive -Path $ZipPath -DestinationPath $InstallDir -Force
-Remove-Item $ZipPath
+$Extracted = $false
+for ($i = 0; $i -lt 5; $i++) {
+    try {
+        Expand-Archive -Path $ZipPath -DestinationPath $InstallDir -Force
+        $Extracted = $true
+        break
+    } catch {
+        Start-Sleep -Milliseconds 500
+    }
+}
+
+if (-not $Extracted) {
+    Write-Error "Failed to extract Niksphere CLI to $InstallDir. Please ensure no process is locking nik.exe."
+    Remove-Item $ZipPath -Force -ErrorAction SilentlyContinue
+    exit 1
+}
+
+Remove-Item $ZipPath -Force -ErrorAction SilentlyContinue
+Remove-Item $OldExe -Force -ErrorAction SilentlyContinue
 
 # Save uninstall script locally for Windows Settings integration
 $LocalUninstallScript = Join-Path $BaseDir "uninstall.ps1"
