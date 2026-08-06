@@ -45,6 +45,7 @@ jobs:
         shell: bash
         run: |
           node -e '
+            const run = async () => {
             const fs = require("fs");
             const path = require("path");
 
@@ -69,7 +70,7 @@ jobs:
             };
 
             // 1. Process GitHub Releases
-            releases.forEach(release => {
+            for (const release of releases) {
               const tag = release.tag_name;
               
               if (tag && tag.includes("/")) {
@@ -89,11 +90,32 @@ jobs:
                   }
                   
                   const assets = {};
+                  let structuredChangelog = null;
+
                   if (release.assets) {
-                    release.assets.forEach(asset => {
+                    for (const asset of release.assets) {
                       const assetName = asset.name;
                       const expectedPrefix = `niksphere-${component}-${version}`;
                       
+                      if (assetName === "release-notes.json") {
+                        try {
+                          const res = await fetch(asset.url, { 
+                            headers: { 
+                              "Accept": "application/octet-stream", 
+                              "Authorization": `Bearer ${process.env.GH_TOKEN}` 
+                            } 
+                          });
+                          if (res.ok) {
+                            structuredChangelog = await res.json();
+                          } else {
+                            console.log(`Failed to fetch release-notes.json for ${tag}: ${res.status}`);
+                          }
+                        } catch (e) {
+                          console.error(`Error fetching release-notes.json for ${tag}:`, e);
+                        }
+                        continue;
+                      }
+
                       if (assetName.includes(expectedPrefix)) {
                         const remaining = assetName.substring(expectedPrefix.length);
                         const lastDotIndex = remaining.lastIndexOf(".");
@@ -113,19 +135,19 @@ jobs:
                           size: asset.size || 0
                         };
                       }
-                    });
+                    }
                   }
 
                   channelObj[component].push({
                     name: componentNames[component] || component,
                     version: version,
                     published_at: release.published_at || new Date().toISOString(),
-                    changelog: release.body || "",
+                    changelog: structuredChangelog || release.body || "",
                     assets: assets
                   });
                 }
               }
-            });
+            }
 
             // 2. Process GHCR Container Packages (only those linked to niksphere-install)
             const versionsDir = "package_versions";
@@ -252,6 +274,8 @@ jobs:
 
             fs.writeFileSync("releases.json", JSON.stringify(manifest, null, 2));
             console.log("releases.json successfully rebuilt from GitHub Releases and GHCR Packages.");
+            };
+            run().catch(e => { console.error(e); process.exit(1); });
           '
 
       - name: Commit and Push changes
