@@ -90,32 +90,12 @@ jobs:
                   }
                   
                   const assets = {};
-                  let structuredChangelog = null;
 
                   if (release.assets) {
                     for (const asset of release.assets) {
                       const assetName = asset.name;
                       const expectedPrefix = `niksphere-${component}-${version}`;
                       
-                      if (assetName === "release-notes.json") {
-                        try {
-                          const res = await fetch(asset.url, { 
-                            headers: { 
-                              "Accept": "application/octet-stream", 
-                              "Authorization": `Bearer ${process.env.GH_TOKEN}` 
-                            } 
-                          });
-                          if (res.ok) {
-                            structuredChangelog = await res.json();
-                          } else {
-                            console.log(`Failed to fetch release-notes.json for ${tag}: ${res.status}`);
-                          }
-                        } catch (e) {
-                          console.error(`Error fetching release-notes.json for ${tag}:`, e);
-                        }
-                        continue;
-                      }
-
                       if (assetName.includes(expectedPrefix)) {
                         const remaining = assetName.substring(expectedPrefix.length);
                         const lastDotIndex = remaining.lastIndexOf(".");
@@ -142,7 +122,7 @@ jobs:
                     name: componentNames[component] || component,
                     version: version,
                     published_at: release.published_at || new Date().toISOString(),
-                    changelog: structuredChangelog || release.body || "",
+                    changelog: release.body || "",
                     assets: assets
                   });
                 }
