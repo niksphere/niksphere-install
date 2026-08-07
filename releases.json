@@ -8,27 +8,27 @@
           "published_at": "2026-07-20T20:25:48Z",
           "changelog": "Automated release of Niksphere CLI. Channel: stable.",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-linux-arm64.zip",
               "size": 4552110
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-linux-x64.zip",
               "size": 5098274
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-mac-arm64.zip",
               "size": 4594176
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-mac-x64.zip",
               "size": 5005035
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-win-arm64.zip",
               "size": 4487203
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.0.0-build.9-channel.stable/niksphere-cli-v1.0.0-build.9-channel.stable-win-x64.zip",
               "size": 5050343
             }
@@ -50,31 +50,31 @@
           "published_at": "2026-07-16T10:25:46Z",
           "changelog": "Automated release of Niksphere Engine. Channel: stable.",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-linux-arm64.zip",
               "size": 9524562
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-linux-x64.zip",
               "size": 10680328
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-mac-arm64.zip",
               "size": 9941535
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-mac-x64.zip",
               "size": 10863211
             },
-            "openapi": {
+            "openapi-yaml": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-openapi.yaml",
               "size": 14210
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-win-arm64.zip",
               "size": 9566507
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.6/niksphere-engine-v1.0.0-build.6-win-x64.zip",
               "size": 10848477
             }
@@ -86,31 +86,31 @@
           "published_at": "2026-07-16T10:18:16Z",
           "changelog": "Automated release of Niksphere Engine. Channel: stable.",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-linux-arm64.zip",
               "size": 9523365
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-linux-x64.zip",
               "size": 10680522
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-mac-arm64.zip",
               "size": 9942182
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-mac-x64.zip",
               "size": 10862119
             },
-            "openapi": {
+            "openapi-yaml": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-openapi.yaml",
               "size": 14210
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-win-arm64.zip",
               "size": 9566327
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.5/niksphere-engine-v1.0.0-build.5-win-x64.zip",
               "size": 10850808
             }
@@ -122,31 +122,31 @@
           "published_at": "2026-07-16T09:53:16Z",
           "changelog": "Automated release of Niksphere Engine. Channel: stable.",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-linux-arm64.zip",
               "size": 9523064
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-linux-x64.zip",
               "size": 10680519
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-mac-arm64.zip",
               "size": 9942170
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-mac-x64.zip",
               "size": 10862121
             },
-            "openapi": {
+            "openapi-yaml": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-openapi.yaml",
               "size": 14210
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-win-arm64.zip",
               "size": 9566335
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.0.0-build.3/niksphere-engine-v1.0.0-build.3-win-x64.zip",
               "size": 10850800
             }
@@ -162,7 +162,11 @@
           "published_at": "2026-08-07T12:00:43Z",
           "changelog": "### Added\n- Initial release of Niksphere VS Code Extension\n",
           "assets": {
-            "release-notes": {
+            "release-notes-json": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.31-channel.insider/niksphere-ide-vscode-v1.0.0-build.31-channel.insider-release-notes.json",
+              "size": 86
+            },
+            "release-notes-md": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/ide-vscode/v1.0.0-build.31-channel.insider/niksphere-ide-vscode-v1.0.0-build.31-channel.insider-release-notes.md",
               "size": 59
             },
@@ -256,15 +260,19 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.37-channel.insider/niksphere-cli-v1.1.0-build.37-channel.insider-mac-x64",
               "size": 17866720
             },
-            "release-notes": {
+            "release-notes-json": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.37-channel.insider/niksphere-cli-v1.1.0-build.37-channel.insider-release-notes.json",
+              "size": 489
+            },
+            "release-notes-md": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.37-channel.insider/niksphere-cli-v1.1.0-build.37-channel.insider-release-notes.md",
               "size": 474
             },
-            "win-arm64": {
+            "win-arm64-exe": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.37-channel.insider/niksphere-cli-v1.1.0-build.37-channel.insider-win-arm64.exe",
               "size": 16450048
             },
-            "win-x64": {
+            "win-x64-exe": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.37-channel.insider/niksphere-cli-v1.1.0-build.37-channel.insider-win-x64.exe",
               "size": 18072064
             }
@@ -284,27 +292,27 @@
           "published_at": "2026-08-07T01:58:00Z",
           "changelog": "### Added\n- Initial release of Niksphere CLI\n- Require explicit server URL for environment authentication login (`env auth login`)\n- Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins\n\n### Fixed\n- Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`\n- Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.36-channel.insider/niksphere-cli-v1.1.0-build.36-channel.insider-linux-arm64.zip",
               "size": 6154907
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.36-channel.insider/niksphere-cli-v1.1.0-build.36-channel.insider-linux-x64.zip",
               "size": 6843801
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.36-channel.insider/niksphere-cli-v1.1.0-build.36-channel.insider-mac-arm64.zip",
               "size": 6273763
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.36-channel.insider/niksphere-cli-v1.1.0-build.36-channel.insider-mac-x64.zip",
               "size": 6796825
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.36-channel.insider/niksphere-cli-v1.1.0-build.36-channel.insider-win-arm64.zip",
               "size": 6130202
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.36-channel.insider/niksphere-cli-v1.1.0-build.36-channel.insider-win-x64.zip",
               "size": 6887424
             }
@@ -324,27 +332,27 @@
           "published_at": "2026-08-05T01:11:24Z",
           "changelog": "### Added\n- Initial release of Niksphere CLI\n- Require explicit server URL for environment authentication login (`env auth login`)\n- Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins\n\n### Fixed\n- Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`\n- {'Improved CLI `--help` layout': 'displayed commands prior to options and unified flags under a single `Flags` section'}",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.34-channel.insider/niksphere-cli-v1.1.0-build.34-channel.insider-linux-arm64.zip",
               "size": 6155110
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.34-channel.insider/niksphere-cli-v1.1.0-build.34-channel.insider-linux-x64.zip",
               "size": 6843399
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.34-channel.insider/niksphere-cli-v1.1.0-build.34-channel.insider-mac-arm64.zip",
               "size": 6274809
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.34-channel.insider/niksphere-cli-v1.1.0-build.34-channel.insider-mac-x64.zip",
               "size": 6797073
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.34-channel.insider/niksphere-cli-v1.1.0-build.34-channel.insider-win-arm64.zip",
               "size": 6130270
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.34-channel.insider/niksphere-cli-v1.1.0-build.34-channel.insider-win-x64.zip",
               "size": 6887811
             }
@@ -364,27 +372,27 @@
           "published_at": "2026-08-03T01:20:31Z",
           "changelog": "### Added\n- Initial release of Niksphere CLI\n- Require explicit server URL for environment authentication login (`env auth login`)\n- Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins\n\n### Fixed\n- Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`\n- {'Improved CLI `--help` layout': 'displayed commands prior to options and unified flags under a single `Flags` section'}",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.32-channel.insider/niksphere-cli-v1.1.0-build.32-channel.insider-linux-arm64.zip",
               "size": 6146885
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.32-channel.insider/niksphere-cli-v1.1.0-build.32-channel.insider-linux-x64.zip",
               "size": 6837132
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.32-channel.insider/niksphere-cli-v1.1.0-build.32-channel.insider-mac-arm64.zip",
               "size": 6265149
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.32-channel.insider/niksphere-cli-v1.1.0-build.32-channel.insider-mac-x64.zip",
               "size": 6789335
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.32-channel.insider/niksphere-cli-v1.1.0-build.32-channel.insider-win-arm64.zip",
               "size": 6123820
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.32-channel.insider/niksphere-cli-v1.1.0-build.32-channel.insider-win-x64.zip",
               "size": 6884973
             }
@@ -404,27 +412,27 @@
           "published_at": "2026-08-02T21:19:52Z",
           "changelog": "### Added\n- Initial release of Niksphere CLI\n- Require explicit server URL for environment authentication login (`env auth login`)\n- Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins\n\n### Fixed\n- Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`\n- {'Improved CLI `--help` layout': 'displayed commands prior to options and unified flags under a single `Flags` section'}",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.31-channel.insider/niksphere-cli-v1.1.0-build.31-channel.insider-linux-arm64.zip",
               "size": 6146897
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.31-channel.insider/niksphere-cli-v1.1.0-build.31-channel.insider-linux-x64.zip",
               "size": 6837108
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.31-channel.insider/niksphere-cli-v1.1.0-build.31-channel.insider-mac-arm64.zip",
               "size": 6265151
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.31-channel.insider/niksphere-cli-v1.1.0-build.31-channel.insider-mac-x64.zip",
               "size": 6789345
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.31-channel.insider/niksphere-cli-v1.1.0-build.31-channel.insider-win-arm64.zip",
               "size": 6123819
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.31-channel.insider/niksphere-cli-v1.1.0-build.31-channel.insider-win-x64.zip",
               "size": 6885030
             }
@@ -444,27 +452,27 @@
           "published_at": "2026-08-01T09:50:26Z",
           "changelog": "### Added\n- Initial release of Niksphere CLI\n- Require explicit server URL for environment authentication login (`env auth login`)\n- Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins\n\n### Fixed\n- Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`\n- {'Improved CLI `--help` layout': 'displayed commands prior to options and unified flags under a single `Flags` section'}",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.29-channel.insider/niksphere-cli-v1.1.0-build.29-channel.insider-linux-arm64.zip",
               "size": 6142045
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.29-channel.insider/niksphere-cli-v1.1.0-build.29-channel.insider-linux-x64.zip",
               "size": 6826847
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.29-channel.insider/niksphere-cli-v1.1.0-build.29-channel.insider-mac-arm64.zip",
               "size": 6258622
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.29-channel.insider/niksphere-cli-v1.1.0-build.29-channel.insider-mac-x64.zip",
               "size": 6777776
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.29-channel.insider/niksphere-cli-v1.1.0-build.29-channel.insider-win-arm64.zip",
               "size": 6117067
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.29-channel.insider/niksphere-cli-v1.1.0-build.29-channel.insider-win-x64.zip",
               "size": 6872349
             }
@@ -484,27 +492,27 @@
           "published_at": "2026-08-01T01:20:49Z",
           "changelog": "### Added\n- Initial release of Niksphere CLI\n- Require explicit server URL for environment authentication login (`env auth login`)\n- Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins\n\n### Fixed\n- Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`\n- {'Improved CLI `--help` layout': 'displayed commands prior to options and unified flags under a single `Flags` section'}",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.28-channel.insider/niksphere-cli-v1.1.0-build.28-channel.insider-linux-arm64.zip",
               "size": 6142046
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.28-channel.insider/niksphere-cli-v1.1.0-build.28-channel.insider-linux-x64.zip",
               "size": 6826851
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.28-channel.insider/niksphere-cli-v1.1.0-build.28-channel.insider-mac-arm64.zip",
               "size": 6258623
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.28-channel.insider/niksphere-cli-v1.1.0-build.28-channel.insider-mac-x64.zip",
               "size": 6777779
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.28-channel.insider/niksphere-cli-v1.1.0-build.28-channel.insider-win-arm64.zip",
               "size": 6117069
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.28-channel.insider/niksphere-cli-v1.1.0-build.28-channel.insider-win-x64.zip",
               "size": 6872348
             }
@@ -524,27 +532,27 @@
           "published_at": "2026-07-30T01:07:15Z",
           "changelog": "### Added\n- Initial release of Niksphere CLI\n- Require explicit server URL for environment authentication login (`env auth login`)\n- Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins\n\n### Fixed\n- Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`\n- {'Improved CLI `--help` layout': 'displayed commands prior to options and unified flags under a single `Flags` section'}",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.26-channel.insider/niksphere-cli-v1.1.0-build.26-channel.insider-linux-arm64.zip",
               "size": 6122405
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.26-channel.insider/niksphere-cli-v1.1.0-build.26-channel.insider-linux-x64.zip",
               "size": 6806275
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.26-channel.insider/niksphere-cli-v1.1.0-build.26-channel.insider-mac-arm64.zip",
               "size": 6238349
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.26-channel.insider/niksphere-cli-v1.1.0-build.26-channel.insider-mac-x64.zip",
               "size": 6759323
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.26-channel.insider/niksphere-cli-v1.1.0-build.26-channel.insider-win-arm64.zip",
               "size": 6097687
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.26-channel.insider/niksphere-cli-v1.1.0-build.26-channel.insider-win-x64.zip",
               "size": 6849905
             }
@@ -564,27 +572,27 @@
           "published_at": "2026-07-29T08:27:19Z",
           "changelog": "### Added\n- Initial release of Niksphere CLI\n- Require explicit server URL for environment authentication login (`env auth login`)\n- Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins\n\n### Fixed\n- Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`\n- {'Improved CLI `--help` layout': 'displayed commands prior to options and unified flags under a single `Flags` section'}",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.25-channel.insider/niksphere-cli-v1.1.0-build.25-channel.insider-linux-arm64.zip",
               "size": 6103189
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.25-channel.insider/niksphere-cli-v1.1.0-build.25-channel.insider-linux-x64.zip",
               "size": 6782328
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.25-channel.insider/niksphere-cli-v1.1.0-build.25-channel.insider-mac-arm64.zip",
               "size": 6216687
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.25-channel.insider/niksphere-cli-v1.1.0-build.25-channel.insider-mac-x64.zip",
               "size": 6734155
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.25-channel.insider/niksphere-cli-v1.1.0-build.25-channel.insider-win-arm64.zip",
               "size": 6071790
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.25-channel.insider/niksphere-cli-v1.1.0-build.25-channel.insider-win-x64.zip",
               "size": 6820137
             }
@@ -604,27 +612,27 @@
           "published_at": "2026-07-29T05:35:26Z",
           "changelog": "### Added\n- Initial release of Niksphere CLI\n- Require explicit server URL for environment authentication login (`env auth login`)\n- Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins\n\n### Fixed\n- Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`\n- {'Improved CLI `--help` layout': 'displayed commands prior to options and unified flags under a single `Flags` section'}",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.24-channel.insider/niksphere-cli-v1.1.0-build.24-channel.insider-linux-arm64.zip",
               "size": 6103203
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.24-channel.insider/niksphere-cli-v1.1.0-build.24-channel.insider-linux-x64.zip",
               "size": 6782315
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.24-channel.insider/niksphere-cli-v1.1.0-build.24-channel.insider-mac-arm64.zip",
               "size": 6216670
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.24-channel.insider/niksphere-cli-v1.1.0-build.24-channel.insider-mac-x64.zip",
               "size": 6734126
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.24-channel.insider/niksphere-cli-v1.1.0-build.24-channel.insider-win-arm64.zip",
               "size": 6071555
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.24-channel.insider/niksphere-cli-v1.1.0-build.24-channel.insider-win-x64.zip",
               "size": 6817358
             }
@@ -644,27 +652,27 @@
           "published_at": "2026-07-28T01:06:58Z",
           "changelog": "### Added\n- Initial release of Niksphere CLI\n- Require explicit server URL for environment authentication login (`env auth login`)",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.20-channel.insider/niksphere-cli-v1.1.0-build.20-channel.insider-linux-arm64.zip",
               "size": 4780246
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.20-channel.insider/niksphere-cli-v1.1.0-build.20-channel.insider-linux-x64.zip",
               "size": 5354184
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.20-channel.insider/niksphere-cli-v1.1.0-build.20-channel.insider-mac-arm64.zip",
               "size": 4850115
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.20-channel.insider/niksphere-cli-v1.1.0-build.20-channel.insider-mac-x64.zip",
               "size": 5281034
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.20-channel.insider/niksphere-cli-v1.1.0-build.20-channel.insider-win-arm64.zip",
               "size": 4732892
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.20-channel.insider/niksphere-cli-v1.1.0-build.20-channel.insider-win-x64.zip",
               "size": 5328499
             }
@@ -684,27 +692,27 @@
           "published_at": "2026-07-27T01:20:10Z",
           "changelog": "### Added\n- Initial release of Niksphere CLI",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.19-channel.insider/niksphere-cli-v1.1.0-build.19-channel.insider-linux-arm64.zip",
               "size": 4779999
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.19-channel.insider/niksphere-cli-v1.1.0-build.19-channel.insider-linux-x64.zip",
               "size": 5353417
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.19-channel.insider/niksphere-cli-v1.1.0-build.19-channel.insider-mac-arm64.zip",
               "size": 4849423
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.19-channel.insider/niksphere-cli-v1.1.0-build.19-channel.insider-mac-x64.zip",
               "size": 5280838
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.19-channel.insider/niksphere-cli-v1.1.0-build.19-channel.insider-win-arm64.zip",
               "size": 4731884
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/cli/v1.1.0-build.19-channel.insider/niksphere-cli-v1.1.0-build.19-channel.insider-win-x64.zip",
               "size": 5327505
             }
@@ -726,31 +734,31 @@
           "published_at": "2026-08-03T01:24:40Z",
           "changelog": "### Added\n- Initial release of Niksphere Engine\n- Unified design for device authorization flow UI in IdP Broker matching React SPA frontend\n\n### Fixed\n- Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)\n- Updated frontend dependencies to resolve security audit vulnerabilities\n- Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.43-channel.insider/niksphere-engine-v1.1.0-build.43-channel.insider-linux-arm64.zip",
               "size": 11603072
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.43-channel.insider/niksphere-engine-v1.1.0-build.43-channel.insider-linux-x64.zip",
               "size": 12854461
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.43-channel.insider/niksphere-engine-v1.1.0-build.43-channel.insider-mac-arm64.zip",
               "size": 12004721
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.43-channel.insider/niksphere-engine-v1.1.0-build.43-channel.insider-mac-x64.zip",
               "size": 13007199
             },
-            "openapi": {
+            "openapi-yaml": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.43-channel.insider/niksphere-engine-v1.1.0-build.43-channel.insider-openapi.yaml",
               "size": 17180
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.43-channel.insider/niksphere-engine-v1.1.0-build.43-channel.insider-win-arm64.zip",
               "size": 11583999
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.43-channel.insider/niksphere-engine-v1.1.0-build.43-channel.insider-win-x64.zip",
               "size": 13040853
             }
@@ -775,31 +783,31 @@
           "published_at": "2026-08-01T01:23:28Z",
           "changelog": "### Added\n- Initial release of Niksphere Engine\n- Unified design for device authorization flow UI in IdP Broker matching React SPA frontend\n\n### Fixed\n- Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)\n- Updated frontend dependencies to resolve security audit vulnerabilities\n- Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.41-channel.insider/niksphere-engine-v1.1.0-build.41-channel.insider-linux-arm64.zip",
               "size": 11572696
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.41-channel.insider/niksphere-engine-v1.1.0-build.41-channel.insider-linux-x64.zip",
               "size": 12822786
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.41-channel.insider/niksphere-engine-v1.1.0-build.41-channel.insider-mac-arm64.zip",
               "size": 11972094
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.41-channel.insider/niksphere-engine-v1.1.0-build.41-channel.insider-mac-x64.zip",
               "size": 12968633
             },
-            "openapi": {
+            "openapi-yaml": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.41-channel.insider/niksphere-engine-v1.1.0-build.41-channel.insider-openapi.yaml",
               "size": 14234
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.41-channel.insider/niksphere-engine-v1.1.0-build.41-channel.insider-win-arm64.zip",
               "size": 11555575
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.41-channel.insider/niksphere-engine-v1.1.0-build.41-channel.insider-win-x64.zip",
               "size": 13009661
             }
@@ -822,31 +830,31 @@
           "published_at": "2026-07-30T01:11:43Z",
           "changelog": "### Added\n- Initial release of Niksphere Engine\n- Unified design for device authorization flow UI in IdP Broker matching React SPA frontend\n\n### Fixed\n- Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)\n- Updated frontend dependencies to resolve security audit vulnerabilities\n- Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.39-channel.insider/niksphere-engine-v1.1.0-build.39-channel.insider-linux-arm64.zip",
               "size": 11567820
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.39-channel.insider/niksphere-engine-v1.1.0-build.39-channel.insider-linux-x64.zip",
               "size": 12812633
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.39-channel.insider/niksphere-engine-v1.1.0-build.39-channel.insider-mac-arm64.zip",
               "size": 11961412
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.39-channel.insider/niksphere-engine-v1.1.0-build.39-channel.insider-mac-x64.zip",
               "size": 12966944
             },
-            "openapi": {
+            "openapi-yaml": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.39-channel.insider/niksphere-engine-v1.1.0-build.39-channel.insider-openapi.yaml",
               "size": 14234
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.39-channel.insider/niksphere-engine-v1.1.0-build.39-channel.insider-win-arm64.zip",
               "size": 11549630
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.39-channel.insider/niksphere-engine-v1.1.0-build.39-channel.insider-win-x64.zip",
               "size": 12996940
             }
@@ -869,31 +877,31 @@
           "published_at": "2026-07-29T05:45:14Z",
           "changelog": "### Added\n- Initial release of Niksphere Engine\n- Unified design for device authorization flow UI in IdP Broker matching React SPA frontend\n\n### Fixed\n- Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)\n- Updated frontend dependencies to resolve security audit vulnerabilities\n- Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.38-channel.insider/niksphere-engine-v1.1.0-build.38-channel.insider-linux-arm64.zip",
               "size": 11564280
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.38-channel.insider/niksphere-engine-v1.1.0-build.38-channel.insider-linux-x64.zip",
               "size": 12808698
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.38-channel.insider/niksphere-engine-v1.1.0-build.38-channel.insider-mac-arm64.zip",
               "size": 11961459
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.38-channel.insider/niksphere-engine-v1.1.0-build.38-channel.insider-mac-x64.zip",
               "size": 12964341
             },
-            "openapi": {
+            "openapi-yaml": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.38-channel.insider/niksphere-engine-v1.1.0-build.38-channel.insider-openapi.yaml",
               "size": 14234
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.38-channel.insider/niksphere-engine-v1.1.0-build.38-channel.insider-win-arm64.zip",
               "size": 11534513
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.38-channel.insider/niksphere-engine-v1.1.0-build.38-channel.insider-win-x64.zip",
               "size": 12989577
             }
@@ -916,31 +924,31 @@
           "published_at": "2026-07-28T01:04:41Z",
           "changelog": "### Added\n- Initial release of Niksphere Engine\n- Unified design for device authorization flow UI in IdP Broker matching React SPA frontend\n\n### Fixed\n- Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
           "assets": {
-            "linux-arm64": {
+            "linux-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.33-channel.insider/niksphere-engine-v1.1.0-build.33-channel.insider-linux-arm64.zip",
               "size": 9889856
             },
-            "linux-x64": {
+            "linux-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.33-channel.insider/niksphere-engine-v1.1.0-build.33-channel.insider-linux-x64.zip",
               "size": 11079028
             },
-            "mac-arm64": {
+            "mac-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.33-channel.insider/niksphere-engine-v1.1.0-build.33-channel.insider-mac-arm64.zip",
               "size": 10259560
             },
-            "mac-x64": {
+            "mac-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.33-channel.insider/niksphere-engine-v1.1.0-build.33-channel.insider-mac-x64.zip",
               "size": 11214085
             },
-            "openapi": {
+            "openapi-yaml": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.33-channel.insider/niksphere-engine-v1.1.0-build.33-channel.insider-openapi.yaml",
               "size": 14210
             },
-            "win-arm64": {
+            "win-arm64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.33-channel.insider/niksphere-engine-v1.1.0-build.33-channel.insider-win-arm64.zip",
               "size": 9878562
             },
-            "win-x64": {
+            "win-x64-zip": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/engine/v1.1.0-build.33-channel.insider/niksphere-engine-v1.1.0-build.33-channel.insider-win-x64.zip",
               "size": 11209157
             }
