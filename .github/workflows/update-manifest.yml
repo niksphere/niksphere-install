@@ -73,10 +73,19 @@ jobs:
             for (const release of releases) {
               const tag = release.tag_name;
               
-              if (tag && tag.includes("/")) {
-                const parts = tag.split("/");
-                const component = parts[0];
-                const version = parts[1];
+              if (tag && tag.startsWith("niksphere-")) {
+                let component, version;
+                
+                if (tag.startsWith("niksphere-ide-vscode-")) {
+                    component = "ide-vscode";
+                    version = tag.substring("niksphere-ide-vscode-".length);
+                } else if (tag.startsWith("niksphere-cli-")) {
+                    component = "cli";
+                    version = tag.substring("niksphere-cli-".length);
+                } else if (tag.startsWith("niksphere-engine-")) {
+                    component = "engine";
+                    version = tag.substring("niksphere-engine-".length);
+                }
                 
                 if (component === "cli" || component === "engine" || component === "ide-vscode") {
                   const channel = release.prerelease ? "insider" : "stable";
@@ -103,13 +112,14 @@ jobs:
                         const ext = lastDotIndex !== -1 ? remaining.substring(lastDotIndex + 1) : "";
                         let key = rawSuffix.startsWith("-") ? rawSuffix.substring(1) : rawSuffix;
                         
+                        const knownPlatforms = ["linux-arm64", "linux-x64", "mac-arm64", "mac-x64", "win-arm64", "win-x64"];
                         if (!key) {
                           if (component === "ide-vscode") {
                             key = "vsix";
                           } else {
                             key = "default";
                           }
-                        } else if (ext) {
+                        } else if (ext && !knownPlatforms.includes(key)) {
                           key = `${key}-${ext}`;
                         }
                         

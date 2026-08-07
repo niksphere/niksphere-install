@@ -32,12 +32,18 @@ module.exports = async ({ github, context, core }, dryRunInput) => {
     }
 
     const tag = release.tag_name || '';
-    const parts = tag.split('/');
-    if (parts.length >= 2) {
-      const comp = parts[0];
-      if (components.includes(comp)) {
-        groups[comp].push(release);
-      }
+    let comp = null;
+    
+    if (tag.startsWith("niksphere-ide-vscode-")) {
+        comp = "ide-vscode";
+    } else if (tag.startsWith("niksphere-cli-")) {
+        comp = "cli";
+    } else if (tag.startsWith("niksphere-engine-")) {
+        comp = "engine";
+    }
+    
+    if (comp && components.includes(comp)) {
+      groups[comp].push(release);
     }
   }
 
