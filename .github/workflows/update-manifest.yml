@@ -133,11 +133,40 @@ jobs:
                     }
                   }
 
+                  let markdownNotes = "";
+                  let jsonNotes = {};
+
+                  if (release.assets) {
+                    const mdAsset = release.assets.find(a => a.name.endsWith("-release-notes.md"));
+                    const jsonAsset = release.assets.find(a => a.name.endsWith("-release-notes.json"));
+
+                    if (mdAsset) {
+                      try {
+                        const res = await fetch(mdAsset.browser_download_url);
+                        if (res.ok) markdownNotes = await res.text();
+                      } catch (e) {
+                        console.error("Error fetching md notes:", e);
+                      }
+                    }
+
+                    if (jsonAsset) {
+                      try {
+                        const res = await fetch(jsonAsset.browser_download_url);
+                        if (res.ok) jsonNotes = await res.json();
+                      } catch (e) {
+                        console.error("Error fetching json notes:", e);
+                      }
+                    }
+                  }
+
                   channelObj[component].push({
                     name: componentNames[component] || component,
                     version: version,
                     published_at: release.published_at || new Date().toISOString(),
-                    changelog: release.body || "",
+                    notes: {
+                      markdown: markdownNotes,
+                      json: jsonNotes
+                    },
                     downloads: downloads,
                     files: files
                   });
