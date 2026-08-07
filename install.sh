@@ -72,7 +72,7 @@ else:
     selected = releases[0] if releases else None
 
 if selected:
-    asset = selected.get('assets', {}).get('${OS_SHORT}-${ARCH_SHORT}')
+    asset = selected.get('downloads', {}).get('${OS_SHORT}-${ARCH_SHORT}')
     if isinstance(asset, dict):
         print(asset.get('url', ''))
     elif isinstance(asset, str):

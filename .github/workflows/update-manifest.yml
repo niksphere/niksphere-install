@@ -98,35 +98,37 @@ jobs:
                     channelObj[component] = [];
                   }
                   
-                  const assets = {};
+                  const downloads = {};
+                  const files = [];
 
                   if (release.assets) {
                     for (const asset of release.assets) {
                       const assetName = asset.name;
                       const expectedPrefix = `niksphere-${component}-${version}`;
                       
+                      let targetKey = "";
                       if (assetName.includes(expectedPrefix)) {
                         const remaining = assetName.substring(expectedPrefix.length);
                         const lastDotIndex = remaining.lastIndexOf(".");
                         const rawSuffix = lastDotIndex !== -1 ? remaining.substring(0, lastDotIndex) : remaining;
                         const ext = lastDotIndex !== -1 ? remaining.substring(lastDotIndex + 1) : "";
-                        let key = rawSuffix.startsWith("-") ? rawSuffix.substring(1) : rawSuffix;
-                        
-                        const knownPlatforms = ["linux-arm64", "linux-x64", "mac-arm64", "mac-x64", "win-arm64", "win-x64"];
-                        if (!key) {
-                          if (component === "ide-vscode") {
-                            key = "vsix";
-                          } else {
-                            key = "default";
-                          }
-                        } else if (ext && !knownPlatforms.includes(key)) {
-                          key = `${key}-${ext}`;
-                        }
-                        
-                        assets[key] = {
+                        const key = rawSuffix.startsWith("-") ? rawSuffix.substring(1) : rawSuffix;
+                        targetKey = key || ext;
+                      }
+                      
+                      const knownTargets = ["linux-arm64", "linux-x64", "mac-arm64", "mac-x64", "win-arm64", "win-x64", "vsix"];
+                      
+                      if (targetKey && knownTargets.includes(targetKey)) {
+                        downloads[targetKey] = {
                           url: asset.browser_download_url,
                           size: asset.size || 0
                         };
+                      } else {
+                        files.push({
+                          name: assetName,
+                          url: asset.browser_download_url,
+                          size: asset.size || 0
+                        });
                       }
                     }
                   }
@@ -136,7 +138,8 @@ jobs:
                     version: version,
                     published_at: release.published_at || new Date().toISOString(),
                     changelog: release.body || "",
-                    assets: assets
+                    downloads: downloads,
+                    files: files
                   });
                 }
               }
@@ -215,7 +218,8 @@ jobs:
                               package: pkgName,
                               tags: tags
                             },
-                            assets: {}
+                            downloads: {},
+                            files: []
                           };
                           channelObj[component].push(newEntry);
                         }

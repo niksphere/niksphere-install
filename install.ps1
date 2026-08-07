@@ -43,7 +43,7 @@ if ($Version) {
     $SelectedRelease = $ComponentReleases[0]
 }
 
-$AssetVal = $SelectedRelease.assets.$Platform
+$AssetVal = $SelectedRelease.downloads.$Platform
 if ($AssetVal -is [string]) {
     $DownloadUrl = $AssetVal
 } elseif ($AssetVal -and $AssetVal.url) {
