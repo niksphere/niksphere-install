@@ -57,12 +57,16 @@ if (-not $DownloadUrl) {
     exit 1
 }
 
-$ZipPath = Join-Path $env:TEMP "niksphere-cli.zip"
+$TempExePath = Join-Path $env:TEMP "nik.exe"
 $BaseDir = Join-Path $env:LOCALAPPDATA "niksphere"
 $InstallDir = Join-Path $BaseDir "bin"
 
+if (-not (Test-Path $InstallDir)) {
+    New-Item -ItemType Directory -Force -Path $InstallDir | Out-Null
+}
+
 Write-Host "Downloading Niksphere CLI $($SelectedRelease.version) ($Platform)..."
-Invoke-WebRequest -Uri $DownloadUrl -OutFile $ZipPath -UseBasicParsing
+Invoke-WebRequest -Uri $DownloadUrl -OutFile $TempExePath -UseBasicParsing
 
 # Stop any running nik.exe processes to release binary lock (e.g. LSP server in VS Code)
 $CurrentPid = $PID
@@ -76,24 +80,23 @@ if (Test-Path $TargetExe) {
     Rename-Item -Path $TargetExe -NewName "nik.exe.old" -Force -ErrorAction SilentlyContinue
 }
 
-$Extracted = $false
+$Moved = $false
 for ($i = 0; $i -lt 5; $i++) {
     try {
-        Expand-Archive -Path $ZipPath -DestinationPath $InstallDir -Force
-        $Extracted = $true
+        Move-Item -Path $TempExePath -Destination $TargetExe -Force
+        $Moved = $true
         break
     } catch {
         Start-Sleep -Milliseconds 500
     }
 }
 
-if (-not $Extracted) {
-    Write-Error "Failed to extract Niksphere CLI to $InstallDir. Please ensure no process is locking nik.exe."
-    Remove-Item $ZipPath -Force -ErrorAction SilentlyContinue
+if (-not $Moved) {
+    Write-Error "Failed to move Niksphere CLI to $InstallDir. Please ensure no process is locking nik.exe."
+    Remove-Item $TempExePath -Force -ErrorAction SilentlyContinue
     exit 1
 }
 
-Remove-Item $ZipPath -Force -ErrorAction SilentlyContinue
 Remove-Item $OldExe -Force -ErrorAction SilentlyContinue
 
 # Save uninstall script locally for Windows Settings integration
@@ -134,7 +137,7 @@ try {
     Write-Warning "Failed to register Niksphere CLI in Windows Registry: $_"
 }
 
-# The executable is natively named 'nik.exe' in the zip, so no renaming is necessary.
+# The downloaded file is now directly the executable, so we just placed it appropriately.
 
 # Add path to system environment variables if it doesn't exist yet
 $UserPath = [Environment]::GetEnvironmentVariable("PATH", "User")

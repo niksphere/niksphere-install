@@ -98,8 +98,8 @@ if [ -z "$DOWNLOAD_URL" ]; then
 fi
 
 echo "Downloading from $DOWNLOAD_URL..."
-TMP_ZIP="/tmp/niksphere-cli.zip"
-curl -sL "$DOWNLOAD_URL" -o "$TMP_ZIP"
+TMP_EXE="/tmp/niksphere-cli"
+curl -sL "$DOWNLOAD_URL" -o "$TMP_EXE"
 
 INSTALL_DIR="$HOME/.local/bin"
 mkdir -p "$INSTALL_DIR"
@@ -111,12 +111,10 @@ elif command -v killall >/dev/null 2>&1; then
     killall nik || true
 fi
 
-echo "Extracting to $INSTALL_DIR..."
-# Force overwrite (-o) and quiet mode (-q)
-unzip -q -o "$TMP_ZIP" -d "$INSTALL_DIR"
-rm -f "$TMP_ZIP"
+echo "Installing to $INSTALL_DIR..."
+mv -f "$TMP_EXE" "$INSTALL_DIR/nik"
 
-# The executable is natively named 'nik' in the zip, ensure it is executable
+# Ensure the executable has execute permissions
 if [ -f "$INSTALL_DIR/nik" ]; then
     chmod +x "$INSTALL_DIR/nik"
 fi
