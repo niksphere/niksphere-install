@@ -7,7 +7,16 @@
           "name": "Niksphere VS Code Extension",
           "version": "v1.0.0-build.32-channel.insider",
           "published_at": "2026-08-07T14:26:12Z",
-          "changelog": "### Added\n- Initial release of Niksphere VS Code Extension\n",
+          "notes": {
+            "markdown": "### Added\n- Initial release of Niksphere VS Code Extension\n",
+            "json": {
+              "added": [
+                "Initial release of Niksphere VS Code Extension"
+              ],
+              "fixed": [],
+              "breaking": []
+            }
+          },
           "downloads": {
             "vsix": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.32-channel.insider/niksphere-ide-vscode-v1.0.0-build.32-channel.insider.vsix",
@@ -33,7 +42,21 @@
           "name": "Niksphere CLI",
           "version": "v1.1.0-build.38-channel.insider",
           "published_at": "2026-08-07T13:58:36Z",
-          "changelog": "### Added\n- Initial release of Niksphere CLI\n- Require explicit server URL for environment authentication login (`env auth login`)\n- Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins\n\n### Fixed\n- Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`\n- Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section\n",
+          "notes": {
+            "markdown": "### Added\n- Initial release of Niksphere CLI\n- Require explicit server URL for environment authentication login (`env auth login`)\n- Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins\n\n### Fixed\n- Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`\n- Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section\n",
+            "json": {
+              "added": [
+                "Initial release of Niksphere CLI",
+                "Require explicit server URL for environment authentication login (`env auth login`)",
+                "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins"
+              ],
+              "fixed": [
+                "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
+                "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section"
+              ],
+              "breaking": []
+            }
+          },
           "downloads": {
             "linux-arm64": {
               "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.38-channel.insider/niksphere-cli-v1.1.0-build.38-channel.insider-linux-arm64",
