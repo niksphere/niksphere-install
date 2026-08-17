@@ -1,4 +1,4 @@
-name: Update Release Manifest
+name: Update Releases
 
 on:
   release:
@@ -6,11 +6,11 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: update-release-manifest
+  group: update-releases
   cancel-in-progress: false
 
 jobs:
-  update-manifest:
+  update-releases:
     runs-on: ubuntu-latest
     permissions:
       contents: write
