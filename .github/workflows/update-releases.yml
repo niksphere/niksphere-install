@@ -15,7 +15,6 @@ jobs:
     permissions:
       contents: write
       actions: write
-      packages: read
 
     steps:
       - name: Checkout Repository
@@ -23,7 +22,7 @@ jobs:
         with:
           ref: main
 
-      - name: Fetch Release and Package Data
+      - name: Fetch Release Data
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -32,274 +31,108 @@ jobs:
           curl -s -H "Authorization: token $GH_TOKEN" \
             "https://api.github.com/repos/${{ github.repository }}/releases?per_page=100" > releases_list.json
 
-          echo "Fetching container package versions for niksphere-engine..."
-          mkdir -p package_versions
-          for comp in engine; do
-            pkg_name="niksphere-${comp}"
-            echo "Fetching versions for container package ${pkg_name}..."
-            curl -s -H "Authorization: token $GH_TOKEN" \
-              "https://api.github.com/orgs/niksphere/packages/container/${pkg_name}/versions?per_page=100" > "package_versions/${pkg_name}.json"
-          done
-
       - name: Update releases.json
         shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           node -e '
             const run = async () => {
-            const fs = require("fs");
-            const path = require("path");
-
-            const releases = JSON.parse(fs.readFileSync("releases_list.json", "utf8"));
-            
-            if (!Array.isArray(releases)) {
-              console.error("Error: Invalid releases list retrieved.");
-              process.exit(1);
-            }
-            
-            const manifest = {
-              channels: {
-                stable: {},
-                insider: {}
-              }
-            };
-            
-            const componentNames = {
-              "cli": "Niksphere CLI",
-              "engine": "Niksphere Engine",
-              "ide-vscode": "Niksphere VS Code Extension"
-            };
-
-            // 1. Process GitHub Releases
-            for (const release of releases) {
-              const tag = release.tag_name;
+              const fs = require("fs");
+              const releases = JSON.parse(fs.readFileSync("releases_list.json", "utf8"));
               
-              if (tag && tag.startsWith("niksphere-")) {
-                let component, version;
-                
-                if (tag.startsWith("niksphere-ide-vscode-")) {
-                    component = "ide-vscode";
-                    version = tag.substring("niksphere-ide-vscode-".length);
-                } else if (tag.startsWith("niksphere-cli-")) {
-                    component = "cli";
-                    version = tag.substring("niksphere-cli-".length);
-                } else if (tag.startsWith("niksphere-engine-")) {
-                    component = "engine";
-                    version = tag.substring("niksphere-engine-".length);
+              if (!Array.isArray(releases)) {
+                console.error("Error: Invalid releases list retrieved.");
+                process.exit(1);
+              }
+              
+              const manifest = {
+                channels: {
+                  stable: {},
+                  insider: {}
                 }
-                
-                if (component === "cli" || component === "engine" || component === "ide-vscode") {
-                  const channel = release.prerelease ? "insider" : "stable";
+              };
+
+              const headers = {};
+              if (process.env.GH_TOKEN) {
+                headers["Authorization"] = `token ${process.env.GH_TOKEN}`;
+              }
+
+              for (const release of releases) {
+                if (release.draft) continue;
+
+                const manifestAsset = release.assets ? release.assets.find(a => a.name === "manifest.json") : null;
+                if (!manifestAsset) continue;
+
+                try {
+                  const res = await fetch(manifestAsset.browser_download_url, { headers });
+                  if (!res.ok) {
+                    console.error(`Failed to fetch manifest.json for ${release.tag_name}: HTTP ${res.status}`);
+                    continue;
+                  }
+                  const manifestJson = await res.json();
                   
+                  const channel = release.prerelease ? "insider" : "stable";
                   if (!manifest.channels[channel]) {
                     manifest.channels[channel] = {};
                   }
-                  const channelObj = manifest.channels[channel];
-                  if (!channelObj[component]) {
-                    channelObj[component] = [];
-                  }
-                  
-                  const downloads = {};
-                  const files = [];
 
-                  if (release.assets) {
-                    for (const asset of release.assets) {
-                      const assetName = asset.name;
-                      const expectedPrefix = `niksphere-${component}-${version}`;
-                      
-                      let targetKey = "";
-                      if (assetName.includes(expectedPrefix)) {
-                        const remaining = assetName.substring(expectedPrefix.length);
-                        const lastDotIndex = remaining.lastIndexOf(".");
-                        const rawSuffix = lastDotIndex !== -1 ? remaining.substring(0, lastDotIndex) : remaining;
-                        const ext = lastDotIndex !== -1 ? remaining.substring(lastDotIndex + 1) : "";
-                        const key = rawSuffix.startsWith("-") ? rawSuffix.substring(1) : rawSuffix;
-                        targetKey = key || ext;
-                      }
-                      
-                      const knownTargets = ["linux-arm64", "linux-x64", "mac-arm64", "mac-x64", "win-arm64", "win-x64", "vsix"];
-                      
-                      if (targetKey && knownTargets.includes(targetKey)) {
-                        downloads[targetKey] = {
-                          url: asset.browser_download_url,
-                          size: asset.size || 0
-                        };
-                      } else {
-                        files.push({
-                          name: assetName,
-                          url: asset.browser_download_url,
-                          size: asset.size || 0
-                        });
-                      }
-                    }
-                  }
+                  for (const [rawKey, entry] of Object.entries(manifestJson)) {
+                    const component = rawKey.replace(/^niksphere-/, "");
 
-                  let markdownNotes = "";
-                  let jsonNotes = {};
-
-                  if (release.assets) {
-                    const mdAsset = release.assets.find(a => a.name.endsWith("-release-notes.md"));
-                    const jsonAsset = release.assets.find(a => a.name.endsWith("-release-notes.json"));
-
-                    if (mdAsset) {
-                      try {
-                        const res = await fetch(mdAsset.browser_download_url);
-                        if (res.ok) markdownNotes = await res.text();
-                      } catch (e) {
-                        console.error("Error fetching md notes:", e);
-                      }
+                    if (!manifest.channels[channel][component]) {
+                      manifest.channels[channel][component] = [];
                     }
 
-                    if (jsonAsset) {
-                      try {
-                        const res = await fetch(jsonAsset.browser_download_url);
-                        if (res.ok) jsonNotes = await res.json();
-                      } catch (e) {
-                        console.error("Error fetching json notes:", e);
-                      }
-                    }
-                  }
-
-                  channelObj[component].push({
-                    name: componentNames[component] || component,
-                    version: version,
-                    published_at: release.published_at || new Date().toISOString(),
-                    notes: {
-                      markdown: markdownNotes,
-                      json: jsonNotes
-                    },
-                    downloads: downloads,
-                    files: files
-                  });
-                }
-              }
-            }
-
-            // 2. Process GHCR Container Packages (only those linked to niksphere-install)
-            const versionsDir = "package_versions";
-            if (fs.existsSync(versionsDir)) {
-              const files = fs.readdirSync(versionsDir);
-              files.forEach(file => {
-                if (file.endsWith(".json")) {
-                  const pkgName = file.replace(".json", "");
-                  const component = pkgName.replace(/^niksphere-/, "");
-                  
-                  try {
-                    const pkgVersions = JSON.parse(fs.readFileSync(path.join(versionsDir, file), "utf8"));
-                    if (Array.isArray(pkgVersions)) {
-                      pkgVersions.forEach(v => {
-                        const containerMeta = v.metadata && v.metadata.container;
-                        const tags = containerMeta && Array.isArray(containerMeta.tags) ? containerMeta.tags : [];
-                        
-                        if (tags.length === 0) return;
-                        
-                        let channel = "insider";
-                        if (tags.includes("latest") || tags.some(t => t.includes("-channel.stable"))) {
-                          channel = "stable";
-                        } else if (tags.includes("insider") || tags.some(t => t.includes("-channel.insider"))) {
-                          channel = "insider";
-                        }
-                        
-                        let specificVersionTag = tags.find(t => t.startsWith("v") && t.includes("-build."))
-                                              || tags.find(t => t.startsWith("v"))
-                                              || tags.find(t => t !== "latest" && t !== "insider");
-
-                        if (!specificVersionTag) return;
-
-                        const pullCmd = `docker pull ghcr.io/niksphere/${pkgName}:${specificVersionTag}`;
-                        
-                        if (!manifest.channels[channel]) {
-                          manifest.channels[channel] = {};
-                        }
-                        const channelObj = manifest.channels[channel];
-                        if (!channelObj[component]) {
-                          channelObj[component] = [];
-                        }
-                        
-                        let relEntry = channelObj[component].find(r => r.version === specificVersionTag);
-                        
-                        if (!relEntry) {
-                          relEntry = channelObj[component].find(r => specificVersionTag.startsWith(r.version) || r.version.startsWith(specificVersionTag));
-                        }
-                        
-                        if (relEntry) {
-                          if (!relEntry.install) {
-                            relEntry.install = {};
+                    // Resolve relative download URLs to full browser_download_url
+                    if (entry.downloads && typeof entry.downloads === "object") {
+                      for (const [targetKey, targetVal] of Object.entries(entry.downloads)) {
+                        if (targetVal && typeof targetVal === "object") {
+                          const url = targetVal.url || "";
+                          if (url && !url.startsWith("http://") && !url.startsWith("https://")) {
+                            const asset = release.assets.find(a => a.name === url || a.name.endsWith(url));
+                            targetVal.url = asset ? asset.browser_download_url : `https://github.com/${process.env.GITHUB_REPOSITORY || "niksphere/niksphere-install"}/releases/download/${release.tag_name}/${url}`;
+                            if ((!targetVal.size || targetVal.size === 0) && asset) {
+                              targetVal.size = asset.size;
+                            }
                           }
-                          relEntry.install.docker = pullCmd;
-                          
-                          relEntry.container = {
-                            image: `ghcr.io/niksphere/${pkgName}:${specificVersionTag}`,
-                            registry: "ghcr.io",
-                            package: pkgName,
-                            tags: tags
-                          };
-                        } else {
-                          const newEntry = {
-                            name: componentNames[component] || component,
-                            version: specificVersionTag,
-                            published_at: v.created_at || v.updated_at || new Date().toISOString(),
-                            install: {
-                              docker: pullCmd
-                            },
-                            container: {
-                              image: `ghcr.io/niksphere/${pkgName}:${specificVersionTag}`,
-                              registry: "ghcr.io",
-                              package: pkgName,
-                              tags: tags
-                            },
-                            downloads: {},
-                            files: []
-                          };
-                          channelObj[component].push(newEntry);
                         }
-                      });
+                      }
                     }
-                  } catch (err) {
-                    console.error(`Error processing package file ${file}:`, err);
+
+                    // Resolve relative docs URLs to full browser_download_url
+                    if (entry.docs && typeof entry.docs === "object") {
+                      for (const [docKey, docVal] of Object.entries(entry.docs)) {
+                        if (typeof docVal === "string" && docVal && !docVal.startsWith("http://") && !docVal.startsWith("https://")) {
+                          const asset = release.assets.find(a => a.name === docVal || a.name.endsWith(docVal));
+                          entry.docs[docKey] = asset ? asset.browser_download_url : `https://github.com/${process.env.GITHUB_REPOSITORY || "niksphere/niksphere-install"}/releases/download/${release.tag_name}/${docVal}`;
+                        }
+                      }
+                    }
+
+                    // Ensure published_at is present
+                    if (!entry.published_at) {
+                      entry.published_at = release.published_at || new Date().toISOString();
+                    }
+
+                    manifest.channels[channel][component].push(entry);
                   }
+                } catch (err) {
+                  console.error(`Error processing manifest for ${release.tag_name}:`, err);
                 }
-              });
-            }
-
-            // 3. Sort releases chronologically descending
-            for (const ch in manifest.channels) {
-              const channelObj = manifest.channels[ch];
-              for (const comp in channelObj) {
-                channelObj[comp].sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
               }
-            }
 
-            // 4. Generate CLI install commands
-            for (const ch in manifest.channels) {
-              const channelObj = manifest.channels[ch];
-              if (channelObj["cli"]) {
-                channelObj["cli"].forEach((rel, index) => {
-                  const isLatestStable = (index === 0 && ch === "stable");
-                  
-                  const bashCmd = isLatestStable
-                    ? "curl -fsSL https://install.niksphere.de/install.sh | bash"
-                    : `curl -fsSL https://install.niksphere.de/install.sh | bash -s -- -c "${ch}" -v "${rel.version}"`;
-                    
-                  const psCmd = isLatestStable
-                    ? "irm https://install.niksphere.de/install.ps1 | iex"
-                    : `irm https://install.niksphere.de/install.ps1 -OutFile install.ps1; .\\install.ps1 -Channel "${ch}" -Version "${rel.version}"`;
-                    
-                  if (!rel.install) {
-                    rel.install = {};
-                  }
-                  rel.install.bash = bashCmd;
-                  rel.install.powershell = psCmd;
-
-                  rel.uninstall = {
-                    "bash": "curl -fsSL https://install.niksphere.de/uninstall.sh | bash",
-                    "powershell": "irm https://install.niksphere.de/uninstall.ps1 | iex"
-                  };
-                });
+              // Sort releases chronologically descending
+              for (const ch in manifest.channels) {
+                const channelObj = manifest.channels[ch];
+                for (const comp in channelObj) {
+                  channelObj[comp].sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+                }
               }
-            }
 
-            fs.writeFileSync("releases.json", JSON.stringify(manifest, null, 2));
-            console.log("releases.json successfully rebuilt from GitHub Releases and GHCR Packages.");
+              fs.writeFileSync("releases.json", JSON.stringify(manifest, null, 2));
+              console.log("releases.json successfully rebuilt from release manifests.");
             };
             run().catch(e => { console.error(e); process.exit(1); });
           '
