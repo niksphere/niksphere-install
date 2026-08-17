@@ -145,18 +145,7 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.58-channel.insider/niksphere-engine-v1.1.0-build.58-channel.insider-release-notes.md",
               "size": 419
             }
-          ],
-          "install": {
-            "docker": "docker pull ghcr.io/niksphere/niksphere-engine:v1.1.0-build.58-channel.insider"
-          },
-          "container": {
-            "image": "ghcr.io/niksphere/niksphere-engine:v1.1.0-build.58-channel.insider",
-            "registry": "ghcr.io",
-            "package": "niksphere-engine",
-            "tags": [
-              "v1.1.0-build.58-channel.insider"
-            ]
-          }
+          ]
         },
         {
           "name": "Niksphere Engine",
@@ -219,18 +208,7 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.56-channel.insider/niksphere-engine-v1.1.0-build.56-channel.insider-release-notes.md",
               "size": 419
             }
-          ],
-          "install": {
-            "docker": "docker pull ghcr.io/niksphere/niksphere-engine:v1.1.0-build.56-channel.insider"
-          },
-          "container": {
-            "image": "ghcr.io/niksphere/niksphere-engine:v1.1.0-build.56-channel.insider",
-            "registry": "ghcr.io",
-            "package": "niksphere-engine",
-            "tags": [
-              "v1.1.0-build.56-channel.insider"
-            ]
-          }
+          ]
         },
         {
           "name": "Niksphere Engine",
@@ -293,18 +271,7 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.55-channel.insider/niksphere-engine-v1.1.0-build.55-channel.insider-release-notes.md",
               "size": 419
             }
-          ],
-          "install": {
-            "docker": "docker pull ghcr.io/niksphere/niksphere-engine:v1.1.0-build.55-channel.insider"
-          },
-          "container": {
-            "image": "ghcr.io/niksphere/niksphere-engine:v1.1.0-build.55-channel.insider",
-            "registry": "ghcr.io",
-            "package": "niksphere-engine",
-            "tags": [
-              "v1.1.0-build.55-channel.insider"
-            ]
-          }
+          ]
         },
         {
           "name": "Niksphere Engine",
@@ -367,36 +334,7 @@
               "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.53-channel.insider/niksphere-engine-v1.1.0-build.53-channel.insider-release-notes.md",
               "size": 419
             }
-          ],
-          "install": {
-            "docker": "docker pull ghcr.io/niksphere/niksphere-engine:v1.1.0-build.53-channel.insider"
-          },
-          "container": {
-            "image": "ghcr.io/niksphere/niksphere-engine:v1.1.0-build.53-channel.insider",
-            "registry": "ghcr.io",
-            "package": "niksphere-engine",
-            "tags": [
-              "v1.1.0-build.53-channel.insider"
-            ]
-          }
-        },
-        {
-          "name": "Niksphere Engine",
-          "version": "v1.1.0-build.22-channel.insider",
-          "published_at": "2026-07-24T09:25:42Z",
-          "install": {
-            "docker": "docker pull ghcr.io/niksphere/niksphere-engine:v1.1.0-build.22-channel.insider"
-          },
-          "container": {
-            "image": "ghcr.io/niksphere/niksphere-engine:v1.1.0-build.22-channel.insider",
-            "registry": "ghcr.io",
-            "package": "niksphere-engine",
-            "tags": [
-              "v1.1.0-build.22-channel.insider"
-            ]
-          },
-          "downloads": {},
-          "files": []
+          ]
         }
       ],
       "ide-vscode": [
