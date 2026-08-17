@@ -177,6 +177,92 @@
       "engine": [
         {
           "name": "Niksphere Engine",
+          "version": "v1.1.0-build.62-channel.insider",
+          "published_at": "2026-08-17T10:37:28Z",
+          "notes": {
+            "markdown": "### Added\n- Initial release of Niksphere Engine\n- Unified design for device authorization flow UI in IdP Broker matching React SPA frontend\n\n### Fixed\n- Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)\n- Updated frontend dependencies to resolve security audit vulnerabilities\n- Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility\n",
+            "json": {
+              "added": [
+                "Initial release of Niksphere Engine",
+                "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend"
+              ],
+              "fixed": [
+                "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
+                "Updated frontend dependencies to resolve security audit vulnerabilities",
+                "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility"
+              ],
+              "breaking": []
+            }
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-linux-arm64",
+              "size": 33095842
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-linux-x64",
+              "size": 35537058
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-mac-arm64",
+              "size": 33889090
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-mac-x64",
+              "size": 36190800
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-win-arm64.exe",
+              "size": 33167360
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-win-x64.exe",
+              "size": 36131328
+            }
+          },
+          "files": [
+            {
+              "name": "manifest.json",
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/manifest.json",
+              "size": 1788
+            },
+            {
+              "name": "niksphere-engine-v1.1.0-build.62-channel.insider-openapi.json",
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-openapi.json",
+              "size": 34053
+            },
+            {
+              "name": "niksphere-engine-v1.1.0-build.62-channel.insider-release-notes.json",
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-release-notes.json",
+              "size": 434
+            },
+            {
+              "name": "niksphere-engine-v1.1.0-build.62-channel.insider-release-notes.md",
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-release-notes.md",
+              "size": 419
+            },
+            {
+              "name": "niksphere-engine-v1.1.0-build.62-channel.insider-usage.json",
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-usage.json",
+              "size": 9303
+            }
+          ],
+          "install": {
+            "docker": "docker pull ghcr.io/niksphere/niksphere-engine:v1.1.0-build.62-channel.insider"
+          },
+          "container": {
+            "image": "ghcr.io/niksphere/niksphere-engine:v1.1.0-build.62-channel.insider",
+            "registry": "ghcr.io",
+            "package": "niksphere-engine",
+            "tags": [
+              "v1.1.0-build.62-channel.insider",
+              "v1.1.0",
+              "insider"
+            ]
+          }
+        },
+        {
+          "name": "Niksphere Engine",
           "version": "v1.1.0-build.61-channel.insider",
           "published_at": "2026-08-17T09:06:49Z",
           "notes": {
@@ -250,9 +336,7 @@
             "registry": "ghcr.io",
             "package": "niksphere-engine",
             "tags": [
-              "v1.1.0-build.61-channel.insider",
-              "v1.1.0",
-              "insider"
+              "v1.1.0-build.61-channel.insider"
             ]
           }
         },
