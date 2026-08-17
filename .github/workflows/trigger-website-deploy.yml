@@ -1,0 +1,32 @@
+name: Trigger Website Deployment
+
+on:
+  workflow_run:
+    workflows: ["Deploy GitHub Pages"]
+    types:
+      - completed
+  push:
+    branches:
+      - main
+    paths:
+      - 'releases.json'
+  workflow_dispatch:
+
+concurrency:
+  group: trigger-website-deploy
+  cancel-in-progress: false
+
+jobs:
+  trigger-website:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Niksphere Website Deployment
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.NIKSPHERE_PAT || secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Triggering workflow 'deploy.yml' on repository 'niksphere/niksphere-website'..."
+          gh workflow run deploy.yml --repo "niksphere/niksphere-website" --ref main
+          echo "Website deployment successfully triggered."
