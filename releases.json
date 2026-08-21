@@ -1,6 +1,30 @@
 {
   "channels": {
-    "stable": {},
+    "stable": {
+      "ide-vscode": [
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.49-channel.stable",
+          "published_at": "2026-08-21T07:07:44Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension"
+            ],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.49-channel.stable/niksphere-ide-vscode-v1.0.0-build.49-channel.stable.vsix",
+              "size": 374325
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.49-channel.stable/niksphere-ide-vscode-v1.0.0-build.49-channel.stable-release-notes.json"
+          }
+        }
+      ]
+    },
     "insider": {
       "ide-vscode": [
         {
