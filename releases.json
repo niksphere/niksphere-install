@@ -125,30 +125,55 @@
       ]
     },
     "insider": {
-      "ide-vscode": [
+      "engine": [
         {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.44-channel.insider",
-          "published_at": "2026-08-17T10:35:56Z",
+          "name": "Niksphere Engine",
+          "version": "v1.1.0-build.68-channel.insider",
+          "published_at": "2026-08-21T16:07:28Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere VS Code Extension"
+              "Initial release of Niksphere Engine",
+              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend"
             ],
-            "fixed": [],
+            "fixed": [
+              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
+              "Updated frontend dependencies to resolve security audit vulnerabilities",
+              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility"
+            ],
             "breaking": []
           },
           "downloads": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.44-channel.insider/niksphere-ide-vscode-v1.0.0-build.44-channel.insider.vsix",
-              "size": 374419
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-linux-arm64",
+              "size": 32309410
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-linux-x64",
+              "size": 34623650
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-mac-arm64",
+              "size": 33108210
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-mac-x64",
+              "size": 35256224
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-win-arm64.exe",
+              "size": 32392192
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-win-x64.exe",
+              "size": 35201024
             }
           },
           "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.44-channel.insider/niksphere-ide-vscode-v1.0.0-build.44-channel.insider-release-notes.json"
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-usage.json"
           }
-        }
-      ],
-      "engine": [
+        },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.63-channel.insider",
@@ -243,6 +268,29 @@
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-usage.json"
+          }
+        }
+      ],
+      "ide-vscode": [
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.44-channel.insider",
+          "published_at": "2026-08-17T10:35:56Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension"
+            ],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.44-channel.insider/niksphere-ide-vscode-v1.0.0-build.44-channel.insider.vsix",
+              "size": 374419
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.44-channel.insider/niksphere-ide-vscode-v1.0.0-build.44-channel.insider-release-notes.json"
           }
         }
       ],
