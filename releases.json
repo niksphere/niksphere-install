@@ -1,6 +1,56 @@
 {
   "channels": {
     "stable": {
+      "engine": [
+        {
+          "name": "Niksphere Engine",
+          "version": "v1.1.0-build.67-channel.stable",
+          "published_at": "2026-08-21T07:09:33Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Engine",
+              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend"
+            ],
+            "fixed": [
+              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
+              "Updated frontend dependencies to resolve security audit vulnerabilities",
+              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.67-channel.stable/niksphere-engine-v1.1.0-build.67-channel.stable-linux-arm64",
+              "size": 32309410
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.67-channel.stable/niksphere-engine-v1.1.0-build.67-channel.stable-linux-x64",
+              "size": 34599074
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.67-channel.stable/niksphere-engine-v1.1.0-build.67-channel.stable-mac-arm64",
+              "size": 33091266
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.67-channel.stable/niksphere-engine-v1.1.0-build.67-channel.stable-mac-x64",
+              "size": 35231232
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.67-channel.stable/niksphere-engine-v1.1.0-build.67-channel.stable-win-arm64.exe",
+              "size": 32372736
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.67-channel.stable/niksphere-engine-v1.1.0-build.67-channel.stable-win-x64.exe",
+              "size": 35179520
+            }
+          },
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.67-channel.stable/niksphere-engine-v1.1.0-build.67-channel.stable-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.67-channel.stable/niksphere-engine-v1.1.0-build.67-channel.stable-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.67-channel.stable/niksphere-engine-v1.1.0-build.67-channel.stable-usage.json"
+          }
+        }
+      ],
       "cli": [
         {
           "name": "Niksphere CLI",
