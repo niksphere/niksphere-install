@@ -1,6 +1,55 @@
 {
   "channels": {
     "stable": {
+      "cli": [
+        {
+          "name": "Niksphere CLI",
+          "version": "v1.1.0-build.57-channel.stable",
+          "published_at": "2026-08-21T07:08:08Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere CLI",
+              "Require explicit server URL for environment authentication login (`env auth login`)",
+              "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins"
+            ],
+            "fixed": [
+              "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
+              "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.57-channel.stable/niksphere-cli-v1.1.0-build.57-channel.stable-linux-arm64",
+              "size": 16449698
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.57-channel.stable/niksphere-cli-v1.1.0-build.57-channel.stable-linux-x64",
+              "size": 17875209
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.57-channel.stable/niksphere-cli-v1.1.0-build.57-channel.stable-mac-arm64",
+              "size": 16554786
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.57-channel.stable/niksphere-cli-v1.1.0-build.57-channel.stable-mac-x64",
+              "size": 17852224
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.57-channel.stable/niksphere-cli-v1.1.0-build.57-channel.stable-win-arm64.exe",
+              "size": 16424960
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.57-channel.stable/niksphere-cli-v1.1.0-build.57-channel.stable-win-x64.exe",
+              "size": 18058752
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.57-channel.stable/niksphere-cli-v1.1.0-build.57-channel.stable-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.57-channel.stable/niksphere-cli-v1.1.0-build.57-channel.stable-usage.json"
+          }
+        }
+      ],
       "ide-vscode": [
         {
           "name": "Niksphere VS Code Extension",
