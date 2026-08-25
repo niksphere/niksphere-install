@@ -125,6 +125,26 @@
       ]
     },
     "insider": {
+      "cloud": [
+        {
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.49-channel.insider",
+          "published_at": "2026-08-25T09:00:20Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Cloud",
+              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)"
+            ],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-release-notes.json"
+          }
+        }
+      ],
       "ide-vscode": [
         {
           "name": "Niksphere VS Code Extension",
