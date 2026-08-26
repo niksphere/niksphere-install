@@ -1,6 +1,27 @@
 {
   "channels": {
     "stable": {
+      "website": [
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.1-channel.stable",
+          "published_at": "2026-08-26T14:42:33Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.1-channel.stable/niksphere-website-v1.0.0-build.1-channel.stable-release-notes.json"
+          }
+        }
+      ],
       "cloud": [
         {
           "name": "Niksphere Cloud",
