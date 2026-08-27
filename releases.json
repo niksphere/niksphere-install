@@ -202,6 +202,27 @@
       ]
     },
     "insider": {
+      "website": [
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.3-channel.insider",
+          "published_at": "2026-08-27T05:07:53Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.3-channel.insider/niksphere-website-v1.0.0-build.3-channel.insider-release-notes.json"
+          }
+        }
+      ],
       "cloud": [
         {
           "name": "Niksphere Cloud",
