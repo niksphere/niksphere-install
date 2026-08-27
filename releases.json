@@ -202,6 +202,51 @@
       ]
     },
     "insider": {
+      "website": [
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.4-channel.insider",
+          "published_at": "2026-08-27T22:26:02Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.4-channel.insider/niksphere-website-v1.0.0-build.4-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.3-channel.insider",
+          "published_at": "2026-08-27T05:07:53Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.3-channel.insider/niksphere-website-v1.0.0-build.3-channel.insider-release-notes.json"
+          }
+        }
+      ],
       "engine": [
         {
           "name": "Niksphere Engine",
@@ -689,27 +734,6 @@
           "docs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.52-channel.insider/niksphere-cli-v1.1.0-build.52-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.52-channel.insider/niksphere-cli-v1.1.0-build.52-channel.insider-usage.json"
-          }
-        }
-      ],
-      "website": [
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.3-channel.insider",
-          "published_at": "2026-08-27T05:07:53Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Website and Documentation Portal",
-              "Integrated automated reference documentation generation from releases catalog",
-              "Support for Stable and Insider release channel deployment"
-            ],
-            "improvement": [],
-            "fixed": [],
-            "breaking": []
-          },
-          "downloads": {},
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.3-channel.insider/niksphere-website-v1.0.0-build.3-channel.insider-release-notes.json"
           }
         }
       ],
