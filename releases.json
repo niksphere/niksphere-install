@@ -814,6 +814,64 @@
       "cli": [
         {
           "name": "Niksphere CLI",
+          "version": "v1.1.0-build.71-channel.insider",
+          "published_at": "2026-09-01T20:45:41Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere CLI",
+              "Require explicit server URL for environment authentication login (`env auth login`)",
+              "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins",
+              "Add `nik env actor` and `nik env client` commands for managing actors and OAuth clients",
+              "Add `nik dev mcp enable|disable|show` commands to register or remove the Niksphere MCP server (`nik mcp`) in AI client configuration files (Claude Code, Cursor, Antigravity, VS Code), with `--client` to target specific clients and `--json` on `show` for machine-readable client discovery"
+            ],
+            "improvement": [
+              "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section",
+              "Pressing Ctrl+C now cleanly cancels an in-progress command or login instead of showing a confusing error",
+              "Unified wording of success and error messages with the Engine and VS Code Extension across all `env app`, `env actor`, `env client`, and `env idp external` commands",
+              "Add detailed `--help` descriptions to `nik mcp` and `nik dev lsp` clarifying they are started by an AI client or editor as a subprocess, not meant to be run manually"
+            ],
+            "fixed": [
+              "Fix duplicated or reworded success/error messages on admin commands (e.g. \"Successfully installed. App X ... successfully installed\" or \"failed to edit actor: Actor not found.\") by relaying the Engine''s own message verbatim",
+              "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
+              "Fix login and token refresh failing due to a retired, unregistered OAuth client ID"
+            ],
+            "breaking": [
+              "Move `nik dev integrate lsp` to `nik dev lsp` and remove the now-empty `nik dev integrate` command group"
+            ]
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-linux-arm64",
+              "size": 16646306
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-linux-x64",
+              "size": 18116873
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-mac-arm64",
+              "size": 16807650
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-mac-x64",
+              "size": 18099248
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-win-arm64.exe",
+              "size": 16650752
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-win-x64.exe",
+              "size": 18302976
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-usage.json"
+          }
+        },
+        {
+          "name": "Niksphere CLI",
           "version": "v1.1.0-build.70-channel.insider",
           "published_at": "2026-09-01T19:25:37Z",
           "notes": {
