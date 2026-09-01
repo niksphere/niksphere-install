@@ -367,6 +367,83 @@
           }
         }
       ],
+      "ide-vscode": [
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.61-channel.insider",
+          "published_at": "2026-09-01T19:25:24Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension",
+              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
+              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
+            ],
+            "improvement": [
+              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
+              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
+              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
+            ],
+            "fixed": [
+              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
+              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.61-channel.insider/niksphere-ide-vscode-v1.0.0-build.61-channel.insider.vsix",
+              "size": 376665
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.61-channel.insider/niksphere-ide-vscode-v1.0.0-build.61-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.60-channel.insider",
+          "published_at": "2026-09-01T02:03:48Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension"
+            ],
+            "improvement": [],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.60-channel.insider/niksphere-ide-vscode-v1.0.0-build.60-channel.insider.vsix",
+              "size": 374667
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.60-channel.insider/niksphere-ide-vscode-v1.0.0-build.60-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.56-channel.insider",
+          "published_at": "2026-08-28T07:04:57Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension"
+            ],
+            "improvement": [],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.56-channel.insider/niksphere-ide-vscode-v1.0.0-build.56-channel.insider.vsix",
+              "size": 374325
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.56-channel.insider/niksphere-ide-vscode-v1.0.0-build.56-channel.insider-release-notes.json"
+          }
+        }
+      ],
       "engine": [
         {
           "name": "Niksphere Engine",
@@ -765,52 +842,6 @@
           "docs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-usage.json"
-          }
-        }
-      ],
-      "ide-vscode": [
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.60-channel.insider",
-          "published_at": "2026-09-01T02:03:48Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere VS Code Extension"
-            ],
-            "improvement": [],
-            "fixed": [],
-            "breaking": []
-          },
-          "downloads": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.60-channel.insider/niksphere-ide-vscode-v1.0.0-build.60-channel.insider.vsix",
-              "size": 374667
-            }
-          },
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.60-channel.insider/niksphere-ide-vscode-v1.0.0-build.60-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.56-channel.insider",
-          "published_at": "2026-08-28T07:04:57Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere VS Code Extension"
-            ],
-            "improvement": [],
-            "fixed": [],
-            "breaking": []
-          },
-          "downloads": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.56-channel.insider/niksphere-ide-vscode-v1.0.0-build.56-channel.insider.vsix",
-              "size": 374325
-            }
-          },
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.56-channel.insider/niksphere-ide-vscode-v1.0.0-build.56-channel.insider-release-notes.json"
           }
         }
       ]
