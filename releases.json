@@ -509,6 +509,63 @@
       "engine": [
         {
           "name": "Niksphere Engine",
+          "version": "v1.1.0-build.82-channel.insider",
+          "published_at": "2026-09-01T20:46:45Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Engine",
+              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend",
+              "Implement actor and identity architecture with universal admin client access, fail-fast validation, and full OpenAPI documentation"
+            ],
+            "improvement": [
+              "Admin API error messages now consistently start with \"Failed to <action>: <reason>\", mirroring the existing \"Successfully <action>...\" convention on success, so the outcome is clear from the first word alone"
+            ],
+            "fixed": [
+              "Fix Admin API upload/publish responses nesting the success message under `data.message` instead of the top level, which caused the CLI and VS Code Extension to show a generic fallback message instead of the server''s actual text",
+              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
+              "Updated frontend dependencies to resolve security audit vulnerabilities",
+              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility",
+              "Return consistent 404 responses for unknown actors, clients, apps, and their sub-resources instead of an empty success or malformed error",
+              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them",
+              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
+              "Fix frontend login using an unregistered OAuth client ID"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-linux-arm64",
+              "size": 38535330
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-linux-x64",
+              "size": 41283746
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-mac-arm64",
+              "size": 39689250
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-mac-x64",
+              "size": 42191776
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-win-arm64.exe",
+              "size": 38737408
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-win-x64.exe",
+              "size": 42023424
+            }
+          },
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-usage.json"
+          }
+        },
+        {
+          "name": "Niksphere Engine",
           "version": "v1.1.0-build.81-channel.insider",
           "published_at": "2026-09-01T19:26:55Z",
           "notes": {
