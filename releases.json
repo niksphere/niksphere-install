@@ -367,6 +367,164 @@
           }
         }
       ],
+      "engine": [
+        {
+          "name": "Niksphere Engine",
+          "version": "v1.1.0-build.80-channel.insider",
+          "published_at": "2026-09-01T02:05:03Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Engine",
+              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend",
+              "Implement actor and identity architecture with universal admin client access, fail-fast validation, and full OpenAPI documentation"
+            ],
+            "improvement": [],
+            "fixed": [
+              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
+              "Updated frontend dependencies to resolve security audit vulnerabilities",
+              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility",
+              "Return consistent 404 responses for unknown actors, clients, apps, and their sub-resources instead of an empty success or malformed error",
+              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them",
+              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
+              "Fix frontend login using an unregistered OAuth client ID"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-linux-arm64",
+              "size": 38535330
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-linux-x64",
+              "size": 41283746
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-mac-arm64",
+              "size": 39689250
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-mac-x64",
+              "size": 42191776
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-win-arm64.exe",
+              "size": 38736896
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-win-x64.exe",
+              "size": 42022400
+            }
+          },
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-usage.json"
+          }
+        },
+        {
+          "name": "Niksphere Engine",
+          "version": "v1.1.0-build.75-channel.insider",
+          "published_at": "2026-08-27T22:18:59Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Engine",
+              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend",
+              "Implement actor and identity architecture with universal admin client access, fail-fast validation, and full OpenAPI documentation"
+            ],
+            "improvement": [],
+            "fixed": [
+              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
+              "Updated frontend dependencies to resolve security audit vulnerabilities",
+              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility",
+              "Return consistent 404 responses for unknown actors, clients, apps, and their sub-resources instead of an empty success or malformed error",
+              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them",
+              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
+              "Fix frontend login using an unregistered OAuth client ID"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-linux-arm64",
+              "size": 32440482
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-linux-x64",
+              "size": 34771106
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-mac-arm64",
+              "size": 33242706
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-mac-x64",
+              "size": 35401984
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-win-arm64.exe",
+              "size": 32526336
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-win-x64.exe",
+              "size": 35349504
+            }
+          },
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-usage.json"
+          }
+        },
+        {
+          "name": "Niksphere Engine",
+          "version": "v1.1.0-build.73-channel.insider",
+          "published_at": "2026-08-26T00:00:04Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Engine",
+              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend"
+            ],
+            "fixed": [
+              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
+              "Updated frontend dependencies to resolve security audit vulnerabilities",
+              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-linux-arm64",
+              "size": 32309410
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-linux-x64",
+              "size": 34627746
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-mac-arm64",
+              "size": 33124882
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-mac-x64",
+              "size": 35260480
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-win-arm64.exe",
+              "size": 32398848
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-win-x64.exe",
+              "size": 35207168
+            }
+          },
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-usage.json"
+          }
+        }
+      ],
       "cli": [
         {
           "name": "Niksphere CLI",
@@ -627,110 +785,6 @@
           "docs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-release-notes.json"
-          }
-        }
-      ],
-      "engine": [
-        {
-          "name": "Niksphere Engine",
-          "version": "v1.1.0-build.75-channel.insider",
-          "published_at": "2026-08-27T22:18:59Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Engine",
-              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend",
-              "Implement actor and identity architecture with universal admin client access, fail-fast validation, and full OpenAPI documentation"
-            ],
-            "improvement": [],
-            "fixed": [
-              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
-              "Updated frontend dependencies to resolve security audit vulnerabilities",
-              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility",
-              "Return consistent 404 responses for unknown actors, clients, apps, and their sub-resources instead of an empty success or malformed error",
-              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them",
-              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
-              "Fix frontend login using an unregistered OAuth client ID"
-            ],
-            "breaking": []
-          },
-          "downloads": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-linux-arm64",
-              "size": 32440482
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-linux-x64",
-              "size": 34771106
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-mac-arm64",
-              "size": 33242706
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-mac-x64",
-              "size": 35401984
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-win-arm64.exe",
-              "size": 32526336
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-win-x64.exe",
-              "size": 35349504
-            }
-          },
-          "docs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-release-notes.json",
-            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-usage.json"
-          }
-        },
-        {
-          "name": "Niksphere Engine",
-          "version": "v1.1.0-build.73-channel.insider",
-          "published_at": "2026-08-26T00:00:04Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Engine",
-              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend"
-            ],
-            "fixed": [
-              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
-              "Updated frontend dependencies to resolve security audit vulnerabilities",
-              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility"
-            ],
-            "breaking": []
-          },
-          "downloads": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-linux-arm64",
-              "size": 32309410
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-linux-x64",
-              "size": 34627746
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-mac-arm64",
-              "size": 33124882
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-mac-x64",
-              "size": 35260480
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-win-arm64.exe",
-              "size": 32398848
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-win-x64.exe",
-              "size": 35207168
-            }
-          },
-          "docs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-release-notes.json",
-            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-usage.json"
           }
         }
       ]
