@@ -202,235 +202,533 @@
       ]
     },
     "insider": {
-      "cloud": [
+      "website": [
         {
-          "name": "Niksphere Cloud",
-          "version": "v1.0.0-build.53-channel.insider",
-          "published_at": "2026-08-26T00:08:30Z",
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.9-channel.insider",
+          "published_at": "2026-09-01T02:05:19Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere Cloud",
-              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)"
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
             ],
-            "fixed": [],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
             "breaking": []
           },
           "downloads": {},
           "docs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.53-channel.insider/niksphere-cloud-v1.0.0-build.53-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.53-channel.insider/niksphere-cloud-v1.0.0-build.53-channel.insider-release-notes.json"
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.9-channel.insider/niksphere-website-v1.0.0-build.9-channel.insider-release-notes.json"
           }
         },
         {
-          "name": "Niksphere Cloud",
-          "version": "v1.0.0-build.49-channel.insider",
-          "published_at": "2026-08-25T09:00:20Z",
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.8-channel.insider",
+          "published_at": "2026-08-31T01:39:22Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere Cloud",
-              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)"
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
             ],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.8-channel.insider/niksphere-website-v1.0.0-build.8-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.7-channel.insider",
+          "published_at": "2026-08-30T01:45:12Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.7-channel.insider/niksphere-website-v1.0.0-build.7-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.6-channel.insider",
+          "published_at": "2026-08-29T04:20:54Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.6-channel.insider/niksphere-website-v1.0.0-build.6-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.5-channel.insider",
+          "published_at": "2026-08-28T07:06:45Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.5-channel.insider/niksphere-website-v1.0.0-build.5-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.4-channel.insider",
+          "published_at": "2026-08-27T22:26:02Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.4-channel.insider/niksphere-website-v1.0.0-build.4-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.3-channel.insider",
+          "published_at": "2026-08-27T05:07:53Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [],
             "fixed": [],
             "breaking": []
           },
           "downloads": {},
           "docs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-release-notes.json"
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.3-channel.insider/niksphere-website-v1.0.0-build.3-channel.insider-release-notes.json"
           }
         }
       ],
-      "cli": [
+      "ide-vscode": [
         {
-          "name": "Niksphere CLI",
-          "version": "v1.1.0-build.62-channel.insider",
-          "published_at": "2026-08-26T00:01:18Z",
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.63-channel.insider",
+          "published_at": "2026-09-01T20:45:36Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere CLI",
-              "Require explicit server URL for environment authentication login (`env auth login`)",
-              "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins"
+              "Initial release of Niksphere VS Code Extension",
+              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
+              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
+            ],
+            "improvement": [
+              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
+              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
+              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
             ],
             "fixed": [
-              "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
-              "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section"
+              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
+              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
             ],
             "breaking": []
           },
           "downloads": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-linux-arm64",
-              "size": 16515234
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-linux-x64",
-              "size": 17932553
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-mac-arm64",
-              "size": 16622226
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-mac-x64",
-              "size": 17910960
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-win-arm64.exe",
-              "size": 16477696
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-win-x64.exe",
-              "size": 18114560
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.63-channel.insider/niksphere-ide-vscode-v1.0.0-build.63-channel.insider.vsix",
+              "size": 378478
             }
           },
           "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-release-notes.json",
-            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-usage.json"
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.63-channel.insider/niksphere-ide-vscode-v1.0.0-build.63-channel.insider-release-notes.json"
           }
         },
         {
-          "name": "Niksphere CLI",
-          "version": "v1.1.0-build.58-channel.insider",
-          "published_at": "2026-08-22T00:00:55Z",
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.62-channel.insider",
+          "published_at": "2026-09-01T19:29:38Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere CLI",
-              "Require explicit server URL for environment authentication login (`env auth login`)",
-              "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins"
+              "Initial release of Niksphere VS Code Extension",
+              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
+              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
+            ],
+            "improvement": [
+              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
+              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
+              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
             ],
             "fixed": [
-              "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
-              "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section"
+              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
+              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
             ],
             "breaking": []
           },
           "downloads": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.58-channel.insider/niksphere-cli-v1.1.0-build.58-channel.insider-linux-arm64",
-              "size": 16449698
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.58-channel.insider/niksphere-cli-v1.1.0-build.58-channel.insider-linux-x64",
-              "size": 17875209
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.58-channel.insider/niksphere-cli-v1.1.0-build.58-channel.insider-mac-arm64",
-              "size": 16554786
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.58-channel.insider/niksphere-cli-v1.1.0-build.58-channel.insider-mac-x64",
-              "size": 17852224
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.58-channel.insider/niksphere-cli-v1.1.0-build.58-channel.insider-win-arm64.exe",
-              "size": 16424960
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.58-channel.insider/niksphere-cli-v1.1.0-build.58-channel.insider-win-x64.exe",
-              "size": 18058752
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.62-channel.insider/niksphere-ide-vscode-v1.0.0-build.62-channel.insider.vsix",
+              "size": 376665
             }
           },
           "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.58-channel.insider/niksphere-cli-v1.1.0-build.58-channel.insider-release-notes.json",
-            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.58-channel.insider/niksphere-cli-v1.1.0-build.58-channel.insider-usage.json"
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.62-channel.insider/niksphere-ide-vscode-v1.0.0-build.62-channel.insider-release-notes.json"
           }
         },
         {
-          "name": "Niksphere CLI",
-          "version": "v1.1.0-build.53-channel.insider",
-          "published_at": "2026-08-18T00:00:17Z",
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.61-channel.insider",
+          "published_at": "2026-09-01T19:25:24Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere CLI",
-              "Require explicit server URL for environment authentication login (`env auth login`)",
-              "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins"
+              "Initial release of Niksphere VS Code Extension",
+              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
+              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
+            ],
+            "improvement": [
+              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
+              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
+              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
             ],
             "fixed": [
-              "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
-              "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section"
+              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
+              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
             ],
             "breaking": []
           },
           "downloads": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.53-channel.insider/niksphere-cli-v1.1.0-build.53-channel.insider-linux-arm64",
-              "size": 16253090
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.53-channel.insider/niksphere-cli-v1.1.0-build.53-channel.insider-linux-x64",
-              "size": 17686793
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.53-channel.insider/niksphere-cli-v1.1.0-build.53-channel.insider-mac-arm64",
-              "size": 16369026
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.53-channel.insider/niksphere-cli-v1.1.0-build.53-channel.insider-mac-x64",
-              "size": 17655856
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.53-channel.insider/niksphere-cli-v1.1.0-build.53-channel.insider-win-arm64.exe",
-              "size": 16246784
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.53-channel.insider/niksphere-cli-v1.1.0-build.53-channel.insider-win-x64.exe",
-              "size": 17862656
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.61-channel.insider/niksphere-ide-vscode-v1.0.0-build.61-channel.insider.vsix",
+              "size": 376665
             }
           },
           "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.53-channel.insider/niksphere-cli-v1.1.0-build.53-channel.insider-release-notes.json",
-            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.53-channel.insider/niksphere-cli-v1.1.0-build.53-channel.insider-usage.json"
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.61-channel.insider/niksphere-ide-vscode-v1.0.0-build.61-channel.insider-release-notes.json"
           }
         },
         {
-          "name": "Niksphere CLI",
-          "version": "v1.1.0-build.52-channel.insider",
-          "published_at": "2026-08-17T10:36:10Z",
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.60-channel.insider",
+          "published_at": "2026-09-01T02:03:48Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere CLI",
-              "Require explicit server URL for environment authentication login (`env auth login`)",
-              "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins"
+              "Initial release of Niksphere VS Code Extension"
             ],
-            "fixed": [
-              "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
-              "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section"
-            ],
+            "improvement": [],
+            "fixed": [],
             "breaking": []
           },
           "downloads": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.52-channel.insider/niksphere-cli-v1.1.0-build.52-channel.insider-linux-arm64",
-              "size": 16253090
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.52-channel.insider/niksphere-cli-v1.1.0-build.52-channel.insider-linux-x64",
-              "size": 17678601
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.52-channel.insider/niksphere-cli-v1.1.0-build.52-channel.insider-mac-arm64",
-              "size": 16368594
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.52-channel.insider/niksphere-cli-v1.1.0-build.52-channel.insider-mac-x64",
-              "size": 17642896
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.52-channel.insider/niksphere-cli-v1.1.0-build.52-channel.insider-win-arm64.exe",
-              "size": 16238592
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.52-channel.insider/niksphere-cli-v1.1.0-build.52-channel.insider-win-x64.exe",
-              "size": 17852416
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.60-channel.insider/niksphere-ide-vscode-v1.0.0-build.60-channel.insider.vsix",
+              "size": 374667
             }
           },
           "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.52-channel.insider/niksphere-cli-v1.1.0-build.52-channel.insider-release-notes.json",
-            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.52-channel.insider/niksphere-cli-v1.1.0-build.52-channel.insider-usage.json"
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.60-channel.insider/niksphere-ide-vscode-v1.0.0-build.60-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.56-channel.insider",
+          "published_at": "2026-08-28T07:04:57Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension"
+            ],
+            "improvement": [],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.56-channel.insider/niksphere-ide-vscode-v1.0.0-build.56-channel.insider.vsix",
+              "size": 374325
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.56-channel.insider/niksphere-ide-vscode-v1.0.0-build.56-channel.insider-release-notes.json"
           }
         }
       ],
       "engine": [
+        {
+          "name": "Niksphere Engine",
+          "version": "v1.1.0-build.82-channel.insider",
+          "published_at": "2026-09-01T20:46:45Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Engine",
+              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend",
+              "Implement actor and identity architecture with universal admin client access, fail-fast validation, and full OpenAPI documentation"
+            ],
+            "improvement": [
+              "Admin API error messages now consistently start with \"Failed to <action>: <reason>\", mirroring the existing \"Successfully <action>...\" convention on success, so the outcome is clear from the first word alone"
+            ],
+            "fixed": [
+              "Fix Admin API upload/publish responses nesting the success message under `data.message` instead of the top level, which caused the CLI and VS Code Extension to show a generic fallback message instead of the server''s actual text",
+              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
+              "Updated frontend dependencies to resolve security audit vulnerabilities",
+              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility",
+              "Return consistent 404 responses for unknown actors, clients, apps, and their sub-resources instead of an empty success or malformed error",
+              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them",
+              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
+              "Fix frontend login using an unregistered OAuth client ID"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-linux-arm64",
+              "size": 38535330
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-linux-x64",
+              "size": 41283746
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-mac-arm64",
+              "size": 39689250
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-mac-x64",
+              "size": 42191776
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-win-arm64.exe",
+              "size": 38737408
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-win-x64.exe",
+              "size": 42023424
+            }
+          },
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-usage.json"
+          }
+        },
+        {
+          "name": "Niksphere Engine",
+          "version": "v1.1.0-build.81-channel.insider",
+          "published_at": "2026-09-01T19:26:55Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Engine",
+              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend",
+              "Implement actor and identity architecture with universal admin client access, fail-fast validation, and full OpenAPI documentation"
+            ],
+            "improvement": [
+              "Admin API error messages now consistently start with \"Failed to <action>: <reason>\", mirroring the existing \"Successfully <action>...\" convention on success, so the outcome is clear from the first word alone"
+            ],
+            "fixed": [
+              "Fix Admin API upload/publish responses nesting the success message under `data.message` instead of the top level, which caused the CLI and VS Code Extension to show a generic fallback message instead of the server''s actual text",
+              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
+              "Updated frontend dependencies to resolve security audit vulnerabilities",
+              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility",
+              "Return consistent 404 responses for unknown actors, clients, apps, and their sub-resources instead of an empty success or malformed error",
+              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them",
+              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
+              "Fix frontend login using an unregistered OAuth client ID"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.81-channel.insider/niksphere-engine-v1.1.0-build.81-channel.insider-linux-arm64",
+              "size": 38535330
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.81-channel.insider/niksphere-engine-v1.1.0-build.81-channel.insider-linux-x64",
+              "size": 41283746
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.81-channel.insider/niksphere-engine-v1.1.0-build.81-channel.insider-mac-arm64",
+              "size": 39689250
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.81-channel.insider/niksphere-engine-v1.1.0-build.81-channel.insider-mac-x64",
+              "size": 42191776
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.81-channel.insider/niksphere-engine-v1.1.0-build.81-channel.insider-win-arm64.exe",
+              "size": 38736896
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.81-channel.insider/niksphere-engine-v1.1.0-build.81-channel.insider-win-x64.exe",
+              "size": 42022400
+            }
+          },
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.81-channel.insider/niksphere-engine-v1.1.0-build.81-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.81-channel.insider/niksphere-engine-v1.1.0-build.81-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.81-channel.insider/niksphere-engine-v1.1.0-build.81-channel.insider-usage.json"
+          }
+        },
+        {
+          "name": "Niksphere Engine",
+          "version": "v1.1.0-build.80-channel.insider",
+          "published_at": "2026-09-01T02:05:03Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Engine",
+              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend",
+              "Implement actor and identity architecture with universal admin client access, fail-fast validation, and full OpenAPI documentation"
+            ],
+            "improvement": [],
+            "fixed": [
+              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
+              "Updated frontend dependencies to resolve security audit vulnerabilities",
+              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility",
+              "Return consistent 404 responses for unknown actors, clients, apps, and their sub-resources instead of an empty success or malformed error",
+              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them",
+              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
+              "Fix frontend login using an unregistered OAuth client ID"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-linux-arm64",
+              "size": 38535330
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-linux-x64",
+              "size": 41283746
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-mac-arm64",
+              "size": 39689250
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-mac-x64",
+              "size": 42191776
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-win-arm64.exe",
+              "size": 38736896
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-win-x64.exe",
+              "size": 42022400
+            }
+          },
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-usage.json"
+          }
+        },
+        {
+          "name": "Niksphere Engine",
+          "version": "v1.1.0-build.75-channel.insider",
+          "published_at": "2026-08-27T22:18:59Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Engine",
+              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend",
+              "Implement actor and identity architecture with universal admin client access, fail-fast validation, and full OpenAPI documentation"
+            ],
+            "improvement": [],
+            "fixed": [
+              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
+              "Updated frontend dependencies to resolve security audit vulnerabilities",
+              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility",
+              "Return consistent 404 responses for unknown actors, clients, apps, and their sub-resources instead of an empty success or malformed error",
+              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them",
+              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
+              "Fix frontend login using an unregistered OAuth client ID"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-linux-arm64",
+              "size": 32440482
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-linux-x64",
+              "size": 34771106
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-mac-arm64",
+              "size": 33242706
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-mac-x64",
+              "size": 35401984
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-win-arm64.exe",
+              "size": 32526336
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-win-x64.exe",
+              "size": 35349504
+            }
+          },
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.75-channel.insider/niksphere-engine-v1.1.0-build.75-channel.insider-usage.json"
+          }
+        },
         {
           "name": "Niksphere Engine",
           "version": "v1.1.0-build.73-channel.insider",
@@ -478,193 +776,364 @@
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.73-channel.insider/niksphere-engine-v1.1.0-build.73-channel.insider-usage.json"
           }
-        },
+        }
+      ],
+      "cloud": [
         {
-          "name": "Niksphere Engine",
-          "version": "v1.1.0-build.68-channel.insider",
-          "published_at": "2026-08-21T16:07:28Z",
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.59-channel.insider",
+          "published_at": "2026-09-01T02:05:39Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere Engine",
-              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend"
+              "Initial release of Niksphere Cloud",
+              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)",
+              "Integrate actor-based IdP broker with dynamic OIDC authentication"
+            ],
+            "improvement": [
+              "Prevent the provisioning worker from hanging indefinitely on a stuck provider call"
             ],
             "fixed": [
-              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
-              "Updated frontend dependencies to resolve security audit vulnerabilities",
-              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility"
+              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
+              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them; remove dead, unused OIDC config options",
+              "Fix CLI and web logins using conflicting, unregistered OAuth client IDs by seeding dedicated `niksphere-cli` and `niksphere-cloud-web` clients"
             ],
             "breaking": []
           },
-          "downloads": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-linux-arm64",
-              "size": 32309410
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-linux-x64",
-              "size": 34623650
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-mac-arm64",
-              "size": 33108210
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-mac-x64",
-              "size": 35256224
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-win-arm64.exe",
-              "size": 32392192
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-win-x64.exe",
-              "size": 35201024
-            }
-          },
+          "downloads": {},
           "docs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-release-notes.json",
-            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.68-channel.insider/niksphere-engine-v1.1.0-build.68-channel.insider-usage.json"
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.59-channel.insider/niksphere-cloud-v1.0.0-build.59-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.59-channel.insider/niksphere-cloud-v1.0.0-build.59-channel.insider-release-notes.json"
           }
         },
         {
-          "name": "Niksphere Engine",
-          "version": "v1.1.0-build.63-channel.insider",
-          "published_at": "2026-08-17T23:58:59Z",
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.55-channel.insider",
+          "published_at": "2026-08-28T07:06:50Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere Engine",
-              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend"
+              "Initial release of Niksphere Cloud",
+              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)",
+              "Integrate actor-based IdP broker with dynamic OIDC authentication"
+            ],
+            "improvement": [
+              "Prevent the provisioning worker from hanging indefinitely on a stuck provider call"
             ],
             "fixed": [
-              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
-              "Updated frontend dependencies to resolve security audit vulnerabilities",
-              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility"
+              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
+              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them; remove dead, unused OIDC config options",
+              "Fix CLI and web logins using conflicting, unregistered OAuth client IDs by seeding dedicated `niksphere-cli` and `niksphere-cloud-web` clients"
             ],
             "breaking": []
           },
-          "downloads": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.63-channel.insider/niksphere-engine-v1.1.0-build.63-channel.insider-linux-arm64",
-              "size": 33095842
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.63-channel.insider/niksphere-engine-v1.1.0-build.63-channel.insider-linux-x64",
-              "size": 35553442
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.63-channel.insider/niksphere-engine-v1.1.0-build.63-channel.insider-mac-arm64",
-              "size": 33922642
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.63-channel.insider/niksphere-engine-v1.1.0-build.63-channel.insider-mac-x64",
-              "size": 36203616
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.63-channel.insider/niksphere-engine-v1.1.0-build.63-channel.insider-win-arm64.exe",
-              "size": 33176576
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.63-channel.insider/niksphere-engine-v1.1.0-build.63-channel.insider-win-x64.exe",
-              "size": 36141568
-            }
-          },
+          "downloads": {},
           "docs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.63-channel.insider/niksphere-engine-v1.1.0-build.63-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.63-channel.insider/niksphere-engine-v1.1.0-build.63-channel.insider-release-notes.json",
-            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.63-channel.insider/niksphere-engine-v1.1.0-build.63-channel.insider-usage.json"
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.55-channel.insider/niksphere-cloud-v1.0.0-build.55-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.55-channel.insider/niksphere-cloud-v1.0.0-build.55-channel.insider-release-notes.json"
           }
         },
         {
-          "name": "Niksphere Engine",
-          "version": "v1.1.0-build.62-channel.insider",
-          "published_at": "2026-08-17T10:36:54Z",
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.53-channel.insider",
+          "published_at": "2026-08-26T00:08:30Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere Engine",
-              "Unified design for device authorization flow UI in IdP Broker matching React SPA frontend"
+              "Initial release of Niksphere Cloud",
+              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)"
             ],
-            "fixed": [
-              "Include configured routePrefix in verificationURI and external OAuth2 redirect URLs (IdP Broker)",
-              "Updated frontend dependencies to resolve security audit vulnerabilities",
-              "Added HTTP/HTTPS scheme annotations to OpenAPI specification generator for SDK compatibility"
-            ],
+            "fixed": [],
             "breaking": []
           },
-          "downloads": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-linux-arm64",
-              "size": 33095842
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-linux-x64",
-              "size": 35537058
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-mac-arm64",
-              "size": 33889090
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-mac-x64",
-              "size": 36190800
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-win-arm64.exe",
-              "size": 33167360
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-win-x64.exe",
-              "size": 36131328
-            }
-          },
+          "downloads": {},
           "docs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-release-notes.json",
-            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.62-channel.insider/niksphere-engine-v1.1.0-build.62-channel.insider-usage.json"
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.53-channel.insider/niksphere-cloud-v1.0.0-build.53-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.53-channel.insider/niksphere-cloud-v1.0.0-build.53-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.49-channel.insider",
+          "published_at": "2026-08-25T09:00:20Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Cloud",
+              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)"
+            ],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-release-notes.json"
           }
         }
       ],
-      "ide-vscode": [
+      "cli": [
         {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.50-channel.insider",
-          "published_at": "2026-08-21T23:58:42Z",
+          "name": "Niksphere CLI",
+          "version": "v1.1.0-build.71-channel.insider",
+          "published_at": "2026-09-01T20:45:41Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere VS Code Extension"
+              "Initial release of Niksphere CLI",
+              "Require explicit server URL for environment authentication login (`env auth login`)",
+              "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins",
+              "Add `nik env actor` and `nik env client` commands for managing actors and OAuth clients",
+              "Add `nik dev mcp enable|disable|show` commands to register or remove the Niksphere MCP server (`nik mcp`) in AI client configuration files (Claude Code, Cursor, Antigravity, VS Code), with `--client` to target specific clients and `--json` on `show` for machine-readable client discovery"
             ],
-            "fixed": [],
-            "breaking": []
+            "improvement": [
+              "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section",
+              "Pressing Ctrl+C now cleanly cancels an in-progress command or login instead of showing a confusing error",
+              "Unified wording of success and error messages with the Engine and VS Code Extension across all `env app`, `env actor`, `env client`, and `env idp external` commands",
+              "Add detailed `--help` descriptions to `nik mcp` and `nik dev lsp` clarifying they are started by an AI client or editor as a subprocess, not meant to be run manually"
+            ],
+            "fixed": [
+              "Fix duplicated or reworded success/error messages on admin commands (e.g. \"Successfully installed. App X ... successfully installed\" or \"failed to edit actor: Actor not found.\") by relaying the Engine''s own message verbatim",
+              "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
+              "Fix login and token refresh failing due to a retired, unregistered OAuth client ID"
+            ],
+            "breaking": [
+              "Move `nik dev integrate lsp` to `nik dev lsp` and remove the now-empty `nik dev integrate` command group"
+            ]
           },
           "downloads": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.50-channel.insider/niksphere-ide-vscode-v1.0.0-build.50-channel.insider.vsix",
-              "size": 374325
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-linux-arm64",
+              "size": 16646306
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-linux-x64",
+              "size": 18116873
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-mac-arm64",
+              "size": 16807650
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-mac-x64",
+              "size": 18099248
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-win-arm64.exe",
+              "size": 16650752
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-win-x64.exe",
+              "size": 18302976
             }
           },
           "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.50-channel.insider/niksphere-ide-vscode-v1.0.0-build.50-channel.insider-release-notes.json"
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-usage.json"
           }
         },
         {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.44-channel.insider",
-          "published_at": "2026-08-17T10:35:56Z",
+          "name": "Niksphere CLI",
+          "version": "v1.1.0-build.70-channel.insider",
+          "published_at": "2026-09-01T19:25:37Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere VS Code Extension"
+              "Initial release of Niksphere CLI",
+              "Require explicit server URL for environment authentication login (`env auth login`)",
+              "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins",
+              "Add `nik env actor` and `nik env client` commands for managing actors and OAuth clients",
+              "Add `nik dev mcp enable|disable|show` commands to register or remove the Niksphere MCP server (`nik mcp`) in AI client configuration files (Claude Code, Cursor, Antigravity, VS Code), with `--client` to target specific clients and `--json` on `show` for machine-readable client discovery"
             ],
-            "fixed": [],
-            "breaking": []
+            "improvement": [
+              "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section",
+              "Pressing Ctrl+C now cleanly cancels an in-progress command or login instead of showing a confusing error",
+              "Unified wording of success and error messages with the Engine and VS Code Extension across all `env app`, `env actor`, `env client`, and `env idp external` commands",
+              "Add detailed `--help` descriptions to `nik mcp` and `nik dev lsp` clarifying they are started by an AI client or editor as a subprocess, not meant to be run manually"
+            ],
+            "fixed": [
+              "Fix duplicated or reworded success/error messages on admin commands (e.g. \"Successfully installed. App X ... successfully installed\" or \"failed to edit actor: Actor not found.\") by relaying the Engine''s own message verbatim",
+              "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
+              "Fix login and token refresh failing due to a retired, unregistered OAuth client ID"
+            ],
+            "breaking": [
+              "Move `nik dev integrate lsp` to `nik dev lsp` and remove the now-empty `nik dev integrate` command group"
+            ]
           },
           "downloads": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.44-channel.insider/niksphere-ide-vscode-v1.0.0-build.44-channel.insider.vsix",
-              "size": 374419
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.70-channel.insider/niksphere-cli-v1.1.0-build.70-channel.insider-linux-arm64",
+              "size": 16646306
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.70-channel.insider/niksphere-cli-v1.1.0-build.70-channel.insider-linux-x64",
+              "size": 18116873
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.70-channel.insider/niksphere-cli-v1.1.0-build.70-channel.insider-mac-arm64",
+              "size": 16807570
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.70-channel.insider/niksphere-cli-v1.1.0-build.70-channel.insider-mac-x64",
+              "size": 18099152
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.70-channel.insider/niksphere-cli-v1.1.0-build.70-channel.insider-win-arm64.exe",
+              "size": 16649216
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.70-channel.insider/niksphere-cli-v1.1.0-build.70-channel.insider-win-x64.exe",
+              "size": 18301952
             }
           },
           "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.44-channel.insider/niksphere-ide-vscode-v1.0.0-build.44-channel.insider-release-notes.json"
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.70-channel.insider/niksphere-cli-v1.1.0-build.70-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.70-channel.insider/niksphere-cli-v1.1.0-build.70-channel.insider-usage.json"
+          }
+        },
+        {
+          "name": "Niksphere CLI",
+          "version": "v1.1.0-build.69-channel.insider",
+          "published_at": "2026-09-01T02:05:05Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere CLI",
+              "Require explicit server URL for environment authentication login (`env auth login`)",
+              "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins",
+              "Add `nik env actor` and `nik env client` commands for managing actors and OAuth clients"
+            ],
+            "improvement": [
+              "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section",
+              "Pressing Ctrl+C now cleanly cancels an in-progress command or login instead of showing a confusing error"
+            ],
+            "fixed": [
+              "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
+              "Fix login and token refresh failing due to a retired, unregistered OAuth client ID"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.69-channel.insider/niksphere-cli-v1.1.0-build.69-channel.insider-linux-arm64",
+              "size": 16646306
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.69-channel.insider/niksphere-cli-v1.1.0-build.69-channel.insider-linux-x64",
+              "size": 18088201
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.69-channel.insider/niksphere-cli-v1.1.0-build.69-channel.insider-mac-arm64",
+              "size": 16757442
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.69-channel.insider/niksphere-cli-v1.1.0-build.69-channel.insider-mac-x64",
+              "size": 18061552
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.69-channel.insider/niksphere-cli-v1.1.0-build.69-channel.insider-win-arm64.exe",
+              "size": 16618496
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.69-channel.insider/niksphere-cli-v1.1.0-build.69-channel.insider-win-x64.exe",
+              "size": 18268160
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.69-channel.insider/niksphere-cli-v1.1.0-build.69-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.69-channel.insider/niksphere-cli-v1.1.0-build.69-channel.insider-usage.json"
+          }
+        },
+        {
+          "name": "Niksphere CLI",
+          "version": "v1.1.0-build.64-channel.insider",
+          "published_at": "2026-08-27T22:15:07Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere CLI",
+              "Require explicit server URL for environment authentication login (`env auth login`)",
+              "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins",
+              "Add `nik env actor` and `nik env client` commands for managing actors and OAuth clients"
+            ],
+            "improvement": [
+              "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section",
+              "Pressing Ctrl+C now cleanly cancels an in-progress command or login instead of showing a confusing error"
+            ],
+            "fixed": [
+              "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
+              "Fix login and token refresh failing due to a retired, unregistered OAuth client ID"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.64-channel.insider/niksphere-cli-v1.1.0-build.64-channel.insider-linux-arm64",
+              "size": 16711842
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.64-channel.insider/niksphere-cli-v1.1.0-build.64-channel.insider-linux-x64",
+              "size": 18231561
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.64-channel.insider/niksphere-cli-v1.1.0-build.64-channel.insider-mac-arm64",
+              "size": 16909762
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.64-channel.insider/niksphere-cli-v1.1.0-build.64-channel.insider-mac-x64",
+              "size": 18212816
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.64-channel.insider/niksphere-cli-v1.1.0-build.64-channel.insider-win-arm64.exe",
+              "size": 16758272
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.64-channel.insider/niksphere-cli-v1.1.0-build.64-channel.insider-win-x64.exe",
+              "size": 18414592
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.64-channel.insider/niksphere-cli-v1.1.0-build.64-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.64-channel.insider/niksphere-cli-v1.1.0-build.64-channel.insider-usage.json"
+          }
+        },
+        {
+          "name": "Niksphere CLI",
+          "version": "v1.1.0-build.62-channel.insider",
+          "published_at": "2026-08-26T00:01:18Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere CLI",
+              "Require explicit server URL for environment authentication login (`env auth login`)",
+              "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins"
+            ],
+            "fixed": [
+              "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
+              "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-linux-arm64",
+              "size": 16515234
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-linux-x64",
+              "size": 17932553
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-mac-arm64",
+              "size": 16622226
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-mac-x64",
+              "size": 17910960
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-win-arm64.exe",
+              "size": 16477696
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-win-x64.exe",
+              "size": 18114560
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-usage.json"
           }
         }
       ]
