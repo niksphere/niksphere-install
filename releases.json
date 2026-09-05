@@ -846,210 +846,66 @@
           }
         }
       ],
-      "ide-vscode": [
+      "cli": [
         {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.68-channel.insider",
-          "published_at": "2026-09-05T01:24:39Z",
+          "name": "Niksphere CLI",
+          "version": "v1.1.0-build.75-channel.insider",
+          "published_at": "2026-09-05T01:29:55Z",
           "notes": {
             "added": [
-              "Initial release of Niksphere VS Code Extension",
-              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
-              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
+              "Initial release of Niksphere CLI",
+              "Require explicit server URL for environment authentication login (`env auth login`)",
+              "Centralized authentication handler with explicit 127.0.0.1 loopback binding for OAuth logins",
+              "Add `nik env actor` and `nik env client` commands for managing actors and OAuth clients",
+              "Add `nik dev mcp enable|disable|show` commands to register or remove the Niksphere MCP server (`nik mcp`) in AI client configuration files (Claude Code, Cursor, Antigravity, VS Code), with `--client` to target specific clients and `--json` on `show` for machine-readable client discovery"
             ],
             "changed": [
-              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
-              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
-              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
+              "Improved CLI `--help` layout: displayed commands prior to options and unified flags under a single `Flags` section",
+              "Pressing Ctrl+C now cleanly cancels an in-progress command or login instead of showing a confusing error",
+              "Unified wording of success and error messages with the Engine and VS Code Extension across all `env app`, `env actor`, `env client`, and `env idp external` commands",
+              "Add detailed `--help` descriptions to `nik mcp` and `nik dev lsp` clarifying they are started by an AI client or editor as a subprocess, not meant to be run manually",
+              "**BREAKING:** Move `nik dev integrate lsp` to `nik dev lsp` and remove the now-empty `nik dev integrate` command group"
             ],
             "deprecated": [],
             "fixed": [
-              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
-              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
+              "Fix duplicated or reworded success/error messages on admin commands (e.g. \"Successfully installed. App X ... successfully installed\" or \"failed to edit actor: Actor not found.\") by relaying the Engine''s own message verbatim",
+              "Centralized server URL resolution across environment commands (`nik env ...`) to avoid silent fallback to `localhost`",
+              "Fix login and token refresh failing due to a retired, unregistered OAuth client ID"
             ],
             "removed": [],
             "security": []
           },
           "downloads": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.68-channel.insider/niksphere-ide-vscode-v1.0.0-build.68-channel.insider.vsix",
-              "size": 459736
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.75-channel.insider/niksphere-cli-v1.1.0-build.75-channel.insider-linux-arm64",
+              "size": 16646306
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.75-channel.insider/niksphere-cli-v1.1.0-build.75-channel.insider-linux-x64",
+              "size": 18116873
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.75-channel.insider/niksphere-cli-v1.1.0-build.75-channel.insider-mac-arm64",
+              "size": 16807682
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.75-channel.insider/niksphere-cli-v1.1.0-build.75-channel.insider-mac-x64",
+              "size": 18099280
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.75-channel.insider/niksphere-cli-v1.1.0-build.75-channel.insider-win-arm64.exe",
+              "size": 16651264
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.75-channel.insider/niksphere-cli-v1.1.0-build.75-channel.insider-win-x64.exe",
+              "size": 18302976
             }
           },
           "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.68-channel.insider/niksphere-ide-vscode-v1.0.0-build.68-channel.insider-release-notes.json"
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.75-channel.insider/niksphere-cli-v1.1.0-build.75-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.75-channel.insider/niksphere-cli-v1.1.0-build.75-channel.insider-usage.json"
           }
         },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.65-channel.insider",
-          "published_at": "2026-09-02T08:12:10Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere VS Code Extension",
-              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
-              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
-            ],
-            "improvement": [
-              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
-              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
-              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
-            ],
-            "fixed": [
-              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
-              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
-            ],
-            "breaking": []
-          },
-          "downloads": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.65-channel.insider/niksphere-ide-vscode-v1.0.0-build.65-channel.insider.vsix",
-              "size": 459715
-            }
-          },
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.65-channel.insider/niksphere-ide-vscode-v1.0.0-build.65-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.63-channel.insider",
-          "published_at": "2026-09-01T20:45:36Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere VS Code Extension",
-              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
-              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
-            ],
-            "improvement": [
-              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
-              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
-              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
-            ],
-            "fixed": [
-              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
-              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
-            ],
-            "breaking": []
-          },
-          "downloads": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.63-channel.insider/niksphere-ide-vscode-v1.0.0-build.63-channel.insider.vsix",
-              "size": 378478
-            }
-          },
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.63-channel.insider/niksphere-ide-vscode-v1.0.0-build.63-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.62-channel.insider",
-          "published_at": "2026-09-01T19:29:38Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere VS Code Extension",
-              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
-              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
-            ],
-            "improvement": [
-              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
-              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
-              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
-            ],
-            "fixed": [
-              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
-              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
-            ],
-            "breaking": []
-          },
-          "downloads": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.62-channel.insider/niksphere-ide-vscode-v1.0.0-build.62-channel.insider.vsix",
-              "size": 376665
-            }
-          },
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.62-channel.insider/niksphere-ide-vscode-v1.0.0-build.62-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.61-channel.insider",
-          "published_at": "2026-09-01T19:25:24Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere VS Code Extension",
-              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
-              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
-            ],
-            "improvement": [
-              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
-              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
-              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
-            ],
-            "fixed": [
-              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
-              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
-            ],
-            "breaking": []
-          },
-          "downloads": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.61-channel.insider/niksphere-ide-vscode-v1.0.0-build.61-channel.insider.vsix",
-              "size": 376665
-            }
-          },
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.61-channel.insider/niksphere-ide-vscode-v1.0.0-build.61-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.60-channel.insider",
-          "published_at": "2026-09-01T02:03:48Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere VS Code Extension"
-            ],
-            "improvement": [],
-            "fixed": [],
-            "breaking": []
-          },
-          "downloads": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.60-channel.insider/niksphere-ide-vscode-v1.0.0-build.60-channel.insider.vsix",
-              "size": 374667
-            }
-          },
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.60-channel.insider/niksphere-ide-vscode-v1.0.0-build.60-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere VS Code Extension",
-          "version": "v1.0.0-build.56-channel.insider",
-          "published_at": "2026-08-28T07:04:57Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere VS Code Extension"
-            ],
-            "improvement": [],
-            "fixed": [],
-            "breaking": []
-          },
-          "downloads": {
-            "vsix": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.56-channel.insider/niksphere-ide-vscode-v1.0.0-build.56-channel.insider.vsix",
-              "size": 374325
-            }
-          },
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.56-channel.insider/niksphere-ide-vscode-v1.0.0-build.56-channel.insider-release-notes.json"
-          }
-        }
-      ],
-      "cli": [
         {
           "name": "Niksphere CLI",
           "version": "v1.1.0-build.71-channel.insider",
@@ -1315,6 +1171,209 @@
           "docs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.62-channel.insider/niksphere-cli-v1.1.0-build.62-channel.insider-usage.json"
+          }
+        }
+      ],
+      "ide-vscode": [
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.68-channel.insider",
+          "published_at": "2026-09-05T01:24:39Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension",
+              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
+              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
+            ],
+            "changed": [
+              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
+              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
+              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
+            ],
+            "deprecated": [],
+            "fixed": [
+              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
+              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
+            ],
+            "removed": [],
+            "security": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.68-channel.insider/niksphere-ide-vscode-v1.0.0-build.68-channel.insider.vsix",
+              "size": 459736
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.68-channel.insider/niksphere-ide-vscode-v1.0.0-build.68-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.65-channel.insider",
+          "published_at": "2026-09-02T08:12:10Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension",
+              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
+              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
+            ],
+            "improvement": [
+              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
+              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
+              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
+            ],
+            "fixed": [
+              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
+              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.65-channel.insider/niksphere-ide-vscode-v1.0.0-build.65-channel.insider.vsix",
+              "size": 459715
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.65-channel.insider/niksphere-ide-vscode-v1.0.0-build.65-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.63-channel.insider",
+          "published_at": "2026-09-01T20:45:36Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension",
+              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
+              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
+            ],
+            "improvement": [
+              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
+              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
+              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
+            ],
+            "fixed": [
+              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
+              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.63-channel.insider/niksphere-ide-vscode-v1.0.0-build.63-channel.insider.vsix",
+              "size": 378478
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.63-channel.insider/niksphere-ide-vscode-v1.0.0-build.63-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.62-channel.insider",
+          "published_at": "2026-09-01T19:29:38Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension",
+              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
+              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
+            ],
+            "improvement": [
+              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
+              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
+              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
+            ],
+            "fixed": [
+              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
+              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.62-channel.insider/niksphere-ide-vscode-v1.0.0-build.62-channel.insider.vsix",
+              "size": 376665
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.62-channel.insider/niksphere-ide-vscode-v1.0.0-build.62-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.61-channel.insider",
+          "published_at": "2026-09-01T19:25:24Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension",
+              "Add \"Copy\" submenu (ID / Name / Version) for apps and app versions in the environment explorer",
+              "Add \"Niksphere: Enable/Disable AI Agent Integration (MCP)\" commands to register or remove the Niksphere MCP server for AI coding agents (Claude Code, Cursor, Antigravity, VS Code Copilot), with a client picker sourced dynamically from the installed CLI"
+            ],
+            "improvement": [
+              "Removed duplicate flat environment context menu entries now fully covered by the Environment Actions submenu",
+              "Made login, install, uninstall, drop-data, upload, download, and delete cancellable from their progress notification instead of blocking until the CLI process finishes",
+              "Use a hollow ring badge instead of a dot for uninstalled app versions/apps with existing data, so it is distinguishable from the installed badge by shape, not just color"
+            ],
+            "fixed": [
+              "Unified success/error message formatting: success messages start with \"Successfully ...\", error messages with \"Failed to {action}: {message}\"",
+              "Update Language Server invocation from `nik dev integrate lsp` to `nik dev lsp` to match the CLI''s command rename"
+            ],
+            "breaking": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.61-channel.insider/niksphere-ide-vscode-v1.0.0-build.61-channel.insider.vsix",
+              "size": 376665
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.61-channel.insider/niksphere-ide-vscode-v1.0.0-build.61-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.60-channel.insider",
+          "published_at": "2026-09-01T02:03:48Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension"
+            ],
+            "improvement": [],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.60-channel.insider/niksphere-ide-vscode-v1.0.0-build.60-channel.insider.vsix",
+              "size": 374667
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.60-channel.insider/niksphere-ide-vscode-v1.0.0-build.60-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.56-channel.insider",
+          "published_at": "2026-08-28T07:04:57Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere VS Code Extension"
+            ],
+            "improvement": [],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.56-channel.insider/niksphere-ide-vscode-v1.0.0-build.56-channel.insider.vsix",
+              "size": 374325
+            }
+          },
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.56-channel.insider/niksphere-ide-vscode-v1.0.0-build.56-channel.insider-release-notes.json"
           }
         }
       ]
