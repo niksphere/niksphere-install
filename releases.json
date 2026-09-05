@@ -728,6 +728,124 @@
           }
         }
       ],
+      "cloud": [
+        {
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.63-channel.insider",
+          "published_at": "2026-09-05T01:27:48Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Cloud",
+              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)",
+              "Integrate actor-based IdP broker with dynamic OIDC authentication"
+            ],
+            "changed": [
+              "Prevent the provisioning worker from hanging indefinitely on a stuck provider call"
+            ],
+            "deprecated": [],
+            "fixed": [
+              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
+              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them; remove dead, unused OIDC config options",
+              "Fix CLI and web logins using conflicting, unregistered OAuth client IDs by seeding dedicated `niksphere-cli` and `niksphere-cloud-web` clients"
+            ],
+            "removed": [],
+            "security": []
+          },
+          "downloads": {},
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.63-channel.insider/niksphere-cloud-v1.0.0-build.63-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.63-channel.insider/niksphere-cloud-v1.0.0-build.63-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.59-channel.insider",
+          "published_at": "2026-09-01T02:05:39Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Cloud",
+              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)",
+              "Integrate actor-based IdP broker with dynamic OIDC authentication"
+            ],
+            "improvement": [
+              "Prevent the provisioning worker from hanging indefinitely on a stuck provider call"
+            ],
+            "fixed": [
+              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
+              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them; remove dead, unused OIDC config options",
+              "Fix CLI and web logins using conflicting, unregistered OAuth client IDs by seeding dedicated `niksphere-cli` and `niksphere-cloud-web` clients"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.59-channel.insider/niksphere-cloud-v1.0.0-build.59-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.59-channel.insider/niksphere-cloud-v1.0.0-build.59-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.55-channel.insider",
+          "published_at": "2026-08-28T07:06:50Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Cloud",
+              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)",
+              "Integrate actor-based IdP broker with dynamic OIDC authentication"
+            ],
+            "improvement": [
+              "Prevent the provisioning worker from hanging indefinitely on a stuck provider call"
+            ],
+            "fixed": [
+              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
+              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them; remove dead, unused OIDC config options",
+              "Fix CLI and web logins using conflicting, unregistered OAuth client IDs by seeding dedicated `niksphere-cli` and `niksphere-cloud-web` clients"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.55-channel.insider/niksphere-cloud-v1.0.0-build.55-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.55-channel.insider/niksphere-cloud-v1.0.0-build.55-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.53-channel.insider",
+          "published_at": "2026-08-26T00:08:30Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Cloud",
+              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)"
+            ],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.53-channel.insider/niksphere-cloud-v1.0.0-build.53-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.53-channel.insider/niksphere-cloud-v1.0.0-build.53-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.49-channel.insider",
+          "published_at": "2026-08-25T09:00:20Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Cloud",
+              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)"
+            ],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-release-notes.json"
+          }
+        }
+      ],
       "ide-vscode": [
         {
           "name": "Niksphere VS Code Extension",
@@ -928,96 +1046,6 @@
           },
           "docs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.56-channel.insider/niksphere-ide-vscode-v1.0.0-build.56-channel.insider-release-notes.json"
-          }
-        }
-      ],
-      "cloud": [
-        {
-          "name": "Niksphere Cloud",
-          "version": "v1.0.0-build.59-channel.insider",
-          "published_at": "2026-09-01T02:05:39Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Cloud",
-              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)",
-              "Integrate actor-based IdP broker with dynamic OIDC authentication"
-            ],
-            "improvement": [
-              "Prevent the provisioning worker from hanging indefinitely on a stuck provider call"
-            ],
-            "fixed": [
-              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
-              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them; remove dead, unused OIDC config options",
-              "Fix CLI and web logins using conflicting, unregistered OAuth client IDs by seeding dedicated `niksphere-cli` and `niksphere-cloud-web` clients"
-            ],
-            "breaking": []
-          },
-          "downloads": {},
-          "docs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.59-channel.insider/niksphere-cloud-v1.0.0-build.59-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.59-channel.insider/niksphere-cloud-v1.0.0-build.59-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere Cloud",
-          "version": "v1.0.0-build.55-channel.insider",
-          "published_at": "2026-08-28T07:06:50Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Cloud",
-              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)",
-              "Integrate actor-based IdP broker with dynamic OIDC authentication"
-            ],
-            "improvement": [
-              "Prevent the provisioning worker from hanging indefinitely on a stuck provider call"
-            ],
-            "fixed": [
-              "Fix external identity provider login page leaking OAuth client secrets to the browser (IdP Broker)",
-              "Apply configured `idp_token_expiry_hours` / `idp_refresh_token_expiry_days` settings instead of ignoring them; remove dead, unused OIDC config options",
-              "Fix CLI and web logins using conflicting, unregistered OAuth client IDs by seeding dedicated `niksphere-cli` and `niksphere-cloud-web` clients"
-            ],
-            "breaking": []
-          },
-          "downloads": {},
-          "docs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.55-channel.insider/niksphere-cloud-v1.0.0-build.55-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.55-channel.insider/niksphere-cloud-v1.0.0-build.55-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere Cloud",
-          "version": "v1.0.0-build.53-channel.insider",
-          "published_at": "2026-08-26T00:08:30Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Cloud",
-              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)"
-            ],
-            "fixed": [],
-            "breaking": []
-          },
-          "downloads": {},
-          "docs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.53-channel.insider/niksphere-cloud-v1.0.0-build.53-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.53-channel.insider/niksphere-cloud-v1.0.0-build.53-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere Cloud",
-          "version": "v1.0.0-build.49-channel.insider",
-          "published_at": "2026-08-25T09:00:20Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Cloud",
-              "Multi-architecture Docker container support (linux/amd64 and linux/arm64)"
-            ],
-            "fixed": [],
-            "breaking": []
-          },
-          "downloads": {},
-          "docs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-release-notes.json"
           }
         }
       ],
