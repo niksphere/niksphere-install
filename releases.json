@@ -202,6 +202,201 @@
       ]
     },
     "insider": {
+      "website": [
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.13-channel.insider",
+          "published_at": "2026-09-05T01:27:33Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment",
+              "Add \"CLI MCP Server Architecture\" architecture documentation and a \"Developing with AI Coding Agents\" guide",
+              "Add cross-product Release Notes overview (`/docs/reference/release-notes`) grouped by date and product, generated from all product release specifications, with a dedicated Insider variant and a Stable/Insider switch link"
+            ],
+            "changed": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients",
+              "Redesign release notes rendering (per-product and cross-product) as a flat, color-coded change-type badge list instead of separate Added/Changed/Fixed headings",
+              "Simplify the Reference overview page by removing the Product Reference Manuals table and Configuration & IDE References list"
+            ],
+            "deprecated": [],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "removed": [],
+            "security": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.13-channel.insider/niksphere-website-v1.0.0-build.13-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.9-channel.insider",
+          "published_at": "2026-09-01T02:05:19Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.9-channel.insider/niksphere-website-v1.0.0-build.9-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.8-channel.insider",
+          "published_at": "2026-08-31T01:39:22Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.8-channel.insider/niksphere-website-v1.0.0-build.8-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.7-channel.insider",
+          "published_at": "2026-08-30T01:45:12Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.7-channel.insider/niksphere-website-v1.0.0-build.7-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.6-channel.insider",
+          "published_at": "2026-08-29T04:20:54Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.6-channel.insider/niksphere-website-v1.0.0-build.6-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.5-channel.insider",
+          "published_at": "2026-08-28T07:06:45Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.5-channel.insider/niksphere-website-v1.0.0-build.5-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.4-channel.insider",
+          "published_at": "2026-08-27T22:26:02Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [
+              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
+            ],
+            "fixed": [
+              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
+              "Update CLI identity management documentation to reference the `nik env actor` command"
+            ],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.4-channel.insider/niksphere-website-v1.0.0-build.4-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
+          "version": "v1.0.0-build.3-channel.insider",
+          "published_at": "2026-08-27T05:07:53Z",
+          "notes": {
+            "added": [
+              "Initial release of Niksphere Website and Documentation Portal",
+              "Integrated automated reference documentation generation from releases catalog",
+              "Support for Stable and Insider release channel deployment"
+            ],
+            "improvement": [],
+            "fixed": [],
+            "breaking": []
+          },
+          "downloads": {},
+          "docs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.3-channel.insider/niksphere-website-v1.0.0-build.3-channel.insider-release-notes.json"
+          }
+        }
+      ],
       "engine": [
         {
           "name": "Niksphere Engine",
@@ -733,171 +928,6 @@
           },
           "docs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.56-channel.insider/niksphere-ide-vscode-v1.0.0-build.56-channel.insider-release-notes.json"
-          }
-        }
-      ],
-      "website": [
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.9-channel.insider",
-          "published_at": "2026-09-01T02:05:19Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Website and Documentation Portal",
-              "Integrated automated reference documentation generation from releases catalog",
-              "Support for Stable and Insider release channel deployment"
-            ],
-            "improvement": [
-              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
-            ],
-            "fixed": [
-              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
-              "Update CLI identity management documentation to reference the `nik env actor` command"
-            ],
-            "breaking": []
-          },
-          "downloads": {},
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.9-channel.insider/niksphere-website-v1.0.0-build.9-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.8-channel.insider",
-          "published_at": "2026-08-31T01:39:22Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Website and Documentation Portal",
-              "Integrated automated reference documentation generation from releases catalog",
-              "Support for Stable and Insider release channel deployment"
-            ],
-            "improvement": [
-              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
-            ],
-            "fixed": [
-              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
-              "Update CLI identity management documentation to reference the `nik env actor` command"
-            ],
-            "breaking": []
-          },
-          "downloads": {},
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.8-channel.insider/niksphere-website-v1.0.0-build.8-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.7-channel.insider",
-          "published_at": "2026-08-30T01:45:12Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Website and Documentation Portal",
-              "Integrated automated reference documentation generation from releases catalog",
-              "Support for Stable and Insider release channel deployment"
-            ],
-            "improvement": [
-              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
-            ],
-            "fixed": [
-              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
-              "Update CLI identity management documentation to reference the `nik env actor` command"
-            ],
-            "breaking": []
-          },
-          "downloads": {},
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.7-channel.insider/niksphere-website-v1.0.0-build.7-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.6-channel.insider",
-          "published_at": "2026-08-29T04:20:54Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Website and Documentation Portal",
-              "Integrated automated reference documentation generation from releases catalog",
-              "Support for Stable and Insider release channel deployment"
-            ],
-            "improvement": [
-              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
-            ],
-            "fixed": [
-              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
-              "Update CLI identity management documentation to reference the `nik env actor` command"
-            ],
-            "breaking": []
-          },
-          "downloads": {},
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.6-channel.insider/niksphere-website-v1.0.0-build.6-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.5-channel.insider",
-          "published_at": "2026-08-28T07:06:45Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Website and Documentation Portal",
-              "Integrated automated reference documentation generation from releases catalog",
-              "Support for Stable and Insider release channel deployment"
-            ],
-            "improvement": [
-              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
-            ],
-            "fixed": [
-              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
-              "Update CLI identity management documentation to reference the `nik env actor` command"
-            ],
-            "breaking": []
-          },
-          "downloads": {},
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.5-channel.insider/niksphere-website-v1.0.0-build.5-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.4-channel.insider",
-          "published_at": "2026-08-27T22:26:02Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Website and Documentation Portal",
-              "Integrated automated reference documentation generation from releases catalog",
-              "Support for Stable and Insider release channel deployment"
-            ],
-            "improvement": [
-              "Simplify Postman API quickstart guide to use Personal Access Token (PAT) authentication as the primary path, with the OAuth Authorization Code flow kept as an alternative for custom clients"
-            ],
-            "fixed": [
-              "Update client_id references in the engine client governance diagram to match the renamed engine web frontend client",
-              "Update CLI identity management documentation to reference the `nik env actor` command"
-            ],
-            "breaking": []
-          },
-          "downloads": {},
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.4-channel.insider/niksphere-website-v1.0.0-build.4-channel.insider-release-notes.json"
-          }
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.3-channel.insider",
-          "published_at": "2026-08-27T05:07:53Z",
-          "notes": {
-            "added": [
-              "Initial release of Niksphere Website and Documentation Portal",
-              "Integrated automated reference documentation generation from releases catalog",
-              "Support for Stable and Insider release channel deployment"
-            ],
-            "improvement": [],
-            "fixed": [],
-            "breaking": []
-          },
-          "downloads": {},
-          "docs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.3-channel.insider/niksphere-website-v1.0.0-build.3-channel.insider-release-notes.json"
           }
         }
       ],
