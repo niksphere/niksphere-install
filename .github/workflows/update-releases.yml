@@ -101,12 +101,12 @@ jobs:
                       }
                     }
 
-                    // Resolve relative docs URLs to full browser_download_url
-                    if (entry.docs && typeof entry.docs === "object") {
-                      for (const [docKey, docVal] of Object.entries(entry.docs)) {
-                        if (typeof docVal === "string" && docVal && !docVal.startsWith("http://") && !docVal.startsWith("https://")) {
-                          const asset = release.assets.find(a => a.name === docVal || a.name.endsWith(docVal));
-                          entry.docs[docKey] = asset ? asset.browser_download_url : `https://github.com/${process.env.GITHUB_REPOSITORY || "niksphere/niksphere-install"}/releases/download/${release.tag_name}/${docVal}`;
+                    // Resolve relative specs URLs to full browser_download_url
+                    if (entry.specs && typeof entry.specs === "object") {
+                      for (const [specKey, specVal] of Object.entries(entry.specs)) {
+                        if (typeof specVal === "string" && specVal && !specVal.startsWith("http://") && !specVal.startsWith("https://")) {
+                          const asset = release.assets.find(a => a.name === specVal || a.name.endsWith(specVal));
+                          entry.specs[specKey] = asset ? asset.browser_download_url : `https://github.com/${process.env.GITHUB_REPOSITORY || "niksphere/niksphere-install"}/releases/download/${release.tag_name}/${specVal}`;
                         }
                       }
                     }
