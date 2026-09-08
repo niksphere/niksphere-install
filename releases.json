@@ -17,7 +17,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.1-channel.stable/niksphere-website-v1.0.0-build.1-channel.stable-release-notes.json"
           }
         }
@@ -36,7 +36,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.52-channel.stable/niksphere-cloud-v1.0.0-build.52-channel.stable-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.52-channel.stable/niksphere-cloud-v1.0.0-build.52-channel.stable-release-notes.json"
           }
@@ -54,7 +54,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.51-channel.stable/niksphere-cloud-v1.0.0-build.51-channel.stable-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.51-channel.stable/niksphere-cloud-v1.0.0-build.51-channel.stable-release-notes.json"
           }
@@ -72,7 +72,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.50-channel.stable/niksphere-cloud-v1.0.0-build.50-channel.stable-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.50-channel.stable/niksphere-cloud-v1.0.0-build.50-channel.stable-release-notes.json"
           }
@@ -121,7 +121,7 @@
               "size": 35179520
             }
           },
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.67-channel.stable/niksphere-engine-v1.1.0-build.67-channel.stable-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.67-channel.stable/niksphere-engine-v1.1.0-build.67-channel.stable-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.67-channel.stable/niksphere-engine-v1.1.0-build.67-channel.stable-usage.json"
@@ -171,7 +171,7 @@
               "size": 18058752
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.57-channel.stable/niksphere-cli-v1.1.0-build.57-channel.stable-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.57-channel.stable/niksphere-cli-v1.1.0-build.57-channel.stable-usage.json"
           }
@@ -195,7 +195,7 @@
               "size": 374325
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.49-channel.stable/niksphere-ide-vscode-v1.0.0-build.49-channel.stable-release-notes.json"
           }
         }
@@ -209,8 +209,8 @@
           "published_at": "2026-09-07T01:20:47Z",
           "downloads": {},
           "specs": {
-            "openapi": "niksphere-cloud-v1.0.0-build.65-channel.insider-openapi.json",
-            "release-notes": "niksphere-cloud-v1.0.0-build.65-channel.insider-release-notes.json"
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.65-channel.insider/niksphere-cloud-v1.0.0-build.65-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.65-channel.insider/niksphere-cloud-v1.0.0-build.65-channel.insider-release-notes.json"
           },
           "sdks": {
             "go": "niksphere-cloud-v1.0.0-build.65-channel.insider-sdk-go.zip"
@@ -239,7 +239,7 @@
             "security": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.63-channel.insider/niksphere-cloud-v1.0.0-build.63-channel.insider-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.63-channel.insider/niksphere-cloud-v1.0.0-build.63-channel.insider-release-notes.json"
           }
@@ -265,7 +265,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.59-channel.insider/niksphere-cloud-v1.0.0-build.59-channel.insider-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.59-channel.insider/niksphere-cloud-v1.0.0-build.59-channel.insider-release-notes.json"
           }
@@ -291,7 +291,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.55-channel.insider/niksphere-cloud-v1.0.0-build.55-channel.insider-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.55-channel.insider/niksphere-cloud-v1.0.0-build.55-channel.insider-release-notes.json"
           }
@@ -309,7 +309,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.53-channel.insider/niksphere-cloud-v1.0.0-build.53-channel.insider-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.53-channel.insider/niksphere-cloud-v1.0.0-build.53-channel.insider-release-notes.json"
           }
@@ -327,7 +327,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-release-notes.json"
           }
@@ -365,8 +365,8 @@
             }
           },
           "specs": {
-            "release-notes": "niksphere-cli-v1.1.0-build.77-channel.insider-release-notes.json",
-            "usage": "niksphere-cli-v1.1.0-build.77-channel.insider-usage.json"
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.77-channel.insider/niksphere-cli-v1.1.0-build.77-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.77-channel.insider/niksphere-cli-v1.1.0-build.77-channel.insider-usage.json"
           },
           "sdks": {}
         },
@@ -424,7 +424,7 @@
               "size": 18302976
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.75-channel.insider/niksphere-cli-v1.1.0-build.75-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.75-channel.insider/niksphere-cli-v1.1.0-build.75-channel.insider-usage.json"
           }
@@ -482,7 +482,7 @@
               "size": 18302976
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.71-channel.insider/niksphere-cli-v1.1.0-build.71-channel.insider-usage.json"
           }
@@ -540,7 +540,7 @@
               "size": 18301952
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.70-channel.insider/niksphere-cli-v1.1.0-build.70-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.70-channel.insider/niksphere-cli-v1.1.0-build.70-channel.insider-usage.json"
           }
@@ -592,7 +592,7 @@
               "size": 18268160
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.69-channel.insider/niksphere-cli-v1.1.0-build.69-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.69-channel.insider/niksphere-cli-v1.1.0-build.69-channel.insider-usage.json"
           }
@@ -609,7 +609,7 @@
               "size": 459736
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.70-channel.insider/niksphere-ide-vscode-v1.0.0-build.70-channel.insider-release-notes.json"
           }
         },
@@ -642,7 +642,7 @@
               "size": 459736
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.68-channel.insider/niksphere-ide-vscode-v1.0.0-build.68-channel.insider-release-notes.json"
           }
         },
@@ -673,7 +673,7 @@
               "size": 459715
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.65-channel.insider/niksphere-ide-vscode-v1.0.0-build.65-channel.insider-release-notes.json"
           }
         },
@@ -704,7 +704,7 @@
               "size": 378478
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.63-channel.insider/niksphere-ide-vscode-v1.0.0-build.63-channel.insider-release-notes.json"
           }
         },
@@ -735,7 +735,7 @@
               "size": 376665
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.62-channel.insider/niksphere-ide-vscode-v1.0.0-build.62-channel.insider-release-notes.json"
           }
         },
@@ -766,7 +766,7 @@
               "size": 376665
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.61-channel.insider/niksphere-ide-vscode-v1.0.0-build.61-channel.insider-release-notes.json"
           }
         },
@@ -788,7 +788,7 @@
               "size": 374667
             }
           },
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.60-channel.insider/niksphere-ide-vscode-v1.0.0-build.60-channel.insider-release-notes.json"
           }
         }
@@ -825,9 +825,9 @@
             }
           },
           "specs": {
-            "openapi": "niksphere-engine-v1.1.0-build.88-channel.insider-openapi.json",
-            "release-notes": "niksphere-engine-v1.1.0-build.88-channel.insider-release-notes.json",
-            "usage": "niksphere-engine-v1.1.0-build.88-channel.insider-usage.json"
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-usage.json"
           },
           "sdks": {
             "go": "niksphere-engine-v1.1.0-build.88-channel.insider-sdk-go.zip"
@@ -886,7 +886,7 @@
               "size": 42023424
             }
           },
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.86-channel.insider/niksphere-engine-v1.1.0-build.86-channel.insider-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.86-channel.insider/niksphere-engine-v1.1.0-build.86-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.86-channel.insider/niksphere-engine-v1.1.0-build.86-channel.insider-usage.json"
@@ -943,7 +943,7 @@
               "size": 42023424
             }
           },
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.82-channel.insider/niksphere-engine-v1.1.0-build.82-channel.insider-usage.json"
@@ -1000,7 +1000,7 @@
               "size": 42022400
             }
           },
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.81-channel.insider/niksphere-engine-v1.1.0-build.81-channel.insider-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.81-channel.insider/niksphere-engine-v1.1.0-build.81-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.81-channel.insider/niksphere-engine-v1.1.0-build.81-channel.insider-usage.json"
@@ -1054,7 +1054,7 @@
               "size": 42022400
             }
           },
-          "docs": {
+          "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-release-notes.json",
             "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.80-channel.insider/niksphere-engine-v1.1.0-build.80-channel.insider-usage.json"
@@ -1088,7 +1088,7 @@
             "security": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.13-channel.insider/niksphere-website-v1.0.0-build.13-channel.insider-release-notes.json"
           }
         },
@@ -1112,7 +1112,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.9-channel.insider/niksphere-website-v1.0.0-build.9-channel.insider-release-notes.json"
           }
         },
@@ -1136,7 +1136,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.8-channel.insider/niksphere-website-v1.0.0-build.8-channel.insider-release-notes.json"
           }
         },
@@ -1160,7 +1160,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.7-channel.insider/niksphere-website-v1.0.0-build.7-channel.insider-release-notes.json"
           }
         },
@@ -1184,7 +1184,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.6-channel.insider/niksphere-website-v1.0.0-build.6-channel.insider-release-notes.json"
           }
         },
@@ -1208,7 +1208,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.5-channel.insider/niksphere-website-v1.0.0-build.5-channel.insider-release-notes.json"
           }
         },
@@ -1232,7 +1232,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.4-channel.insider/niksphere-website-v1.0.0-build.4-channel.insider-release-notes.json"
           }
         },
@@ -1251,7 +1251,7 @@
             "breaking": []
           },
           "downloads": {},
-          "docs": {
+          "specs": {
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.3-channel.insider/niksphere-website-v1.0.0-build.3-channel.insider-release-notes.json"
           }
         }
