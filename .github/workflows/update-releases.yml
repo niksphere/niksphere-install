@@ -101,6 +101,13 @@ jobs:
                       }
                     }
 
+                    // Normalize legacy "docs" key to "specs" (build-lib renamed
+                    // docs -> specs; older manifests may still use the old key)
+                    if (!entry.specs && entry.docs) {
+                      entry.specs = entry.docs;
+                      delete entry.docs;
+                    }
+
                     // Resolve relative specs URLs to full browser_download_url
                     if (entry.specs && typeof entry.specs === "object") {
                       for (const [specKey, specVal] of Object.entries(entry.specs)) {
