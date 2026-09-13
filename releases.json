@@ -234,6 +234,134 @@
           }
         }
       ],
+      "engine": [
+        {
+          "name": "Niksphere Engine",
+          "version": "v1.1.0-build.97-channel.insider",
+          "published_at": "2026-09-13T14:03:28Z",
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.97-channel.insider/niksphere-engine-v1.1.0-build.97-channel.insider-linux-arm64",
+              "size": 38994082
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.97-channel.insider/niksphere-engine-v1.1.0-build.97-channel.insider-linux-x64",
+              "size": 41722018
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.97-channel.insider/niksphere-engine-v1.1.0-build.97-channel.insider-mac-arm64",
+              "size": 40134306
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.97-channel.insider/niksphere-engine-v1.1.0-build.97-channel.insider-mac-x64",
+              "size": 42645664
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.97-channel.insider/niksphere-engine-v1.1.0-build.97-channel.insider-win-arm64.exe",
+              "size": 39145984
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.97-channel.insider/niksphere-engine-v1.1.0-build.97-channel.insider-win-x64.exe",
+              "size": 42470912
+            }
+          },
+          "specs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.97-channel.insider/niksphere-engine-v1.1.0-build.97-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.97-channel.insider/niksphere-engine-v1.1.0-build.97-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.97-channel.insider/niksphere-engine-v1.1.0-build.97-channel.insider-usage.json",
+            "config": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.97-channel.insider/niksphere-engine-v1.1.0-build.97-channel.insider-config.json",
+            "sbom": {
+              "win-x64": "niksphere-engine-v1.1.0-build.97-channel.insider-win-x64-sbom.cdx.json",
+              "win-arm64": "niksphere-engine-v1.1.0-build.97-channel.insider-win-arm64-sbom.cdx.json",
+              "linux-x64": "niksphere-engine-v1.1.0-build.97-channel.insider-linux-x64-sbom.cdx.json",
+              "linux-arm64": "niksphere-engine-v1.1.0-build.97-channel.insider-linux-arm64-sbom.cdx.json",
+              "mac-x64": "niksphere-engine-v1.1.0-build.97-channel.insider-mac-x64-sbom.cdx.json",
+              "mac-arm64": "niksphere-engine-v1.1.0-build.97-channel.insider-mac-arm64-sbom.cdx.json"
+            }
+          },
+          "sdks": {
+            "go": "niksphere-engine-v1.1.0-build.97-channel.insider-sdk-go.zip"
+          }
+        },
+        {
+          "name": "Niksphere Engine",
+          "version": "v1.1.0-build.91-channel.insider",
+          "published_at": "2026-09-08T09:22:35Z",
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-linux-arm64",
+              "size": 38535330
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-linux-x64",
+              "size": 41304226
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-mac-arm64",
+              "size": 39705938
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-mac-x64",
+              "size": 42208336
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-win-arm64.exe",
+              "size": 38753792
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-win-x64.exe",
+              "size": 42041344
+            }
+          },
+          "specs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-usage.json"
+          },
+          "sdks": {
+            "go": "niksphere-engine-v1.1.0-build.91-channel.insider-sdk-go.zip"
+          }
+        },
+        {
+          "name": "Niksphere Engine",
+          "version": "v1.1.0-build.88-channel.insider",
+          "published_at": "2026-09-06T14:23:48Z",
+          "downloads": {
+            "linux-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-linux-arm64",
+              "size": 38535330
+            },
+            "linux-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-linux-x64",
+              "size": 41283746
+            },
+            "mac-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-mac-arm64",
+              "size": 39689250
+            },
+            "mac-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-mac-x64",
+              "size": 42191776
+            },
+            "win-arm64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-win-arm64.exe",
+              "size": 38736896
+            },
+            "win-x64": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-win-x64.exe",
+              "size": 42022912
+            }
+          },
+          "specs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-release-notes.json",
+            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-usage.json"
+          },
+          "sdks": {
+            "go": "niksphere-engine-v1.1.0-build.88-channel.insider-sdk-go.zip"
+          }
+        }
+      ],
       "cli": [
         {
           "name": "Niksphere CLI",
@@ -794,86 +922,6 @@
           "specs": {
             "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-openapi.json",
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.49-channel.insider/niksphere-cloud-v1.0.0-build.49-channel.insider-release-notes.json"
-          }
-        }
-      ],
-      "engine": [
-        {
-          "name": "Niksphere Engine",
-          "version": "v1.1.0-build.91-channel.insider",
-          "published_at": "2026-09-08T09:22:35Z",
-          "downloads": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-linux-arm64",
-              "size": 38535330
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-linux-x64",
-              "size": 41304226
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-mac-arm64",
-              "size": 39705938
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-mac-x64",
-              "size": 42208336
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-win-arm64.exe",
-              "size": 38753792
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-win-x64.exe",
-              "size": 42041344
-            }
-          },
-          "specs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-release-notes.json",
-            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.91-channel.insider/niksphere-engine-v1.1.0-build.91-channel.insider-usage.json"
-          },
-          "sdks": {
-            "go": "niksphere-engine-v1.1.0-build.91-channel.insider-sdk-go.zip"
-          }
-        },
-        {
-          "name": "Niksphere Engine",
-          "version": "v1.1.0-build.88-channel.insider",
-          "published_at": "2026-09-06T14:23:48Z",
-          "downloads": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-linux-arm64",
-              "size": 38535330
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-linux-x64",
-              "size": 41283746
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-mac-arm64",
-              "size": 39689250
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-mac-x64",
-              "size": 42191776
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-win-arm64.exe",
-              "size": 38736896
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-win-x64.exe",
-              "size": 42022912
-            }
-          },
-          "specs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-release-notes.json",
-            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-engine-v1.1.0-build.88-channel.insider/niksphere-engine-v1.1.0-build.88-channel.insider-usage.json"
-          },
-          "sdks": {
-            "go": "niksphere-engine-v1.1.0-build.88-channel.insider-sdk-go.zip"
           }
         }
       ]
