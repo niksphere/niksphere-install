@@ -1,4 +1,4 @@
-name: Cleanup Old Insider Releases
+name: Cleanup Old Insider Releases and Packages
 
 on:
   schedule:
@@ -14,6 +14,7 @@ on:
 permissions:
   contents: write
   actions: write
+  packages: write
 
 jobs:
   cleanup:
@@ -22,12 +23,27 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v7
 
-      - name: Run Cleanup Script
+      - name: Run Release Cleanup Script
         uses: actions/github-script@v9
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const script = require('./.github/scripts/cleanup-releases.js');
+            const dryRun = ${{ github.event.inputs.dry_run || 'false' }};
+            await script({ github, context, core }, dryRun);
+
+      - name: Run Package Cleanup Script
+        uses: actions/github-script@v9
+        env:
+          # Packages (e.g. niksphere-cloud, niksphere-engine) are owned by other
+          # repositories in the org, so the default GITHUB_TOKEN (repo-scoped) cannot
+          # manage them. NIKSPHERE_PAT must be an org-wide PAT with read/delete:packages
+          # scope (classic) or Organization > Packages: Read and write (fine-grained).
+          GITHUB_TOKEN: ${{ secrets.NIKSPHERE_PAT || secrets.GITHUB_TOKEN }}
+        with:
+          github-token: ${{ secrets.NIKSPHERE_PAT || secrets.GITHUB_TOKEN }}
+          script: |
+            const script = require('./.github/scripts/cleanup-packages.js');
             const dryRun = ${{ github.event.inputs.dry_run || 'false' }};
             await script({ github, context, core }, dryRun);
 

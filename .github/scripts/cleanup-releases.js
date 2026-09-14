@@ -16,11 +16,13 @@ module.exports = async ({ github, context, core }, dryRunInput) => {
   core.info(`Fetched ${releases.length} releases.`);
 
   // Group releases by component
-  const components = ['cli', 'engine', 'ide-vscode'];
+  const components = ['cli', 'engine', 'ide-vscode', 'cloud', 'website'];
   const groups = {
     cli: [],
     engine: [],
-    'ide-vscode': []
+    'ide-vscode': [],
+    cloud: [],
+    website: []
   };
 
   for (const release of releases) {
@@ -33,15 +35,19 @@ module.exports = async ({ github, context, core }, dryRunInput) => {
 
     const tag = release.tag_name || '';
     let comp = null;
-    
+
     if (tag.startsWith("niksphere-ide-vscode-")) {
         comp = "ide-vscode";
     } else if (tag.startsWith("niksphere-cli-")) {
         comp = "cli";
     } else if (tag.startsWith("niksphere-engine-")) {
         comp = "engine";
+    } else if (tag.startsWith("niksphere-cloud-")) {
+        comp = "cloud";
+    } else if (tag.startsWith("niksphere-website-")) {
+        comp = "website";
     }
-    
+
     if (comp && components.includes(comp)) {
       groups[comp].push(release);
     }
