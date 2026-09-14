@@ -37,11 +37,12 @@ jobs:
         env:
           # Packages (e.g. niksphere-cloud, niksphere-engine) are owned by other
           # repositories in the org, so the default GITHUB_TOKEN (repo-scoped) cannot
-          # manage them. NIKSPHERE_PAT must be an org-wide PAT with read/delete:packages
-          # scope (classic) or Organization > Packages: Read and write (fine-grained).
-          GITHUB_TOKEN: ${{ secrets.NIKSPHERE_PAT || secrets.GITHUB_TOKEN }}
+          # manage them. PACKAGES_READ_DELETE must be an org-wide PAT (classic) with
+          # read:packages and delete:packages scope — fine-grained PATs and GitHub Apps
+          # do not support the Packages API.
+          GITHUB_TOKEN: ${{ secrets.PACKAGES_READ_DELETE || secrets.GITHUB_TOKEN }}
         with:
-          github-token: ${{ secrets.NIKSPHERE_PAT || secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.PACKAGES_READ_DELETE || secrets.GITHUB_TOKEN }}
           script: |
             const script = require('./.github/scripts/cleanup-packages.js');
             const dryRun = ${{ github.event.inputs.dry_run || 'false' }};
