@@ -205,6 +205,22 @@
       "ide-vscode": [
         {
           "name": "Niksphere VS Code Extension",
+          "version": "v1.0.0-build.80-channel.insider",
+          "published_at": "2026-09-16T01:39:49Z",
+          "downloads": {
+            "vsix": {
+              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.80-channel.insider/niksphere-ide-vscode-v1.0.0-build.80-channel.insider.vsix",
+              "size": 468625
+            }
+          },
+          "specs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.80-channel.insider/niksphere-ide-vscode-v1.0.0-build.80-channel.insider-release-notes.json",
+            "sbom": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.80-channel.insider/niksphere-ide-vscode-v1.0.0-build.80-channel.insider-sbom.cdx.json"
+          },
+          "sdks": {}
+        },
+        {
+          "name": "Niksphere VS Code Extension",
           "version": "v1.0.0-build.77-channel.insider",
           "published_at": "2026-09-13T14:01:45Z",
           "downloads": {
