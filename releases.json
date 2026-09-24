@@ -390,6 +390,34 @@
           }
         }
       ],
+      "cloud": [
+        {
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.85-channel.insider",
+          "published_at": "2026-09-24T01:41:39Z",
+          "downloads": {},
+          "specs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.85-channel.insider/niksphere-cloud-v1.0.0-build.85-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.85-channel.insider/niksphere-cloud-v1.0.0-build.85-channel.insider-release-notes.json"
+          },
+          "sdks": {
+            "go": "niksphere-cloud-v1.0.0-build.85-channel.insider-sdk-go.zip"
+          }
+        },
+        {
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.75-channel.insider",
+          "published_at": "2026-09-14T01:45:06Z",
+          "downloads": {},
+          "specs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.75-channel.insider/niksphere-cloud-v1.0.0-build.75-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.75-channel.insider/niksphere-cloud-v1.0.0-build.75-channel.insider-release-notes.json"
+          },
+          "sdks": {
+            "go": "niksphere-cloud-v1.0.0-build.75-channel.insider-sdk-go.zip"
+          }
+        }
+      ],
       "cli": [
         {
           "name": "Niksphere CLI",
@@ -574,21 +602,6 @@
             "sbom": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-ide-vscode-v1.0.0-build.77-channel.insider/niksphere-ide-vscode-v1.0.0-build.77-channel.insider-sbom.cdx.json"
           },
           "sdks": {}
-        }
-      ],
-      "cloud": [
-        {
-          "name": "Niksphere Cloud",
-          "version": "v1.0.0-build.75-channel.insider",
-          "published_at": "2026-09-14T01:45:06Z",
-          "downloads": {},
-          "specs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.75-channel.insider/niksphere-cloud-v1.0.0-build.75-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.75-channel.insider/niksphere-cloud-v1.0.0-build.75-channel.insider-release-notes.json"
-          },
-          "sdks": {
-            "go": "niksphere-cloud-v1.0.0-build.75-channel.insider-sdk-go.zip"
-          }
         }
       ]
     }
