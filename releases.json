@@ -268,76 +268,6 @@
             "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.57-channel.insider/niksphere-website-v1.0.0-build.57-channel.insider-release-notes.json"
           },
           "sdks": {}
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.56-channel.insider",
-          "published_at": "2026-10-11T02:14:49Z",
-          "downloads": {},
-          "specs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.56-channel.insider/niksphere-website-v1.0.0-build.56-channel.insider-release-notes.json"
-          },
-          "sdks": {}
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.55-channel.insider",
-          "published_at": "2026-10-10T02:48:41Z",
-          "downloads": {},
-          "specs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.55-channel.insider/niksphere-website-v1.0.0-build.55-channel.insider-release-notes.json"
-          },
-          "sdks": {}
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.54-channel.insider",
-          "published_at": "2026-10-09T03:07:41Z",
-          "downloads": {},
-          "specs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.54-channel.insider/niksphere-website-v1.0.0-build.54-channel.insider-release-notes.json"
-          },
-          "sdks": {}
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.53-channel.insider",
-          "published_at": "2026-10-08T03:00:22Z",
-          "downloads": {},
-          "specs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.53-channel.insider/niksphere-website-v1.0.0-build.53-channel.insider-release-notes.json"
-          },
-          "sdks": {}
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.52-channel.insider",
-          "published_at": "2026-10-07T02:43:33Z",
-          "downloads": {},
-          "specs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.52-channel.insider/niksphere-website-v1.0.0-build.52-channel.insider-release-notes.json"
-          },
-          "sdks": {}
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.51-channel.insider",
-          "published_at": "2026-10-06T03:21:59Z",
-          "downloads": {},
-          "specs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.51-channel.insider/niksphere-website-v1.0.0-build.51-channel.insider-release-notes.json"
-          },
-          "sdks": {}
-        },
-        {
-          "name": "Niksphere Website",
-          "version": "v1.0.0-build.50-channel.insider",
-          "published_at": "2026-10-05T02:26:09Z",
-          "downloads": {},
-          "specs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.50-channel.insider/niksphere-website-v1.0.0-build.50-channel.insider-release-notes.json"
-          },
-          "sdks": {}
         }
       ],
       "cli": [
@@ -384,51 +314,6 @@
               "mac-arm64": "niksphere-cli-v1.1.0-build.117-channel.insider-mac-arm64-sbom.cdx.json"
             }
           }
-        },
-        {
-          "name": "Niksphere CLI",
-          "version": "v1.1.0-build.103-channel.insider",
-          "published_at": "2026-10-01T02:34:49Z",
-          "downloads": {
-            "linux-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.103-channel.insider/niksphere-cli-v1.1.0-build.103-channel.insider-linux-arm64",
-              "size": 23855266
-            },
-            "linux-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.103-channel.insider/niksphere-cli-v1.1.0-build.103-channel.insider-linux-x64",
-              "size": 25710857
-            },
-            "mac-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.103-channel.insider/niksphere-cli-v1.1.0-build.103-channel.insider-mac-arm64",
-              "size": 24208514
-            },
-            "mac-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.103-channel.insider/niksphere-cli-v1.1.0-build.103-channel.insider-mac-x64",
-              "size": 25839920
-            },
-            "win-arm64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.103-channel.insider/niksphere-cli-v1.1.0-build.103-channel.insider-win-arm64.exe",
-              "size": 23905792
-            },
-            "win-x64": {
-              "url": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.103-channel.insider/niksphere-cli-v1.1.0-build.103-channel.insider-win-x64.exe",
-              "size": 25982976
-            }
-          },
-          "specs": {
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.103-channel.insider/niksphere-cli-v1.1.0-build.103-channel.insider-release-notes.json",
-            "usage": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.103-channel.insider/niksphere-cli-v1.1.0-build.103-channel.insider-usage.json",
-            "config": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cli-v1.1.0-build.103-channel.insider/niksphere-cli-v1.1.0-build.103-channel.insider-config.json",
-            "sbom": {
-              "win-x64": "niksphere-cli-v1.1.0-build.103-channel.insider-win-x64-sbom.cdx.json",
-              "win-arm64": "niksphere-cli-v1.1.0-build.103-channel.insider-win-arm64-sbom.cdx.json",
-              "linux-x64": "niksphere-cli-v1.1.0-build.103-channel.insider-linux-x64-sbom.cdx.json",
-              "linux-arm64": "niksphere-cli-v1.1.0-build.103-channel.insider-linux-arm64-sbom.cdx.json",
-              "mac-x64": "niksphere-cli-v1.1.0-build.103-channel.insider-mac-x64-sbom.cdx.json",
-              "mac-arm64": "niksphere-cli-v1.1.0-build.103-channel.insider-mac-arm64-sbom.cdx.json"
-            }
-          },
-          "sdks": {}
         }
       ],
       "engine": [
