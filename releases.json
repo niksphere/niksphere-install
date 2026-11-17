@@ -231,6 +231,34 @@
           }
         }
       ],
+      "cloud": [
+        {
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.139-channel.insider",
+          "published_at": "2026-11-17T05:22:59Z",
+          "downloads": {},
+          "specs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.139-channel.insider/niksphere-cloud-v1.0.0-build.139-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.139-channel.insider/niksphere-cloud-v1.0.0-build.139-channel.insider-release-notes.json"
+          },
+          "sdks": {
+            "go": "niksphere-cloud-v1.0.0-build.139-channel.insider-sdk-go.zip"
+          }
+        },
+        {
+          "name": "Niksphere Cloud",
+          "version": "v1.0.0-build.93-channel.insider",
+          "published_at": "2026-10-02T02:46:27Z",
+          "downloads": {},
+          "specs": {
+            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.93-channel.insider/niksphere-cloud-v1.0.0-build.93-channel.insider-openapi.json",
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.93-channel.insider/niksphere-cloud-v1.0.0-build.93-channel.insider-release-notes.json"
+          },
+          "sdks": {
+            "go": "niksphere-cloud-v1.0.0-build.93-channel.insider-sdk-go.zip"
+          }
+        }
+      ],
       "ide-vscode": [
         {
           "name": "Niksphere VS Code Extension",
@@ -357,21 +385,6 @@
           },
           "sdks": {
             "go": "niksphere-engine-v1.1.0-build.116-channel.insider-sdk-go.zip"
-          }
-        }
-      ],
-      "cloud": [
-        {
-          "name": "Niksphere Cloud",
-          "version": "v1.0.0-build.93-channel.insider",
-          "published_at": "2026-10-02T02:46:27Z",
-          "downloads": {},
-          "specs": {
-            "openapi": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.93-channel.insider/niksphere-cloud-v1.0.0-build.93-channel.insider-openapi.json",
-            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-cloud-v1.0.0-build.93-channel.insider/niksphere-cloud-v1.0.0-build.93-channel.insider-release-notes.json"
-          },
-          "sdks": {
-            "go": "niksphere-cloud-v1.0.0-build.93-channel.insider-sdk-go.zip"
           }
         }
       ]
