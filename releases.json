@@ -205,6 +205,15 @@
       "website": [
         {
           "name": "Niksphere Website",
+          "version": "v1.0.0-build.95-channel.insider",
+          "published_at": "2026-11-19T04:34:07Z",
+          "downloads": {},
+          "specs": {
+            "release-notes": "https://github.com/niksphere/niksphere-install/releases/download/niksphere-website-v1.0.0-build.95-channel.insider/niksphere-website-v1.0.0-build.95-channel.insider-release-notes.json"
+          }
+        },
+        {
+          "name": "Niksphere Website",
           "version": "v1.0.0-build.94-channel.insider",
           "published_at": "2026-11-18T04:44:28Z",
           "downloads": {},
